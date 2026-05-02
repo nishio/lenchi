@@ -2,6 +2,86 @@
 
 Ingest / Query / Lint の時系列ログ。`## [YYYY-MM-DD] {ingest|query|lint} | 概要` の書式で1エントリ1行を起点に追記する。
 
+## [2026-05-02] ingest | Day 12 Session C — Q14・Q17 解決、ナラティブの価値 言語化
+
+- Sources: 3 ファイル
+  - `raw/nishio-激動の2024年5月下旬.1hop.txt`（27ページ）— Q14 補強
+  - `raw/blu3mo-fractal_reader.2hop.txt`（10ページ）— Q17 補強
+  - `raw/nishio-直線的でない時間.1hop.txt`（10ページ）— 思考の熟成 補強、ナラティブの価値 発見
+- Q14 を **解決**: ブロードリスニング本そのもののプロセスログは混ぜない、付随 Wiki と「情報処理」誌寄稿は参照対象
+- Q17 を **解決**: Fractal Reader システム実体・コスト構造・派生構想（非対称なエディタ）を反映
+- 新規ページ:
+  - [concepts/ナラティブの価値.md](concepts/ナラティブの価値.md) — wiki化で失われる6次元（暗黙知／順序／動機／記憶／共感／意味の生成）。**LENCHI の `raw/` + `wiki/` 二層分離設計の理論的根拠** として位置づけた
+  - [concepts/ブロードリスニング.md](concepts/ブロードリスニング.md) — 集団における知的生産性向上。LENCHI 主題の集団版
+  - [entities/ブロードリスニング本.md](entities/ブロードリスニング本.md) — 並走中の別書籍プロジェクト（2026-09 出版予定）
+  - [timeline/Day12.md](timeline/Day12.md) Session C — 本セッションの記録
+- 大幅更新:
+  - [concepts/フラクタル要約.md](concepts/フラクタル要約.md) — Fractal Reader 実体・アルゴリズム・コスト・派生構想（非対称なエディタ）
+  - [entities/青山柊太朗.md](entities/青山柊太朗.md) — Fractal Reader 運営の「経営者は意思決定が仕事」体験的気づき、ブロードリスニング本への共著関与
+  - [entities/デジタル民主主義.md](entities/デジタル民主主義.md) — 中断動機の詳細タイムライン（2024-05-13〜2024-07-25）
+  - [entities/西尾泰和.md](entities/西尾泰和.md) — システム理解力の系譜に「集団スケール」（階層組織 2018 → 個人情報とマネタイズ 2019 → LLMがもたらす組織構造の変化 2023 → ブロードリスニング 2024）を追加
+  - [concepts/思考の熟成.md](concepts/思考の熟成.md) — ジェンドリン哲学のシータ図、主体客体交換、ストーリーの交差点で機構を補強
+- 軽微な更新:
+  - [chapters/第二部-LLM_Wikiの導入.md](chapters/第二部-LLM_Wikiの導入.md) — 見取り図に「ナラティブの価値と二層分離」節を追加
+  - [questions/未解決の問い.md](questions/未解決の問い.md) — Q14・Q17 を解決に格下げ、Q21（個人/集団の知的生産の橋渡し）と Q22（ブロードリスニング本付随 Wiki の比較取り込み）を新設
+  - [index.md](index.md) — 新概念2件、新エンティティ1件、Day 12 Session C、新 raw 3ファイルを登録、問い数を 22 に更新
+- 重要な発見: **ナラティブの価値の 6 次元整理が、LENCHI の `raw/` 改変禁止原則の事後的根拠を提供する**。これは Karpathy の LLM Wiki への重要な批評的補足として第二部本論で扱う価値がある（→ [chapters/第二部-LLM_Wikiの導入.md](chapters/第二部-LLM_Wikiの導入.md) に節を予約）
+- 設計判断:
+  - 「ストーリーの交差点がアトムになる」は独立ページにせず [思考の熟成](concepts/思考の熟成.md) の機構補強として記述（同一の機構に対する別表現と判断）
+  - 安野貴博、関治之、Audrey Tang、tokoroten 等の人物は独立エンティティページにせず [デジタル民主主義](entities/デジタル民主主義.md) と [ブロードリスニング](concepts/ブロードリスニング.md) のタイムライン内で言及（LENCHI の主題と直接関係しないため）
+
+## [2026-05-02] ingest | Day 12 Session B — Q16 検証（GPT 5.5 Pro サーベイ）
+
+- Source: `raw/2026-05-02-Q16検証-GPT.txt`（西尾 × ChatGPT GPT-5系の3ラウンド対話、当初 `a.txt` として置かれ後に改名）
+- 動機: [Day 12](timeline/Day12.md) で残した [Q16](questions/未解決の問い.md)（Karpathy LLM Wiki の歴史的位置づけ検証）への回答が得られた
+- Q16 を **解決（概ね妥当・条件付き）** に格下げ
+- 新規ページ:
+  - [timeline/Day12.md](timeline/Day12.md) Session B — Q16 検証セッションの記録
+  - [concepts/段階的開示.md](concepts/段階的開示.md) — Progressive Disclosure。Nielsen / Shneiderman の HCI 原理から Skills、LLM Wiki までの系譜を整理。本書の中心概念に格上げ
+- 大幅更新:
+  - [concepts/RAG.md](concepts/RAG.md) — Naive RAG とそのバックラッシュ、Advanced/Modular RAG、Contextual Retrieval、LLM Wiki / Claude Code との関係を新節として追加
+  - [concepts/コンテキスト維持.md](concepts/コンテキスト維持.md) — Karpathy 帰属節を Day 12 Session B 検証済みの精密版に置き換え（API memory tool / Skills / auto memory の時系列訂正を含む）
+  - [chapters/第二部-LLM_Wikiの導入.md](chapters/第二部-LLM_Wikiの導入.md) — 「Karpathy 帰属の補正」節を検証済みの内容に差し替え。本論見取り図に「段階的開示と外部記憶の系譜」節を追加
+- 軽微な更新:
+  - [concepts/フラクタル要約.md](concepts/フラクタル要約.md) — 段階的開示への接続を関連概念に追加
+  - [questions/未解決の問い.md](questions/未解決の問い.md) — Q16 を解決に格下げ、Q19（外部記憶研究系譜の本文組み込み）と Q20（raw ファイル命名規約）を新設
+  - [index.md](index.md) — 段階的開示、Day 12 Session B、新 raw ファイルを登録、問い数を 20 に更新
+- 設計判断:
+  - 「filesystem access の進歩がソースコード領域から需要を生んだ」という著者の重要観察は、独立ページではなく [段階的開示](concepts/段階的開示.md) 内の一節として記録（系譜の枝として位置づくため）
+  - 研究文献（A-MEM、Lost in the Middle、Contextual Retrieval 等）は Wiki に名前だけ記録し、各論文の本格的読解は別 ingest として Q19 に登録
+
+## [2026-05-02] ingest | 青山柊太朗（blu3mo）のプロフィール、フラクタル要約帰属の正確化
+
+- Source: `raw/blu3mo-自分について2024.1hop.txt`（Scrapbox `自分について2024` 中心の1-hopエクスポート、15ページ）
+- 動機: 直前の Day 12 ingest で著者は [フラクタル要約](concepts/フラクタル要約.md) のオリジネーターを「青山君」と言及。エージェントが下の名前を「諒」と推測して記載したのは誤り。本資料により **青山柊太朗（あおやま しゅうたろう / blu3mo / Bluemo）** であると確定。
+- 新規ページ: [entities/青山柊太朗.md](entities/青山柊太朗.md) — Columbia大CS+哲学副専攻、孫正義育英財団1期、IPA未踏2020、柳井正財団6期生、国立情報学研究所「情報科学の達人」1期。研究テーマ "Asymmetric Reality"。情報科学の達人時代に Saliencyを用いた授業映像要約の研究を行っており、フラクタル要約の系譜が確認できる。
+- 修正:
+  - [concepts/フラクタル要約.md](concepts/フラクタル要約.md) — 「青山（諒）」を「青山柊太朗（blu3mo）」に修正、エンティティへリンク、研究系譜（Saliency要約→フラクタル要約）を追記
+  - [timeline/Day12.md](timeline/Day12.md) — 同様に修正（2か所）
+  - [questions/未解決の問い.md](questions/未解決の問い.md) Q17 — 同様に修正、青山の Scrapbox を入口とする取り込み手順を補足
+  - [index.md](index.md) — 人物に青山柊太朗を追加、raw 資料に新ファイルを登録
+- 設計判断: 青山の研究テーマ全体（Asymmetric Reality / Kineto / asym-chat / 弾性同期）は LENCHI の主題と思想的に隣接するが、本書プロジェクトに直接素材として取り込むものではないため、エンティティページ内の「LENCHIと思想的に交差する点」節で接続点だけ明示する形に留めた。
+
+## [2026-05-02] ingest | Day 12 — Wiki初読・並列実行・概念の再定義
+
+- Source: `raw/2026-05-02.txt`（著者が Wiki を新幹線で初通読しながら書いたメモ）
+- 新規ページ:
+  - [timeline/Day12.md](timeline/Day12.md)
+  - [concepts/後段としてのWiki.md](concepts/後段としてのWiki.md) — Wikiを下流に置くことで上流の探索が並列化される
+  - [concepts/思考の熟成.md](concepts/思考の熟成.md) — 「放置」ではなく異経路で同じ場所に辿り着くことが熟成の機構
+- 更新ページ:
+  - [concepts/フラクタル要約.md](concepts/フラクタル要約.md) — 青山（当初「諒」と誤記、後の ingest で **青山柊太朗 / blu3mo** と訂正）のアイデアであるという出典追加。一般AI要約との対比考察を取り込み候補に
+  - [concepts/コンテキスト維持.md](concepts/コンテキスト維持.md) — Karpathyの位置づけを「単発発明」から「漸進的有用化の言語化」に補正、Claude Code Skills が早期形態という補助仮説を追加、後段としてのWikiへの接続
+  - [concepts/LLM時代の知的生産.md](concepts/LLM時代の知的生産.md) — 「人間×AI協働」前提を明示し、AI単独完結時代に「趣味としての知的生産本」が残る可能性を追加
+  - [concepts/創発的アプローチ.md](concepts/創発的アプローチ.md) — 思考の熟成へのリンク追加
+  - [entities/デジタル民主主義.md](entities/デジタル民主主義.md) — 中断動機の補足（ブロードリスニング＝集団の知的生産性向上）
+  - [entities/西尾泰和.md](entities/西尾泰和.md) — システム理解力の系譜（プログラム挙動→言語→言語史→知的生産→LLM時代）
+  - [chapters/第二部-LLM_Wikiの導入.md](chapters/第二部-LLM_Wikiの導入.md) — 「後段としてのWiki」節と「Karpathy帰属の補正」節を追加
+  - [overview.md](overview.md) — 「プロジェクトの性格」節を新設（書籍プロジェクトという呼称の不正確さの明示、改訂版10年後の想定）
+  - [questions/未解決の問い.md](questions/未解決の問い.md) — Q14を「部分再開」に格上げ（情報処理原稿の取り込み候補化）。Q15（人間×AI前提の妥当性）、Q16（Karpathyの歴史的位置づけ検証）、Q17（青山のフラクタル要約考察取り込み）、Q18（後段としてのWikiの実例化）を新設
+  - [index.md](index.md) — 新概念2件、Day 12、新raw資料を登録
+- 設計判断: 著者の「概念ページが面白い／他人の視線での整理」観察は独立ページ化せず、Day 12 のキー観察として記録（Wiki読書の固有価値の論点だが、概念として取り出すには未成熟）
+
 ## [2026-05-01] ingest | 現行 LLM 動向（Q12 部分対応）
 
 利用者判断: Q14（デジタル民主主義書籍 ingest）は **不採用**で記録。Q12（後発モデル追従）に着手。

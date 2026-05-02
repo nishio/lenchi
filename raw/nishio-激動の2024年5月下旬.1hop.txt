@@ -1,0 +1,2013 @@
+This text contains the content of https://scrapbox.io/nishio/激動の2024年5月下旬 (a page on Cosense, formerly known as Scrapbox) and its related pages in one file.
+Total pages included: 27 (main page + 26 directly linked pages).
+
+IMPORTANT: Bracketed [page title] are internal links. Most linked pages exist within this document - use them to navigate between related concepts.
+
+== GUIDE FOR AI AGENTS ==
+1. START with the first page (main topic: "激動の2024年5月下旬") - marked as type="mainpage"
+2. READ the <PageList> in order - pages are sorted by relevance and importance
+3. USE internal links [page title] to understand connections between concepts
+4. NAVIGATE by searching for "<Page title=" to jump to specific pages
+5. REFERENCE created/updated timestamps when handling conflicting information
+6. UNDERSTAND page relationships using type attribute:
+   - type="mainpage": The primary page you requested
+   - type="1hopLink": Pages directly linked from the main page (most relevant)
+   - type="2hopLink": Pages linked from 1-hop pages (contextually relevant)
+
+<PageList>
+<Page title="激動の2024年5月下旬" url="https://scrapbox.io/nishio/激動の2024年5月下旬" updated="2025-05-23T23:03:52.729Z" created="2024-07-22T13:23:49.566Z" type="mainpage">
+激動の2024年5月下旬
+[安野チームに参加したきっかけ]
+
+激動の2024年5月下旬
+	安野さんとは[未踏ジュニア]つながり
+		未踏ジュニアの中では2023-04以降Pluralityが面白いという話をしていた
+		[Plurality Tokyo 2023]の運営に[rickshinmi]が関わっていた
+	僕が[安野 貴博]さんの選挙戦に関わるようになったのは、安野さんが西尾が公開していた[Plurality本]の和訳を読んで参考になったとコンタクトした(5/13)のがきっかけ
+		[/plurality-japanese]のこと
+	5/13に安野さんを[関 治之]さんに紹介して、5/23にミーティング、色々情報交換した
+		[思考の結節点2024-05-23] #都知事選xデジタル民主主義
+	その後のチャットで関さんが[Talk to the City]の話題を出して、安野さんが「めちゃ面白そう」となる
+		僕はTalk to the Cityのことは[Gisele Chou]に聞いて知ってたけど、[tkgshn]が試してるのを見て「めんどくさそうだな〜」と放置してた
+			[/tkgshn/Talk to the City]
+			[/tkgshn/台湾の同性婚に関する議論をTalk to the Cityでレポート化してみる]
+			これは2種類あるTalk to the Cityの一つだった([Talk to the City Turbo])
+	西尾はこの時に[11万人の意見クラスター分析]を見せた
+		[JAPAN CHOICE]から11万人分の匿名データを提供いただいてPolis的分析をしたもの
+		安野さんのコメント
+ 		「選挙期間中に集めた自然言語のデータがあったら試してみたりできます？」
+ 		「個人的な興味として盛り上がったAIのパブコメとかを流して眺めてみたい。２万件ぐらい集まってたやつ」
+		「Polisは意見ベクトルが入力」と説明してから、Talk to the Cityがどうやって自然文をクラスタリングをやってるのか気になってきた
+			調べた結果、やってみたくなって、AIパブコメで試してみることにした
+				これは[Talk to the City Scatter]
+				関さん「普通に行政側での整理にも役立ちそう」
+	[AIパブコメ]のTalk to the Cityをやってみた(5/30)
+		[TTTC: AIと著作権に関するパブリックコメント]
+	それをみた関さんが翌日5/31の[シビックテックによる、社会と民主主義のアップデート]で紹介したいと考えた
+		Scrapboxにある画像は好きに使ってと言ったら、僕の手描きの[ブロードリスニング]の絵が使われてて爆笑してた
+ 	この絵は後に安野さんのマニフェストにまで使われて一躍有名な図になったw
+ 		もちろんどちらも許可を出している
+  	むしろみんな使いたいのだと思ったのでこの辺りでCC0ライセンスにした
+ 	最終的に[Broad listening in practice]でも冗談でスーパーデザイナーと紹介されてたw
+		その後[ブロードリスニングの「あの図」]と呼ばれてテレビなどでも放映されることに
+
+[2024]
+
+</Page>
+
+
+
+<Page title="ブロードリスニング" url="https://scrapbox.io/nishio/ブロードリスニング" updated="2025-11-15T13:18:06.195Z" created="2023-08-31T16:20:44.000Z" type="1hopLink">
+ブロードリスニング
+情報を複製し配信する技術の発展により、一人の人が大勢の人に考えを伝えることが容易になった。
+しかし大勢が情報発信すると、一人が受け取る情報量が膨大になり情報洪水で溺れてしまう。
+人々が積極的に発信する社会や会社では、大勢の意見を聞くことを支援する技術が重要になる。
+[https://gyazo.com/8aed1a6ee239c672d1e504cdb48d0e9e]
+	図は2023年に情報処理学会誌に寄稿した「[主観か客観かではなく、一人の主観から大勢の主観へ]」から
+		この図は[ブロードリスニング]を解説する上で便利らしいのでCC0とする
+		この図に関しての詳細は: [情報の複製により情報発信は効率化されたが、受信は改善しない、情報を減らす技術が必要]
+	LLMの発展によって[要約技術]が発展し、それが人々のコミュニケーションの形に影響を与えていく
+	[関 治之]による 2024年度 人工知能学会全国大会 [シビックテックによる、社会と民主主義のアップデート]も参照
+	具体的な技術の例: [Polis], [Talk to the City]
+
+2025-11-15
+>Broad listening is the opposite of broadcasting.
+> ブロードリスニングは放送の反対です。
+> While broadcasting is the ability to speak to millions of people, broad listening is the ability to hear from millions and synthesize their collective wisdom into a shared voice. And when broadcasting and broad listening are combined, they can enable one person to have a conversation with millions of people.
+> 放送とは何百万人もの人々に話しかける能力ですが、ブロードリスニングとは、何百万人もの人々の声を聞き、彼らの集合的な知恵を共通の声にまとめる能力です。そして、放送とブロードリスニングを組み合わせると、一人の人間が何百万人もの人々と会話できるようになります。
+	[Andrew Trask]自身による記述。書かれたのは2025年の9月ごろ。
+	[一人の人間が何百万人と対話することが可能になる]能力
+
+
+2025-07-14 色々詳細調査[o3.icon][nishio.icon]
+	Audrey Tang が「broadcast ↔ broad listening」という対概念を公で初めて明言したのは 2024 年5 月が確認できる最古．
+		2024-05-06 AI Objectives Institute との公開対話
+			“What’s the inverse of broadcasting? Broad listening. … maybe we need a name for this now.”
+			https://sayit.archive.tw/2024-05-06-conversation-with-ai-objectives-institu#s617719
+		2023年のPluralityのprefaceにも書かれていた(僕はそれを見て知った)が、確かにこれを書いたのがAudreyかGlenかは明確ではない(GitHubのログを見ればわかるとは思う)
+		2016 年時点の発言から「一方向放送 vs. 多方向リスニング」という思想自体は一貫しており，フレーズを定式化したのが 2024 年とみられる．
+			2016 年12 月の ICRT インタビューで、Tang 氏は「ラジオは何百万人が1〜2人の声を聴けても、1〜2人が何百万人の声を聴く手段がない」という“片方向”性を問題提起し、**「何百万人を“聴く”ためのスケーラブルな listening 技術が必要だ」**と説いている。これは “broadcast ↔ listening” の対比を明確に示す。
+				>It’s because of this that I’m experimenting with this, as if in a laboratory, on various public governance topics. It’s because we’re early in this new, what I call, scalable listening technologies that we need to tailor‑make it to each different specific policy issues.
+				https://sayit.archive.tw/2016-12-20-icrt-interview#s20588
+		Audrey 以外 で “broad listening” が登場する最古の用例は，ブランド名として使われた Sarah Austin 氏の HR スタートアップ Broad Listening（2016 年1 月時点で Inc. 誌に掲載） でした．概念的には 2016 ～ 17 年の NGO／国際開発分野の “broad-listening workshop” という表現が，公共的議論を聴取する意味で最も早く確認できます．学術的に “broad listening” を deliberation 技法として提唱した人物は研究者 Andrew Trask とされ，その事実を明示的に記した最古の一次資料は 2025 年2 月版の査読前論文 Prosocial Media です（論文内脚注に “The term ‘broad listening’ was proposed by researcher Andrew Trask.” と明記）｡
+
+2025-01-23
+	「ブロードリスニング」という言葉を避けようとして色々な和訳が模索されている
+	個人的には「[広範囲の傾聴]」という表現が一番しっくりきた
+	その他の目にしたもの: [広聴], [多聞], [広範な傾聴], [デジタル広聴]
+
+2024-06-07
+	[安野たかひろ氏が東京都知事選に出馬へ] 記者会見の中でブロードリスニングへの言及があった。オードリータンからも安野さんの計画の良いところとして言及されている。
+
+2024-05-31
+	2024年度 人工知能学会全国大会 オーガナイズドセッション » OS-8 AIとデモクラシー 基調講演
+	関 治之 [シビックテックによる、社会と民主主義のアップデート]
+
+2024-01-11
+	[Glen Weyl]によれば、この概念は[Andrew Trask]由来で、broadcasting / broadlistening という対比構造らしい
+		[/plurality-japanese/2024-01-10 QA with Glen]
+
+2023-04-22
+私は人間の[知的生産性]の向上に関心がある。ブロードリスニングは[生身の人間]には不可能な「多勢の意見を聞くこと」を可能にする技術。なので、[人間増強]の一種として興味がある。
+
+2023-04-11
+ブロードリスニングという言葉はPluralityの解説を読んでいて知った
+>何百万人もの人々が仲間の意見分布のエッセンスを抽出したものを聞くことができる
+	from [Plurality]
+	>Advances in statistics (often associated with AI) make it possible “[broad listening]”, where millions of people can hear the distilled essence of the distribution of opinion of their peers, empowering democratic [deliberation] at scale.
+	(DeepL)統計学の進歩（しばしばAIと関連付けられている）は、何百万人もの人々が仲間の意見の分布から抽出されたエッセンスを聞くことができる「ブロードリスニング」を可能にし、大規模で民主的な[熟議]を強化することができます。
+
+
+
+
+--- 以下AI生成
+[*** ブロードリスニング] 2023-09-01 01:19 [omni.icon]
+私の研究は、人間の知的生産性の向上に焦点を当てています。特に、多くの意見を聞くことを可能にするブロードリスニングという技術に興味があります。これは人間増強の一種と考えています。
+
+ブロードリスニングは、統計学の進歩とAIの関連性により、何百万人もの人々が仲間の意見の分布から抽出されたエッセンスを聞くことができるようになりました。これにより、大規模な民主的熟議が可能になりました。
+
+具体的な技術としては、Polisがあります。これは、多くの人々が質問に対して意見を表明し、それが可視化されるシステムです。AIが人格を演じることも可能で、これにより、多重視点が得られます。
+
+「大勢の意見を認識する能力」を増強すれば「よりよい合意形成」ができる
+
+しかし、ブロードリスニングの実践手法の習得はまだ課題となっています。これについては、今後の研究で深く探求していきたいと考えています。
+
+[* extra info]
+titles: `["ブロードリスニング", "Kozaneba:Plurality", "PluralityとPolis勉強会", "ブロードリスニングの概念を言語化したい", "LLMとPluralityの関係"]`
+generated: 2023-09-01 01:19
+[* previous notes]
+ブロードリスニング
+私は人間の[知的生産性]の向上に関心がある。ブロードリスニングは[生身の人間]には不可能な「多勢の意見を聞くこと」を可能にする技術なので、[人間増強]の一種として興味がある。
+
+ブロードリスニングという言葉はPluralityの解説を読んでいて知った
+>何百万人もの人々が仲間の意見分布のエッセンスを抽出したものを聞くことができる
+	from [Plurality]
+	>Advances in statistics (often associated with AI) make it possible “[broad listening]”, where millions of people can hear the distilled essence of the distribution of opinion of their peers, empowering democratic [deliberation] at scale.
+	(DeepL)統計学の進歩（しばしばAIと関連付けられている）は、何百万人もの人々が仲間の意見の分布から抽出されたエッセンスを聞くことができる「ブロードリスニング」を可能にし、大規模で民主的な[熟議]を強化することができます。
+
+具体的技術
+	[Polis]
+		[Polisをもっとやりたい]
+
+Polisに関して「社会を変えたくてやってるんじゃないの？」と質問されて改めて考えてみたんだが、それほど社会を変えたいと思ってるわけでもない気がしてきた
+ 「複数の人格がたくさんの質問に対して意見を表明して、それが可視化されるシステム」
+ 	[多重視点]
+ 	たとえば[/villagepump/Scrapbox ChatGPT Connector座談会モード]みたいに、人格をAIがやることも可能
+ 自分の興味がある[生煮えのトピック]に対して自分が「有益な意見を出してくれるかも」と思ってる人を20人集めて投票してもらうのって高コスト
+  だけど寝てる間にAIが色々な人の人格で投票してくれたらいいよね
+ 「あれー、この議題、当然賛成だろと思ったのに意外と意見が分かれるなー」という[切り口]がそれによって発見されたら、「このテーマについて反対の人をAIに演じさせて議論しよう」とかできるわけ
+ 人間増強の手法だから興味がある、ということ
+
+</Page>
+
+
+
+<Page title="TTTC: AIと著作権に関するパブリックコメント" url="https://scrapbox.io/nishio/TTTC:_AIと著作権に関するパブリックコメント" updated="2025-03-25T16:23:02.067Z" created="2024-06-14T14:17:46.225Z" type="1hopLink">
+TTTC: AIと著作権に関するパブリックコメント
+[*** Ver.2 2024-12-24]
+https://github.com/takahiroanno2024/anno-broadlistening/blob/main/scatter/README_ja.md#文化庁aiと著作権バブリックコメントデータセット
+
+日本の文化庁が収集した「AIと著作権に関する考え方について（素案）」のパブリックコメントの結果から個人由来3000件と、団体由来248件(ページ)を抽出したデータです。
+
+[*** Ver.1 2024-06-14]
+from [AIと著作権に関するパブリックコメント]
+TTTC: AIと著作権に関するパブリックコメント
+>[nishio https://x.com/nishio/status/1796370976730722377] 文化庁が収集したAIと著作権に関するパブリックコメントから2013人分、5957件の意見を抽出し、AI([Talk to the City])で分析可視化しました
+> [https://pbs.twimg.com/media/GO39erpaEAAGVXM?format=jpg&name=medium#.png]
+
+>[nishio https://x.com/nishio/status/1796371283976097831] ここで右上の国旗をクリックすると言語が切り替えられます。「全画面地図を開く」で拡大表示
+> https://nishio.github.io/tttc_aipubcom_japan/
+
+>[nishio https://x.com/nishio/status/1796384519077150914] Talk to the CityはAI Objectives Instituteが開発しているOSSです
+> 
+> Audrey TangがPlurality Seoulでも紹介しています
+
+>[nishio https://x.com/nishio/status/1796394634446586276] Audrey TangとGlen Weylが最近出した書籍「⿻數位Plurality: The Future of Collaborative Technology and Democracy」#pluralitybook でも紹介されているブロードリスニングの実現例です。つまり人々に広く情報を伝える"ブロードキャスティング"だけではなく、人々から情報を集めることが大事
+
+>[nishio https://x.com/nishio/status/1796395791596355715] マスコミは「マス *コミュニケーション*」を名乗っている割に、しばしば一方的な「ブロードキャスティング」だけをして、逆方向の「[ブロードリスニング]」が疎かになりがち。コミュニケーションが成立するには話すだけでなく聞くことが必要なのです。AI(LLM)技術はこれを支援できる。
+
+>[takahiroanno https://x.com/takahiroanno/status/1796370976730722377] LLMによるブロードリスニング、大量のテキストから議論の[全体感を抽出]するにはすごくいいので[パブコメの可視化]などの用途ではもっと使われると良いのではないだろうか
+
+>[hal_sk https://x.com/hal_sk/status/1796420245768540544] 2024年度 人工知能学会全国大会「AIとデモクラシー」OS招待講演 での資料です。
+> Pluralityについても紹介しました。⿻
+> 
+> @nishio の Talk to City ネタも盛り込んでいます。
+> [シビックテックによる、社会と民主主義のアップデート]
+[シビックテックによる、社会と民主主義のアップデート - Speaker Deck https://speakerdeck.com/halsk/sibitukutetukuniyoru-she-hui-tomin-zhu-zhu-yi-noatupudeto]
+
+2024-07-21
+>[nishio https://x.com/nishio/status/1814932184735830329] 文化庁が行なったAIと著作権に関するパブコメのデータを元に、AI Objectives InstituteのZoeyがTalk to the CityのTurboバージョンでのレポートを作成してくれました！こちらはクラスターを二段階掘り下げることができるなど、Scatter版にはない機能があります
+	https://talktothecity.org/report/AI%20and%20Copyright%20Public%20Comment%20Analysis%20in%20Japan_large
+	[クラスタを掘り下げる]
+
+[aipubcom]
+
+</Page>
+
+
+
+<Page title="シビックテックによる、社会と民主主義のアップデート" url="https://scrapbox.io/nishio/シビックテックによる、社会と民主主義のアップデート" updated="2024-07-01T06:07:03.804Z" created="2024-05-31T11:40:46.332Z" type="1hopLink">
+シビックテックによる、社会と民主主義のアップデート
+2024-05-31
+>[hal_sk https://x.com/hal_sk/status/1796420245768540544] 2024年度 人工知能学会全国大会「AIとデモクラシー」OS招待講演 での資料です。
+> [Plurality]についても紹介しました。[⿻]
+> @nishio の [Talk to the City] ネタも盛り込んでいます。
+> [シビックテック]による、[社会と民主主義のアップデート]
+[シビックテックによる、社会と民主主義のアップデート - Speaker Deck https://speakerdeck.com/halsk/sibitukutetukuniyoru-she-hui-tomin-zhu-zhu-yi-noatupudeto]
+[https://gyazo.com/6ba0de3971710aa53717ccf0cee66be9]
+
+
+[2024年度 人工知能学会全国大会（第38回）/セッション一覧 https://confit.atlas.jp/guide/event/jsai2024/sessions/classlist/0408]
+オーガナイズドセッション » OS-8 [AIとデモクラシー]
+[関 治之] 基調講演
+
+[デジタル公共財]
+
+</Page>
+
+
+
+<Page title="思考の結節点2024-05-23" url="https://scrapbox.io/nishio/思考の結節点2024-05-23" updated="2024-05-31T11:45:22.466Z" created="2024-05-23T13:15:02.669Z" type="1hopLink">
+思考の結節点2024-05-23
+[参加型予算編成の方が参加型政策立案よりやりやすい]
+
+[インターネットと選挙]
+
+[Talk to the City]
+	[/tkgshn/Talk to the City]
+	[/tkgshn/台湾の同性婚に関する議論をTalk to the Cityでレポート化してみる]
+
+[Deger Turan]
+
+[SayIt]
+
+[都知事選xデジタル民主主義]
+
+</Page>
+
+
+
+<Page title="ブロードリスニングの「あの図」" url="https://scrapbox.io/nishio/ブロードリスニングの「あの図」" updated="2025-11-18T04:22:19.105Z" created="2025-01-31T07:28:10.603Z" type="1hopLink">
+ブロードリスニングの「あの図」
+[安野の都知事選2024マニフェストのブロードリスニングの図]
+[https://gyazo.com/d141c52d53b650c677266b0626eb8160]
+from [安野 貴博]の[都知事選2024]でのマニフェスト
+	[Google Slide https://docs.google.com/presentation/d/1kE_W3NpvIODglaN1OrKKxmq-rNMu69Vnh7M9hhSpFwU/preview?slide=id.g274ffc7e6e4_1750_3430]
+元々は2023年「[主観か客観かではなく、一人の主観から大勢の主観へ]」
+	変遷の過程は「[ブロードリスニングの「あの図」勉強会]」で解説した
+
+</Page>
+
+
+
+<Page title="Talk to the City" url="https://scrapbox.io/nishio/Talk_to_the_City" updated="2025-11-14T07:07:45.992Z" created="2024-02-09T13:07:08.297Z" type="1hopLink">
+Talk to the City
+[nihia.icon][nishio.icon]「Talk to the City」は、[AI Objectives Institute] (AOI)が開発したオープンソースの分析ツールです。このツールは、集団的な議論や意思決定の改善を目指しており、特に都市などのコミュニティとの対話を促進するために設計されています。
+	[Talk to the City — AI • Objectives • Institute https://ai.objectives.institute/talk-to-the-city]
+
+[** ツールの概要]
+「Talk to the City」は、TwitterのツイートやPolisの結果など、異なるソースからデータを収集し、それを視覚化マップとして提供します。これにより、異なる意見や議論のクラスターを可視化し、対話を促進します 。
+
+[** データのクラスタリング]
+このツールは、[BERTopic]という技術を用いてデータをクラスタリングします。BERTopicは、[HDBSCAN]と[UMAP]を使用して、異なる密度のクラスターを見つけることができます。これにより、データのクラスタリングがより安定し、パラメータの選択に対してもロバストな結果を得ることができます 。
+
+[*** 実験と適用例]
+	AIと著作権: 文化庁が収集したAIと著作権に関するパブリックコメントを「Talk to the City」で分析し、可視化する実験が行われました 。
+		2024年5月にやりました[nishio.icon]
+			[AIと著作権に関するパブリックコメント]
+	[国連IGF京都大会]: 2023年10月 [インターネット・ガバナンス・フォーラム京都２０２３ https://www.soumu.go.jp/igfkyoto2023/]
+		Audrey TangがTalk to the Cityを紹介した
+		[/plurality-japanese/Audrey Tang Remarks in Plurality Seoul]
+			この動画で軽く触れている
+	台湾の同性婚議論: 台湾の同性婚に関する議論を「Talk to the City」でレポート化する試みも行われています 。
+		https://tttc-turbo.web.app/report/taiwan-zh
+	[東京都知事選挙2024]
+		[安野たかひろ]
+	[日テレNEWS×2024衆院選×ブロードリスニング]
+
+
+>[anderssandberg https://x.com/anderssandberg/status/1849570772869656662] Talk to the City originally was conceived of by [Peter Eckersley] in a discussion we had about using AI to elicit preferences from large populations. I am happy to see what it has grown up into.
+> 「Talk to the City」はもともと、ピーター・エッカーズリーが、AIを使用して大勢の人々から選好を引き出すことについての議論で考案しました。それが何に成長したのかを見るのがうれしいです。
+> >[nishio https://x.com/nishio/status/1846185175518269742] Talk to the City was used in a special program by Nippon TV regarding an upcoming election, where live questions were asked to incumbent politicians.
+> 「トーク・トゥ・ザ・シティ」は、日本テレビが控えた選挙に関する特別番組で、現職の政治家に生々しい質問を投げかける番組で使われた。
+> [https://pbs.twimg.com/media/GZ726bAbAAApHYW?format=jpg&name=medium#.png]
+[Anders Sandberg - Wikipedia https://en.wikipedia.org/wiki/Anders_Sandberg]
+
+
+
+[ブロードリスニング]
+[Polis 2.0]
+</Page>
+
+
+
+<Page title="11万人の意見クラスター分析" url="https://scrapbox.io/nishio/11万人の意見クラスター分析" updated="2024-10-18T05:22:38.160Z" created="2024-07-21T08:22:53.572Z" type="1hopLink">
+11万人の意見クラスター分析
+2024-05-14
+	[JAPAN CHOICE]の[2022参院選 投票ナビ https://japanchoice.jp/vote-navi/]から11万人分の匿名化されたデータを提供いただき、クラスター分析しました。
+	14件の択一質問をone-hot encodingして11万x74次元の[投票行列]にして、[Polis]のアルゴリズムで[Polis的分析]し、5つのクラスターに分割して、クラスターの解説をGPT4に作成させた
+
+[https://gyazo.com/f1e4df47808c3db06875529eae6bd8e5]
+[gpt.icon]以下は、日本の政治的質問に対する異なるグループの反応に基づいて、適切なグループ名です：
+	グループ0: 進歩的改革派
+		このグループは集団的自衛権を含む安全保障法制に強く反対し、アベノミクスを評価しない立場を取り、原子力発電からの即時脱却を支持します。また、沖縄の米軍基地の名護市辺野古への移設に反対し、憲法9条の改正にも反対しています。これらの立場は、憲法への忠実さを重視し、軍事および核政策に慎重な進歩的で改革的なアプローチを示しています。
+	グループ1: 保守的守護者
+		このグループのメンバーは一般的に、日本の防衛能力を強化する安全保障法制を支持し、アベノミクスを評価し、沖縄の米軍基地の移設を支持し、自衛隊を明記する憲法改正を支持します。また、カジノを含む観光政策を推進することも支持しており、保守的で防衛志向が強く、経済成長を重視する姿勢を示しています。
+	グループ2: 慎重な穏健派
+		このグループはアベノミクスや安全保障法制に関してはグループ1に比べて支持がやや控えめであり、カジノや基地移設のような取り組みを支持しつつも、増税のような財政政策に慎重な立場を示しています。潜在的な利益と社会的影響を天秤にかけるバランスの取れた見解を持っています。
+	グループ3: 無関心な懐疑派
+		核電政策に関する中立的な反応が目立ち、大きな変化や強い意見に対しても積極的ではないため、主要な問題に対して懐疑的または決定を下すのが難しいようです。これは、無関心または関与が低い態度を反映している可能性があります。
+	グループ4: 批判的な観察者
+		このグループはアベノミクスや安全保障法制のような現行の政策に対して非常に批判的であり、米軍基地の移設にも抵抗しています。主要な経済および防衛政策に対する批判的な姿勢と、政府行動に対する深い観察と懐疑を示していることが窺えます。
+
+これらのラベルは、日本の重要な政策質問に対する投票パターンと反応に基づいて、各グループの一般的な傾向と感情を捉えることを目的としています。
+
+[投票ナビ]
+[AIによるクラスタ解説]
+分野ごとの質問が混在しているから、分けた方が良いように思った
+	→[世論地図]
+
+</Page>
+
+
+
+<Page title="関 治之" url="https://scrapbox.io/nishio/関_治之" updated="2026-01-30T13:08:15.052Z" created="2024-05-09T14:05:06.618Z" type="1hopLink">
+関 治之
+[/halsk/hal_sk]
+ [Code for Japan] Founder
+ [デジタル庁] プロジェクトマネージャー
+ [/mitou-meikan/関 治之]
+
+[halsk]
+[hal sk]
+[Hal Seki]
+
+</Page>
+
+
+
+<Page title="Broad listening in practice" url="https://scrapbox.io/nishio/Broad_listening_in_practice" updated="2025-09-06T05:47:33.901Z" created="2024-07-18T17:56:02.974Z" type="1hopLink">
+Broad listening in practice
+[Funding the Commons Tokyo 2024]における[安野たかひろ]と[Audrey Tang]の対談
+	[FtCTokyo Day2]
+
+[https://youtu.be/k6bZ2qayBQA]
+
+[gpt.icon](YouTube文字起こしからの全訳)
+こんにちは、セッションに参加いただきありがとうございます。私の名前は安野貴博です。今年の東京都知事選挙に出馬しました。本日は、(ブロードリスニング、広範囲の傾聴)の実践について、私とAudrey Tangでお話しします。最初に、5～10分ほどのプレゼンテーションを行い、その中で今年の選挙について、またその選挙でどのようにテクノロジーを活用して革新を図ったかをご紹介します。その後、Audrey Tangとのディスカッションに移りたいと思います。プレゼン中でも、質問があればいつでも手を挙げて中断していただいて構いません。
+
+まず簡単に自己紹介をさせていただきます。私の名前は安野貴博です。現在、私は3つの仕事をしています。1つ目はソフトウェアエンジニア、2つ目は起業家で、これまでに2つのスタートアップを設立しました。そして3つ目はSF作家です。これまでに、早川書房から2冊の本を出版しています。この3つの仕事には共通点があり、それはテクノロジーを使って未来を創造することです。
+
+次に、今年の選挙についてお話しします。この選挙には、2024年の東京都知事選挙で56人の候補者が立候補しました。非常に多くの候補者がいる中で、私は6月初旬に記者会見を開きましたが、最初のメディアの反応は非常に冷ややかなものでした。というのも、私は著名人ではなく、テクノロジー業界では知られていましたが、一般の人々には全く知られていなかったからです。メディアの反応は、「誰このオタク？」や「その長髪は何なんだ？」というものでした。一部のテレビプロデューサーが私の妻に直接言ったこともあります。
+
+しかし結果的に、私は15万票を獲得しました。著名人ではないにもかかわらず、多くの票を得られたことは非常にありがたかったです。この選挙の勝者はK氏で、彼女はこのイベントのシークレットゲストでもあった有名な政治家です。しかし、私は無名で、政治経験もなく、組織もない中でこの結果を出しました。このスコアは、無経験かつ組織を持たない候補者としては史上最多得票であり、東京都知事選挙の30人以上の候補者がいる選挙の中でも歴史的な記録です。
+
+永田町、つまり日本の「ワシントンDC」は、この結果に非常に驚きました。ここから、私たちが何をしたのか、どのようにしてこの結果を達成したのかを説明します。
+
+私たちが取り組んだ主要なコンセプトは、スライドにもある「ブロードリスニング（広範囲の傾聴）」です。このスライドは、グラフィックデザイナーである西尾さんが作成したものです。彼は非常に才能のあるソフトウェアエンジニアでもありますが、メディア関係者の間でもこのスライドが非常に好評でした。このアイデアは、過去においては技術を使って多くの人に自分の考えを伝えることが可能になった、つまり「放送（Broadcasting）」が主流だったというものです。しかし、インターネットやスマートフォンが普及した後、人々は逆にそれぞれが誰かに向けて自分の考えを発信するようになりました。
+
+この状況には課題があります。それは、多くの人々の意見を全て理解し、把握することが難しいという点です。しかし、2020年代に入り、ついにこれらの大量の情報を要約するための技術が登場しました。例えば、大規模言語モデル（LLM：Large Language Models）は自然言語を処理できるため、大量の情報を効率的に処理することが可能です。
+
+これまでの選挙では、候補者が一方的に自分の考えを発信する「一方向のコミュニケーション」が主流でした。しかし、私たちは「ブロードリスニング」の技術を活用することで、これを「双方向のコミュニケーション」に変えました。
+
+次に、この選挙の最初のシステムアーキテクチャについて説明します。私は選挙前にAudrey Tangにこのシステムのシンプルなバージョンを見せ、いくつかのアドバイスをもらいました。このシステムは、大きく3つの部分で構成されています。「傾聴（Listening）」、「ブラッシュアップ（Brush Up）」、「配信（Delivery）」です。
+	[nishio.icon]元の日本語だと「きく、みがく、つたえる」だったと思うので以下ではそうしました
+
+第一の「きく」部分では、「Talk to the City」というツールを使用しました。このツールはアメリカで開発されたもので、自然言語で書かれたコメントを処理し、可視化する機能があります。私たちはX（旧Twitter）やYouTubeなどからデータを収集し、このツールを通じて市民の意見を大局的に把握しました。このツールを使うことで、選挙に関連する膨大なコメントの流れを一目で把握できるようになりました。
+
+次に第二の「みがく」部分では、GitHubを利用して政策について議論を行うウェブフォーラムを設置しました。GitHubはカスタマイズ性が高いため、GitHub Actionsを活用してAIを導入し、議論を円滑に進める仕組みを構築しました。このAIは、ヘイトスピーチや不適切な画像を検出して排除するほか、重複する課題を検出して通知するなど、議論を効率的に進めるための機能を提供しました。
+
+このプロセスにより、課題が明確化され、より良い政策案を作成することができました。選挙キャンペーンの期間中に、私たちは206件の課題を議論し、74件のプルリクエストがマージされました。このような迅速な政策の更新は、これまでの選挙では見られないものでした。
+
+第三の「つたえる」部分では、政策を市民に届ける方法として、最新の政策を常に公開できるようにCI/CD（継続的インテグレーション/継続的デリバリー）技術を活用しました。これにより、ウェブサイトがリアルタイムで更新される仕組みを構築しました。
+
+さらに、AIを活用した動画配信技術も導入しました。具体的には、YouTubeライブ上でAIアバターが政策を説明し、視聴者のコメントにリアルタイムで応答する形式を採用しました。また、YouTubeライブを利用しない人々にもアクセスできるように、Twilioを活用して電話でAIアバターに質問できる仕組みも構築しました。
+
+この結果、AIアバター「AIあんの」は、YouTubeライブで7400件、電話で100件、合計7500件以上の質問に応答しました。これは、物理的な安野自身では到底対応できない規模です。この仕組みにより、市民との双方向コミュニケーションを実現し、選挙キャンペーンにおける新しい形の民主主義を模索しました。
+
+そして最終的に、私たちはこのシステム全体をオープンソース化し、知見を公開することを決定しました。この試みを通じて、未来のすべての候補者がこの仕組みを利用できるようにすることを目指しました。
+
+この試みの出発点となったのは、「Plurality」という書籍でした。この本は私にとって非常に刺激的な内容で、ブロードリスニングというコンセプトを理解し、実践に活かそうと決意するきっかけになりました。Audrey Tangさんと翻訳に携わった西尾さんを通じてこの本を知ることができたことに感謝しています。
+
+以上が私のプレゼンテーションの内容です。ここからは、Audreyさんにいくつか質問を投げかけ、さらに議論を深めていきたいと思います。
+
+---
+
+安野: 最初の質問です。この試みをご覧になって、どのように評価されますか？
+
+Audrey:
+これは素晴らしい概念実証だと思います。従来のやり方では、リアルタイムの民主的な意見収集を実現するために多くのスタッフが必要でした。しかし、今回の試みでは、少人数のチームが明確なプロセスを持つことで、言語モデルやAIを活用し、モデレーター、ファシリテーター、サマライザーといった役割を代替しました。これにより、従来必要だった大規模な人手を大幅に削減しています。
+
+特に重要なのは、AIを用いて市民の声を迅速かつ正確に反映させるシステムの構築です。もしこれが数ヶ月ではなく数年前から始まっていれば、より強力な政治的な動きになっていたかもしれません。このような試みは、始まりに過ぎませんが、非常に大きな可能性を秘めていると思います。
+
+安野:
+ありがとうございます。この試みについて「これはもはやSFではない」とおっしゃいましたが、その点を少し詳しく伺いたいです。
+
+Audrey:
+その通りです。これはもはや未来の話ではなく、現実の技術で可能なことです。SF作家としてのあなたの役割は、隣接可能な未来を示すこと、つまり少し方向を変えれば到達できる近未来を人々に示すことだと思います。証明可能な概念を提示することで、人々が「これが実現可能だ」と認識できるようになることが重要です。この試みは、そのための重要な一歩だったと思います。
+
+安野:
+ありがとうございます。次の質問に移ります。このシステムには限界もあると感じていますが、現在のデジタル民主主義の制限について、どのようにお考えですか？
+
+Audrey:
+これは少し話しましたが、多くの人々がまだこのシステムに慣れていないことが大きな制限です。例えば、GitHubを使用する場合、「GitHubって何？なぜこれを使わなければならないの？」という反応が多いですよね。このような技術的なハードルが存在しています。
+
+また、現在のシステムでは主に1対1のやり取り、つまり候補者と市民の対話が中心です。しかし、政治的な動員の現場では、少人数のグループでの対話が非常に重要です。現在の技術では、チャットボットやAIとの1対1の会話は可能ですが、少人数のグループでのリアルタイムの議論を支援する仕組みがまだ十分ではありません。
+
+台湾での試みとして、10人程度の人々をビデオチャットに招待し、リアルタイムで議論を行いました。この方法では、他の人々の視点を聞いて新しいアイデアを生み出しやすくなり、質の高い議論が可能になります。現行の1対1のシステムではこのような相互作用が難しいため、これが現時点での主な限界だと思います。
+
+安野:
+なるほど。10人程度のグループが良いとのことですが、その理由を教えていただけますか？
+
+Audrey:
+台湾での実例では、ランダムに選んだ電話番号にSMSを送り、450人を抽出して45部屋に分け、各部屋10人で議論を行いました。このように構成されたグループは、統計的に性別や地域、職業のバランスを再現する「ミニパブリック」として機能します。
+
+10人程度のグループでは、議論が非常に活発になりやすいです。他の参加者の意見を聞いて新しい視点を得ることができるので、質の高い対話が可能になります。1対1では重複した意見が多くなりがちですが、グループ内では自然に意見が補完的になります。これが少人数グループの利点です。
+
+安野:
+とても興味深いですね。次の質問に移ります。技術的な側面で言えば、まだ完璧な解決策には達していないと感じています。デジタル民主主義を実現するために、現在どのような技術が不足しているとお考えですか？
+
+Audrey:
+現在、技術的なパーツ自体は多くが既に存在していますが、それらが一体化されておらず、誰もが簡単に利用できる形にはなっていないことが課題です。例えば、「Talk to the City」を使うにはカスタマイズが必要で、Gitの大規模ファイルシステム(Git LFS)を調整するなどの技術的な負担があります。このようなセットアップの困難さが、デジタル民主主義を普及させる上でのハードルになっています。
+
+しかし、今後1〜2年でAIがソフトウェアエンジニアリングに与える影響によって、多くの初期設定の課題が解消され、DIYでシステムを構築することが容易になると考えています。これにより、学校や職場、個人のレベルでもこうしたシステムを試すことが可能になり、真にデジタル民主主義が実現すると思います。それが可能になるまでは、現在のように政府や技術に詳しい候補者が中心となる「適応型行政」の段階に留まるでしょう。
+
+安野:
+なるほど、技術の普及が鍵ということですね。では、次の質問に移ります。この試みを通じて、若い世代やこれまで政治に関心がなかった人々の政治参加をどのように促進できると考えていますか？
+
+Audrey:
+これは非常に重要なポイントです。現在、多くの人々が政治に関心を持たず、特に若い世代は政治の課題を自分ごととして捉えにくい状況にあります。しかし、選挙は注目を集める機会として非常に有効です。通常、政治に関心がない人でも、選挙を通じて一時的に政治に注目を向けることがあります。この「注目」を活用することが、デジタル民主主義を進めるための一つの鍵だと思います。
+
+例えば、今回のようにデジタル技術を用いて新しい形の選挙キャンペーンを実現することで、より多くの人々が政治に関わるきっかけを作ることができます。そして、この方法を東京だけでなく、地方選挙など他のレベルでも広げていくことで、さらに多くの人々が参加するようになるでしょう。
+
+安野:
+確かに、選挙は注目を集める場ですね。その結果として、より多くの人々が政治に関心を持つ可能性がありますね。では、今回の試みを経て、次の選挙やプロジェクトでどのような改善や拡大を計画されていますか？
+
+Audrey:
+今回の試みは非常に良い「デモンストレーション」でした。最初のデモが成功すると、次回以降の実施がコスト的にも簡単になります。そしてより多くの人々が、この方法を新しい動員ツールとして活用するようになるでしょう。
+
+たとえば、経済的な面からも、この方法は非常に効率的な手段です。新しい技術を試すこと自体が動機付けになるだけでなく、より多くの人々にメッセージを届けるコスト効果の高い方法でもあります。この経済的な観点が、今後数年間でさらに多くの人々がデジタル民主主義を試みる原動力になると考えています。
+
+安野:
+非常に実用的な視点ですね。デジタル民主主義が普及することで、将来的にどのような社会的影響を与えるとお考えですか？
+
+Audrey:
+デジタル民主主義が普及すると、若い世代を含めた市民が「抗議者」ではなく「提案者」として認識されるようになると思います。抗議は現状への反発ですが、提案は新しい可能性を示すものです。この違いは大きいです。
+
+たとえば、台湾では私が若い頃、若い世代が内閣の「逆メンター」として参加する仕組みがありました。彼らが新しい可能性を示すことで、従来の内閣の議論に多様な視点が加わりました。このように、若い世代が単なる抗議者ではなく、未来を示す「デモンストレーター」として認識されることが、デジタル民主主義の最大の可能性だと思います。
+	[nishio.icon]関連: [抗議とデモの違い]
+
+安野:
+それは非常に興味深い視点ですね。デジタル民主主義の取り組みをさらに広げるためには、何が重要だとお考えですか？
+
+Audrey:
+デジタル民主主義をさらに広げるためには、システムが簡単に使えることが非常に重要です。現在は技術的な知識や準備が必要で、多くの人が利用を躊躇してしまう状態です。しかし、技術が進歩し、セットアップがより簡単になれば、学校や職場、コミュニティなど、あらゆる場面でこの仕組みを試すことが可能になります。
+
+また、重要なのは、このシステムが単なる政府主導のプロジェクトに留まらず、誰でも使えるツールとして普及することです。そのためには、既存のツールを統合し、ユーザーが技術的な負担を感じることなく活用できる環境を整えることが必要です。これが実現すれば、デジタル民主主義は政府や候補者だけでなく、市民自身によって広がる「真の民主主義」となるでしょう。
+
+安野:
+確かに、技術の簡便化が普及の鍵ですね。では、最後の質問です。このようなデジタル民主主義の取り組みが、日本の政治や社会にどのような影響を与えるとお考えですか？
+
+Audrey:
+日本では、若い世代が政治に関心を持つきっかけとして、この取り組みが重要な役割を果たすと思います。特に、従来の政治に対する不信感や無関心を乗り越え、新しい可能性を示す「提案型」の政治文化が生まれることが期待されます。
+
+また、こうしたデジタル民主主義の手法は、地方自治体や小規模なコミュニティでも応用可能です。大規模な選挙だけでなく、地域レベルでの意思決定や政策策定に取り入れることで、より多くの市民が参加しやすくなります。そして、このような取り組みが広がれば、政治に対する市民の信頼感や関心が高まり、より健全な民主主義が実現するでしょう。
+
+安野:
+素晴らしいお答えをありがとうございます。本日はお時間をいただき、大変有意義なディスカッションができました。これからもデジタル民主主義を進めていく上で、ぜひご協力をお願いいたします。
+
+Audrey:
+こちらこそ、素晴らしい取り組みを実現されたことに敬意を表します。これからも引き続きお互いに学び合い、良い方向に進めていきましょう。
+
+[nishio.icon]翻訳文はテキストで見る限り自然だが、動画と見比べてない、会場からの質疑があった気がするか安野さんの質問として認識されてしまってるのかな、後で確認する
+---
+
+>[nishio https://x.com/nishio/status/1818130802976465055] We @pluralitytokyo just published the video of the session "Broad Listening in Practice" of @audreyt and @takahiroanno in Funding the Commons Tokyo 2024 #FtCTokyo #Plurality
+> https://youtu.be/k6bZ2qayBQA
+> Created by @leonelkigopfert
+
+>[nishio https://x.com/nishio/status/1818129845148385378] Funding the Commonsでの #安野たかひろ @takahiroanno さんと オードリー・タン @audreyt さんの対談動画を公開しました。
+
+>[yaephone https://x.com/yaephone/status/1818834385623195988] オードリー・タンさんと都知事選5位の安野貴博さんさんによるトークセッション！
+> 28分あたりからオードリーさんによる今回の都知事選の所感も。
+> 日本と台湾モデルのデジタル民主主義の交流が本格的にスタートしそうで胸熱すぎます…！
+> https://youtu.be/k6bZ2qayBQA
+> [https://pbs.twimg.com/media/GT3MO3FXAAAh3it?format=jpg&name=medium#.png]
+
+
+
+from [日記2024-07-12]
+anno+audrey
+>[takahiroanno https://x.com/takahiroanno/status/1811708071023911254] 7/24-25に行われるFunding the Commons Tokyoにてオードリー・タン氏とお話します！
+> [https://gyazo.com/c523cd124f392c5506d91f457bf64dbb]
+> >[0xtkgshn https://x.com/0xtkgshn/status/1811640870216913069] 
+100万viewを超えてた、すごい
+
+[正の外部性]
+	[ネットワーク財]
+		[つなげると価値が生まれる]
+		[注目]を得ることができれば、つながることに価値があるからみんなつながろうとしてどんどん大きくなる
+			[転がる雪玉]
+				[拡大再生産]
+					[社会資本での拡大再生産]
+
+
+2024-07-25
+[https://gyazo.com/1aa79b0427a0199f1b8d9adbd2cb1ff4]
+
+[https://gyazo.com/9c1b0be11ff79791336b422cba73d2a6]
+
+
+
+[Plurality in Practice❌]
+[安野貴博]
+
+</Page>
+
+
+
+<Page title="Plurality Tokyo 2023" url="https://scrapbox.io/nishio/Plurality_Tokyo_2023" updated="2025-04-18T11:37:47.296Z" created="2023-04-12T16:11:38.691Z" type="1hopLink">
+Plurality Tokyo 2023
+2023-04-12 [Plurality Tokyo]当日のメモ
+
+[/plurality-tokyo/Keynote speech]
+
+[** Opening Remark]
+[/mitou-meikan/関 治之]
+>[https://twitter.com/nishio/status/1646031290364497920 @nishio]: #PluralityTokyo
+>[https://pbs.twimg.com/media/Ftfgu9ZaEAAcitT.jpg]
+[Think Together, Create Together.]
+	[https://gyazo.com/da4c23d9b619e1ecc13b07e728777e91]
+	[Code for Japan]
+
+[/mitou-meikan/新美 陸人]
+	[https://gyazo.com/172363dff5b6fb2b5e6bccae5d96172e]
+
+[Proof of Participation NFT] 参加証明NFT取得体験記
+	[[参加証明NFT取得体験記.icon]]
+	[参加証明NFT]
+
+[https://www.youtube.com/watch?v=Ma7E6T16n5Y]
+
+
+[*** Keynote]
+[/plurality-tokyo/Keynote speech]
+
+[** [Audrey Tang]]
+	[Plurality Tokyo Keynote from Audrey Tang]で全訳した[nishio.icon]
+	https://www.youtube.com/live/Ma7E6T16n5Y?feature=share&t=779
+	[Plurality Poem]
+	[collective diversity]
+ >[https://twitter.com/rickshinmi/status/1646035699970473984?s=20 @rickshinmi]: #PluralityTokyo
+ >オードリータン氏のKeynote！！げきあつ〜！！！
+ >[https://pbs.twimg.com/media/FtfkvWEaUAAEjxh.jpg]
+	このトークを聞いてて、なるほどベクトルだなーと感じた
+	　[https://gyazo.com/4f7e0f1e027f7b57fd29d903447b1495]
+
+
+[** [Kevin Owocki]]
+	https://www.youtube.com/live/Ma7E6T16n5Y?feature=share&t=1254
+	[Gitcoin]
+	[Quadratic Lands]
+
+[** [Joi Ito]]
+　新しい環境に民主主義を適応させる
+　　[変化したものは同じものか]
+　クリプトは新しいレイヤー
+　複式簿記の発明
+　　ギャンブル→確率論
+　　保険
+　　などなどファイナンスの発展をもたらした
+　　　[https://gyazo.com/32fc1b5d9570d1cbd50b02b0208a08f9]
+　human coodinationのプロトコルとしてのEth
+　Programmable ...
+　	Business
+　	Government
+　	Society
+　　これを聞いててプログラマブルであるということは明確に言語化されるということなのだなと思った[nishio.icon]
+　AIとWeb3によって
+　　transparency
+　　accountability
+　　interpretability
+　　「明確に言語化される」ことによって透明性と説明責任と解釈容易性がもたらされる[nishio.icon]
+　　 Web3に関してはそうだと思うけどAIに関してはどうかな？逆にブラックボックス化してるところがあると思うけど…
+	DAO
+	New Gonernance Tool
+	Resisting Reduction
+		Henkaku Community
+		Membership NFT
+		購入できない
+		[金で買えないトークン]
+		　[現金は弱い資本]
+	[Ph.D. is verified credential]
+	　自分が大学で取得した博士号を売って儲けようという人はいない
+	　　確かに！[nishio.icon]
+	　　　[NFT]を売って儲けようとしてる人ばかり目につくせいで売るものという思い込みが強くなっていた
+	　　　NFTは[digital identifier]にすぎないのだから、それをどう使うかはオープンということか
+	　　　実際、移転不能な[SoulBound Token]なんてのもあるわけだし、[Proof of Participation NFT]も売るものではないな
+
+	[Leverage Points: Places to Intervene in a System]
+	[簿記と会計の再発明 (確実性を求めて)]
+	[/natsuozawa/Joi Itoさん]
+
+>[https://twitter.com/nishio/status/1646047120078831616?s=20 @nishio]: 唐突にトークンもらったww 名刺もらうより面白いな、自分も作れるのかな？？
+>[https://gyazo.com/620306983594778a2cf5e6c7871819f8]
+	>[https://twitter.com/nishio/status/1646053988771721216?s=20 @nishio]: なるほど、いつ話を聞いたのかがトークンになるんだ
+ >[https://pbs.twimg.com/media/Ftf1X9zagAA8fzB.jpg]
+ [参加証明NFT]
+	ここでコレクションを見せられるらしい
+		https://callback.is/address/0x25819D1883F92a8085CEAF89C23C48baA3e249E1
+　QRコードを読むとアプリのインストールを求められた
+　　https://callback.is
+　　[Callback.is]
+	[Joi POM]
+
+>[https://twitter.com/Fumi/status/1646057819475681280?s=20 @Fumi]: At #PluralityTokyo today.
+>welcome by @hal_sk keynotes by @audreyt @owocki and @Joi
+>[https://pbs.twimg.com/media/Ftf41g0aIAEChod.jpg][https://pbs.twimg.com/media/Ftf42E0akAA-1yP.jpg][https://pbs.twimg.com/media/Ftf42fEaAAIAmQW.jpg][https://pbs.twimg.com/media/Ftf43ApaAAAF81U.jpg]
+
+[*** Panel 1]
+
+>[https://twitter.com/ntszw/status/1646054371334160384?s=20 @ntszw]: 台湾のデジタル省、Plurality課があるのか、、、
+>多元宇宙課
+>[https://pbs.twimg.com/media/Ftf1qwnacAc9yIV.jpg]
+	>[https://twitter.com/mashbean/status/1646158235269836807?s=20 @mashbean]: yeah, I really come from 多元宇宙 @TAIWANmoda
+ >[https://pbs.twimg.com/media/Ftf1qwnacAc9yIV.jpg]
+
+>[https://twitter.com/nishio/status/1646066303101435905?s=20 @nishio]: #PluralityTokyo
+>[https://pbs.twimg.com/media/FtgAkvIagAAWjMY.jpg]
+
+>[https://twitter.com/syora_btc/status/1646070366408945665?s=20 @syora_btc]: アーカイブって残りますか？
+	>[https://twitter.com/hal_sk/status/1646071121064886272?s=20 @hal_sk]: アーカイブ残す予定です
+	 >[https://twitter.com/nishio/status/1646072759238414336?s=20 @nishio]: #PluralityTokyo I'm happy to hear that we can see today’s discussion again in archives. I have handicap in real-time English understanding :p
+
+>[https://twitter.com/hal_sk/status/1646072350662885376?s=20 @hal_sk]: Scrapboxがガシガシ更新されてるのが嬉しい。見ながら聞いてると、コンテキスト見失ってもついていけるのが良いね👍
+>https://t.co/BpeR04GCTI
+	>[https://twitter.com/nishio/status/1646073758237724672?s=20 @nishio]: #PluralityTokyo Slow non-real-time communication on Scrapbox should be great help for community of diverted language speaker
+ 	>[https://twitter.com/ntszw/status/1646074476449374209?s=20 @ntszw]: @nishio It would also be great for online participants 👍
+
+>[https://twitter.com/extreme_stretch/status/1646081386284199936?s=20 @extreme_stretch]: #PluralityTokyo に参加して、久しぶりに[梅棹 忠夫]を読み返したくなった。『[文明の生態史観序説]』とか。
+	>[https://twitter.com/nishio_en/status/1646085452011798528?s=20 @nishio_en]: And also I remembered Kawakita Jiro, as his goal “[衆知を集める]” is collect intelligence from view from 360 degrees diverted viewpoints. It is definitely related to plurality. #PluralityTokyo
+
+[*** Panel 2]
+
+>[nishio_en https://twitter.com/nishio_en/status/1646082839820263424/photo/1] “[Small closed communities]” enlightened me #PluralityTokyo
+> [https://pbs.twimg.com/media/FtgPgooaQAEgb0y?format=jpg&name=large#.png]
+　[小さな閉じたコミュニティ]
+　　過去に書いたいくつもの記事と文脈がつながった
+	　　[小さなコミュニティ]
+　　	[ゲートは隠すべき]
+　　正直ここがつながるとは思ってなかった！
+	>[nishio_en https://twitter.com/nishio_en/status/1646083161884086273] Btw l posted “[freedom of curiosity]”
+	　密度の低い英語では字数制限で書ききれなかったけど[好奇心追求の自由]
+	　　みんな自分の好奇心に基づいて好き勝手なことをやっている
+	　　好奇心が人それぞれ異なるから、人それぞれ異なった視点や知識を持つようになる
+	　　↔逆のパターン
+	　　　例えば「大学に入らないといい仕事に就けないから、みんなこの教科書に書かれてることを高速に間違いなく実行できるように訓練しよう」
+
+
+>[https://twitter.com/mindlikeplants/status/1646095417246089216?s=20 @mindlikeplants]: #PluralityTokyo
+>東洋的価値観を実装できるような
+>「デジタル技術」×「社会システム」ってなんでしょう。ブロックチェーンを応用するのか、他の技術なのか。
+>一般人の主権意識って、別に東洋的には必要とされてなくないですか？
+>Pluralityには、東洋的価値観を実装できる可能性がある
+	>[https://twitter.com/nishio_en/status/1646100843559788544?s=20 @nishio_en]: Referring the relationship between East Asian culture and plurality. Interesting viewpoints. I feel the Confucian worldview seems to reinforce hierarchical organizational structures, while the Buddhist worldview encourages pluralistic organization #PluralityTokyo
+
+>[https://twitter.com/mindlikeplants/status/1646093200971665409?s=20 @mindlikeplants]: リアルでほぼ誰とも喋ってないですが、まぁ楽しいし多少貢献できている可能性もあるので、これもpluralityだなと思ってます。
+	>[https://twitter.com/nishio_en/status/1646095079021645824?s=20 @nishio_en]: Verbal communication is just a method in many communication methods. He said he didn’t talk much, however I think he did communication beyond time. Nice contribution, isn’t it? #PluralityTokyo
+
+>[fpocket https://twitter.com/fpocket/status/1645273974732099586/photo/1] #PluralityTokyo のパネルディスカッションでも、PluralityとDiversityの違いについて質問が出ていました。やや専門的になりますが、圏論的に整理すると分かり易いのではないかと思います。Pluralityは、世界の「見え方」は多元的であるが世界は一つで共有されているという構造がある。
+> [https://pbs.twimg.com/media/FtUvgt7aQAA7nFf?format=jpg&name=small#.png] [https://pbs.twimg.com/media/FtUviDracAEVJhR?format=jpg&name=small#.png]
+>田口茂, 西郷甲矢人, "圏論による現象学の深化", 現代思想2020年7月号　特集＝圏論の世界――現代数学の最前線
+	>[fpocket https://twitter.com/fpocket/status/1646085327956873222] そうした構造が、多元的知性の共進化の場になり、人や社会のレジリエンスが向上する。一方で、Diversityはそういう構造には着目していないと見ています。
+		>[fpocket https://twitter.com/fpocket/status/1646086267619397632] Pluralityは、Networks as Processes(圏論的)のパラダイム、Diversityは、Networks as Things(集合論的)のパラダイムの概念と見ることもできると思います。Diversityは状態 に関心があるのに対して、Pluralityはプロセスに関心がある(プロセス中心の)概念とも言えると思います。
+			> [https://pbs.twimg.com/media/FLoMqMQacAQvqJw?format=jpg&name=medium#.png]
+			>Executable Business Process Networkを使用した業務自動化システムというのを開発・運用しているが、「プロセスとしてのネットワーク」の重要性は増してくると思う。
+	>[https://twitter.com/nishio_en/status/1646093947985616896?s=20 @nishio_en]: He said, in Plurality viewpoint, even the views of the world are diverted, the world itself is single. I feel it related to the word in previous panel: the internet is single but it is decentralized. #PluralityTokyo
+
+>[https://twitter.com/mindlikeplants/status/1646087793142276096?s=20 @mindlikeplants]: #PluralityTokyo
+>雑ではありますが、やや抽象的なPluralityの解釈を書いています。
+>Pluralityを[フワフワ]した「アイデア」で捉えるのではなく、始点と終点・向き・長さ・太さ・解像度をもった「ベクトル」と捉えることで議論が進むのではないかという仮説があります。
+>https://t.co/BQUA11FZ4e
+ >[https://twitter.com/mindlikeplants/status/1646088292046352384?s=20 @mindlikeplants]: The hypothesis suggests that viewing Plurality as a "vector" with distinct attributes, rather than a vague "idea," could lead to more productive discussions. #Plurality #VectorThinking
+		>[https://twitter.com/nishio_en/status/1646093709342285826?s=20 @nishio_en]: I also feel that the plurality is vector, in the panel 1. I’ll read the page after the event and think more! #PluralityTokyo
+
+>[mindlikeplants https://twitter.com/mindlikeplants/status/1646095417246089216] #PluralityTokyo 
+> 東洋的価値観を実装できるような
+> 「デジタル技術」×「社会システム」ってなんでしょう。ブロックチェーンを応用するのか、他の技術なのか。
+> 
+> 一般人の主権意識って、別に東洋的には必要とされてなくないですか？
+> Pluralityには、東洋的価値観を実装できる可能性がある
+	>[https://twitter.com/nishio_en/status/1646100843559788544?s=20 @nishio_en]: Referring the relationship between East Asian culture and plurality. Interesting viewpoints. I feel the Confucian worldview seems to reinforce hierarchical organizational structures, while the Buddhist worldview encourages pluralistic organization #PluralityTokyo
+
+>[https://twitter.com/nishio_en/status/1646109650276978689?s=20 @nishio_en]: Moving beyond code-is-law / Sound interesting but, because of my poor English skill I couldn't catch it. #PluralityTokyo
+>[https://pbs.twimg.com/media/FtgoAEOaMAA4-T-.jpg]
+
+[なめ敵会のきっかけ]
+
+>[etokiwa999 https://twitter.com/etokiwa999/status/1646120042168483840] 今日の #PluralityTokyo ぶっちゃけ議論が微妙だったなあ
+> 議論をよくするには
+> ・大きな理想を描く
+> ・定義を明確にする
+> ・過去からの背景確認
+> ・現在の事例を共有
+> ・メリデメを共有
+> ・各業界への影響
+> ・実際の行動方法
+> ・質問を拾う
+> とかが必要なんだけど、結局DAOのイベントになった気がする
+ >[mindlikeplants https://twitter.com/mindlikeplants/status/1646129615164047360] 同意です。特に上2つの
+ > ・大きな理想を描く(ベクトルを最大限伸ばす)
+ > ・定義を明確にする(ベクトルの解像度をあげる)
+ > 
+ > ことがhistorical eventとしては優先度高いアクションだったと思うのですが、弱かった気がしますね。
+ > 
+ > ScrapboxやTwitterなどの非同期コミュだとそれが共通認識になりにくいしなぁ…
+
+
+>[AkioHoshi https://twitter.com/AkioHoshi/status/1646154275268050946] 本日のイベントPlurality Tokyoで5分だけ時間をもらって喋ったのですが、そのときのスライドを公開します。
+> メインは英文ですが、大事な部分は日本語でも解説。
+> Why are we here?
+> 〜Technology, Journalism, Human Rights and Plurality〜
+> https://docs.google.com/presentation/d/e/2PACX-1vT9dJa-PCeGEYnXOh3HL8Plq0_iQvO5fDzV9yM4KJOaO3hb_m9zcdkg7SvWAB_aONi3SLqMf2hFR6LZ/pub?start=false&loop=false&delayms=5000…
+	>[AkioHoshi https://twitter.com/AkioHoshi/status/1646154942019690502] Plurality（複数性）については、台湾デジタル担当大臣オードリー・タンと経済学者グレン・ワイルが本を書いていて、一部が公開されています。
+	> オードリー・タンの言い方では、「デジタルは人と人を結ぶ（機械とではなく）」「Plurality（複数性）は異なる意見の持ち主が協働できる仕組み」です。
+	>[AkioHoshi https://twitter.com/AkioHoshi/status/1646155490127237120] 私の意見では、商業SNSによる人々の心理を付いたアクセス増加戦略が、今や人々を分断し民主主義の脅威となっています。過激な意見、偽情報、ヘイトスピーチがアルゴリズムに拾われて拡散され、熟議を妨げています。
+	> 人々の熟議を機能させる新たなデジタル共有材が必要だと考えています。
+ >[AkioHoshi https://twitter.com/AkioHoshi/status/1646155833275809792] オードリー・タンはhttp://pol.isという意見集約＆可視化のプラットフォームを紹介しています。人々を分断させるのではなく、似た意見、異なる意見を可視化するための仕組みです。
+ > この http://pol.is は今回のPlurality TokyoのUnconferenceでも使われました。
+	>[AkioHoshi https://twitter.com/AkioHoshi/status/1646156357052104704] Pluralityとは、デジタルの力で複数の意見を可視化し、熟議に結びつけ、民主主義を再び機能させるための取り組みです。そのピースとなるのが http://pol.is やQuadratic voteやDIDやSBTなどのデジタルの仕組みです。
+	>[AkioHoshi https://twitter.com/AkioHoshi/status/1646157008633044992] デジタル技術は今、主に民主主義を破壊するために使われています（つまり大規模商業SNSです）。
+	> しかし技術は価値中立。デジタルは民主主義を再び機能させるためにも使えるはずです。
+	> 人々の尊厳と自由を取り戻すためのデジタルがあってもいいのではないでしょうか。
+ >[AkioHoshi https://twitter.com/AkioHoshi/status/1646168580931690496] 余談：
+ > 本日は実は「イーサリアム＆web3界隈のイベント」だったのですが、振り返ると自分のLTにブロックチェーン関連の話が皆無……
+ > 後付けの理由：
+ > 喋る時間が短く、それにイーサリアムやブロックチェーンの成功/失敗に関わらず、デジタル民主主義は継続的に取り組むべき課題だからですね。
+
+
+>[https://twitter.com/noahyeh/status/1646173029431377922?s=20 @noahyeh]: At #PluralityTokyo we intended the impossible task to define #Plurality
+>Challenge accepted, to me Plurality is the necessary humanity of our future society.
+>[多元主義]是未來社會的必要良善。
+>Thx again to @hal_sk @rickshinmi @0xtkgshn Looking forward to see you in Taipei
+>[https://pbs.twimg.com/media/Fthho9FWwAAZIvu.jpg]
+
+>[https://twitter.com/da0_g0v_tw/status/1646173673643032578?s=20 @da0_g0v_tw]: da0 at #PluralityTokyo
+>[https://pbs.twimg.com/media/Fthho9FWwAAZIvu.jpg]
+
+
+</Page>
+
+
+
+<Page title="Plurality本" url="https://scrapbox.io/nishio/Plurality本" updated="2025-02-24T05:05:56.299Z" created="2025-02-24T05:05:27.305Z" type="1hopLink">
+Plurality本
+[Plurality: The Future of Collaborative Technology and Democracy]のこと
+
+</Page>
+
+
+
+<Page title="tkgshn" url="https://scrapbox.io/nishio/tkgshn" updated="2025-02-14T03:27:27.958Z" created="2023-04-24T03:16:01.195Z" type="1hopLink">
+tkgshn
+[https://lh3.googleusercontent.com/a/AEdFTp7z0Qv6a9PBxMpRmYq5RDpPJWe6F-wuDz8eP56BGG4=s96-c#.png]
+[/tkgshn]
+	[/tkgshn/tkgshn（高木俊輔）について]
+		[高木 俊輔]
+
+</Page>
+
+
+
+<Page title="2024" url="https://scrapbox.io/nishio/2024" updated="2025-01-02T05:57:40.377Z" created="2025-01-01T04:34:36.665Z" type="1hopLink">
+2024
+[2024/01]
+[2024/02]
+[2024/03]
+[2024/04]
+[2024/05]
+[2024/06]
+[2024/07]
+[2024/08]
+[2024/09]
+[2024/10]
+[2024/11]
+[2024/12]
+
+[o1 Pro.icon]
+2024年の活動の振り返りは、各月の動きやプロジェクトの進展が詳細に記録されています。特に以下の点が目立ちます：
+
+主要な成果
+	Polisの新UI開発
+		投票機能やリアルタイム反映を実装し、ステージング環境から本番環境への移行準備が進行。
+		ユーザフィードバックを収集し、UI改善が進んだことが特筆されます。
+	デジタル民主主義関連活動
+		「Talk to the City」の導入や「AIパブコメ」の試みが行政や社会問題に寄与。
+		ブロードリスニングの「図」が注目され、広く認知されました。
+	外部イベント参加と議論の拡張
+		「Social Hack Day」や未踏ジュニア関連の活動で議論や知見を深め、外部コミュニティとのつながりを強化。
+	AI活用とナレッジ管理
+		ClaudeやGPTを使った効率化の実践。週記や要約をAIで再構成し、新たな洞察を得る仕組みが進化。
+
+主な課題
+	情報共有の遅れ
+		チーム間での進捗共有やドキュメント化が後回しになりがち。
+	リズム管理
+		忙しさや体調不良が重なると生活リズムが乱れがちで、継続的な改善が必要。
+	複数タスクの優先順位付け
+		多くのプロジェクトが並行して進む中で、どれを優先すべきかの判断が難しい。
+
+今後のアクション
+	タスクとスケジュール管理の最適化
+		Scrapboxやカンバンボードを活用し、プロジェクト進捗を視覚化・共有。
+
+	振り返りの仕組み強化
+		週記やAI要約を組み合わせ、振り返りとアイデア抽出を効率化。
+
+	コミュニティとの連携拡大
+		イベントで得たフィードバックを反映しつつ、活動内容を積極的に公開・共有。
+
+2024年の経験を基に、デジタル民主主義やAI活用をさらに深化させるための基盤が整った年だったと言えます。この振り返りをもとに、2025年の活動計画を練ることが有意義です。
+
+[o1 Pro.icon]
+以下では、2024年の主な動きを振り返りつつ、各時期の出来事やテーマがどのようにつながってきたかを整理してみます。月ごとの概要をざっとつなぎ合わせることで、2024年全体像をざっくりとイメージできるようにまとめました。
+
+1～2月：複数プロジェクトの下地づくりと外部連携
+	Pluralityの和訳や字幕作業・AI活用
+ 	GPTやClaudeを使い始め、翻訳や要約を効率化。
+ 	Glen Weyl氏の来日サポートや、パネルディスカッション要約など英日ローカライズが本格化。
+	コミュニティ活動への積極参加
+		なめら会議、Social Hack Day、プログラミングシンポジウムなどに参加して、新しい技術や民主主義アップデートの議論を深める。
+	週記の運用と体調管理
+		週記をこまめにつける努力をしつつ、忙しさや体調不良でうまくリズムを維持できない局面も。
+		開脚ストレッチやボードゲーム会など、オン・オフを切り替えながらアイデアを得たりリフレッシュしたりする習慣が継続。
+
+3月：外部交渉と新ツール試用の加速
+	PluralityBookの出版交渉
+		出版社とのやりとりが集中し、契約条件を詰める。
+		世界展開への期待が高まり、翻訳・編集作業の進め方を整える。
+	Gov4GitやpMAGIなどの新ツール検証
+		実際に環境構築を試すも、エラーや運用面の壁に直面。
+		コミュニティ内で障害ログを共有し、解決策を模索する。
+	未踏会議2024関連の活動
+		生成AI/LLMのビジネス活用やQuadratic Votingなどのテーマで議論を活性化。
+		週末はマーダーミステリー会などでリフレッシュしつつ、新しい発想を得る場にもなっている。
+
+4～5月：プロジェクトの本格始動と「激動の5月下旬」
+	PluralityAssistantやAI活用プロジェクトの進捗
+		小規模コミュニティ向けの政治参加モデルや、AIに要約を任せる運用が進む。
+		出版交渉も具体化しつつ、コミュニティ連携（未踏ジュニアや勉強会）でノウハウ共有を継続。
+	ゴールデンウィークも休みなしの稼働
+		未踏ジュニア面接・フィードバックやPlurality勉強会などが重なり、作業負荷が大きくなる。
+		AIやフラクタル要約を活用し、膨大なデータ処理を乗り切る。
+	激動の2024年5月下旬：安野チーム参加のきっかけ
+		Plurality本の和訳を読んだ安野さん（都知事選立候補）からの連絡がスタート。
+		TalktotheCity（TTTCやScatterなど）での大規模自然文可視化に手応えを感じ、選挙戦のデータ活用やマニフェスト形成をサポート。
+		「ブロードリスニングのあの図」が生まれ、後に多方面で活用されることに。
+
+6～7月：選挙関連で一気に多忙化、ブロードリスニングやデモクラシー関連
+	都知事選とTTTC Turbo
+		6月27日にTTTC Turbo（ブロードリスニング技術）を起動し、7月頭にかけて国内外の事例を調査・記事執筆。
+		選挙戦をブロードリスニングで振り返り、2万件以上のAIパブコメを解析するなど、一気に応用が広まる。
+	ブロードリスニングの環境整備と試行錯誤
+		Scatterを動かすPython環境でトラブルが多発する一方、ブラウザベースのTurboは手軽だがエラー原因特定が難しいなど、技術的ハードルと戦う。
+		Google Colabや外部サービスの活用で乗り切り、データ可視化を充実化。
+	選挙がひと段落した後のドキュメント整理
+		KPT形式で都知事選を振り返り、Plurality・マイナ投票などの成果を記事化しようとするも、タスクが山積み。
+		週記の更新が不定期になりつつも、記録はなるべく残しておく方針。
+
+8～9月：新UI開発・イベント参加ラッシュと生活リズムへの挑戦
+	Polis新UIの開発が本格化
+		投票機能実装やリアルタイムの結果反映などをステージング環境でデモ。
+		Social Hack Dayなどのイベントでユーザからフィードバックを収集し、ユーザビリティ改善へ。
+	多忙の中での合宿・出張・読書
+		X Meetup、サイボウズラボユース合宿、未踏ジュニアAWSツアーなど移動やイベントが連続。
+		「一貫性や目的管理」を考えなおすきっかけとして仏教関連やウィトゲンシュタイン系の読書を継続。
+	生活リズムと体調管理の課題
+		親知らず抜歯や睡眠リズムの乱れ、体重増加など、健康面の警戒サインが顕在化。
+		イベント尽くしの合間に自己調整を繰り返しながら開発と学習に追われる。
+
+10～12月：Polis新UIが佳境に入り、年末進行でのタスク管理
+	Polis新UI投票機能の安定化とデータ更新プロセス整備
+		ステージングから本番環境に移す準備が進みつつ、「管理者でも簡単にデータ更新できる仕組み」やドキュメントが遅れ気味。
+		イベント参加やユーザデモでどんどん新しい要望が上がり、優先度の振り分けが難しくなる。
+	社内外への共有不足に課題感
+		年末の慌ただしさもあって情報共有やドキュメント化が追いつかず、「いつ何が終わったのか」が見えにくい状況。
+		週記やAI要約を活用しつつも、複数案件との両立が難しいまま年末へ。
+	今後に向けたタスク管理・フィードバック優先度づけ
+		年内にデータ更新プロセスを固めたいが、イベントやプライベートの予定も増え、リソース不足が顕著に。
+		社内勉強会やオンライン発表で進捗を共有し、2025年に向けた仕組みづくりを再度合意形成する必要あり。
+
+総合まとめと2025年への展望
+	複数プロジェクトの並行と“民主主義アップデート”の加速
+		2024年は「ブロードリスニング」「Polis新UI」「Talk to the City」といったデジタル民主主義関連ツールの開発・活用が大きく前進した一年でした。都知事選や各種イベントを通じて、現場で試行錯誤しながら着実に成果を積み上げました。
+	コミュニティ活動・外部連携の広がり
+		未踏ジュニアやSocial Hack Day、サイボウズラボユース合宿など幅広いコミュニティでフィードバックを得る機会が増え、アイデアを洗練させる好循環が生まれました。一方で参加イベントが増えすぎて、健康管理やドキュメント整備が疎かになるリスクも。
+	AI活用と情報整理の重要性
+		GPTやClaudeを使った翻訳・要約・可視化はすっかり定着し、大量のデータを扱うプロジェクトで大きな役割を果たしました。その一方で、どの時点でどんなバージョンを使い、どこに成果を残すかという運用ルールはまだ固まりきっておらず、情報の散逸や優先度の混乱が課題として残っています。
+	課題：管理プロセス・ドキュメント化・体調面
+		管理プロセスやドキュメント
+			データ更新やマニュアル化が後回しになりがちで、「せっかくの機能を他メンバーが使いこなせない」問題が顕在化。
+		体調と生活リズム
+			多忙なスケジュールの影響で、抜歯や睡眠不足・体重増加など、健康面の悩みが増加。メンタル面のケア含めたスケジュール余裕づくりが必要。
+	2025年に向けた提案・アイデア
+		開発＆ドキュメント“ペア目標”の設定
+			新機能実装と同時に最低限のマニュアル整備や社内共有を必ず行う、といったルールを導入し、開発とドキュメンテーションをセットで走らせる。
+		フィードバックの優先度付けとロードマップの見える化
+			イベント参加やユーザデモで出た要望を、緊急度・影響度に応じて明確に整理し、Scrapboxやカンバンツールでロードマップを可視化する。
+		タスク／体調管理の仕組み強化
+			カレンダーや週記システムと連動して、開発スプリントの合間にオフタイムを確実に挟む。定期的に健康チェック＆活動量を振り返り、限界を超えないよう調整。
+		AI要約・再構成の自動化パイプライン
+			週記やコミュニティイベントログなどを一定期間でまとめ、AIに定期的に要約させるパイプラインを構築。埋もれがちなアイデアや気づきを引き上げやすくする。
+
+結び
+	2024年は、デジタル民主主義ツールの実践・発展が一気に進み、都知事選や複数のコミュニティ活動を通じて「社会実装」の芽が育った年だったといえます。その一方、開発スピードが速いぶん、情報整理や健康管理の「地味な基盤づくり」が追いついていない場面も目立ちました。
+	2025年に向けては、「開発・イベント・振り返り」のバランスを取りながら、ドキュメント化・タスク管理・健康管理をシステム的に回すことで、より安定的・持続的な活動が可能になるでしょう。ぜひこの振り返りを踏まえて、来年以降のプロジェクトをさらに充実させてください。
+
+</Page>
+
+
+
+<Page title="JAPAN CHOICE" url="https://scrapbox.io/nishio/JAPAN_CHOICE" updated="2024-11-21T03:02:45.761Z" created="2024-01-30T18:27:24.774Z" type="1hopLink">
+JAPAN CHOICE
+>JAPAN CHOICEは、
+> 政治に関する意思決定のハードルが下がるよう、
+> 省庁が公開したデータや統計、政党・政治家の公約や情報を見やすく整理しました。
+https://japanchoice.jp/
+
+powered by [Mielka]
+
+https://mielka.org/
+>Mielkaは政治×テクノロジー×教育を軸に2016年に発足したNPO法人です。
+> 若年層の投票率の向上、政治参加・社会参加意欲の向上のために、社会や政治のことを「じぶんごと」として身近に考えてもらうために政治的中立公平な立場から発信しています。
+> 若者と政治の距離を近づけるために、社会が意思決定を行うための土台作りとして政治を可視化（見えるか）することで政治や選挙のことをわかりやすく伝えています。
+
+代表理事（理事長）　池邊亮輔
+代表理事　　　　　　[結城 東輝]
+副理事長　　　　　　楠本脩馬
+
+[選挙権のない人間が作った『JAPAN CHOICE』という選挙サイトについて｜結城東輝（とんふぃ） https://note.com/tonfi/n/n81fcafc9d10f]
+何年から始まったか調べていたら、当時の経緯などを解説した記事があった。2017年
+
+</Page>
+
+
+
+<Page title="安野 貴博" url="https://scrapbox.io/nishio/安野_貴博" updated="2024-06-17T15:04:50.355Z" created="2024-06-06T15:37:54.475Z" type="1hopLink">
+安野 貴博
+[安野たかひろ]
+[安野貴博]
+[/mitou-meikan/安野 貴博]
+
+</Page>
+
+
+
+<Page title="都知事選xデジタル民主主義" url="https://scrapbox.io/nishio/都知事選xデジタル民主主義" updated="2024-06-06T15:46:02.436Z" created="2024-05-30T05:56:26.783Z" type="1hopLink">
+都知事選xデジタル民主主義
+[都知事選]x[デジタル民主主義]に関する結節点
+
+
+
+</Page>
+
+
+
+<Page title="rickshinmi" url="https://scrapbox.io/nishio/rickshinmi" updated="2024-04-08T07:31:23.646Z" created="2024-04-08T07:31:23.632Z" type="1hopLink">
+rickshinmi
+[/mitou-meikan/新美 陸人]
+
+</Page>
+
+
+
+<Page title="灘校土曜講座2025" url="https://scrapbox.io/nishio/灘校土曜講座2025" updated="2025-06-01T13:21:37.821Z" created="2025-05-23T22:45:25.656Z" type="1hopLink">
+灘校土曜講座2025
+2025-05-24
+	[Slide https://docs.google.com/presentation/d/1xEiw6PX6M4X_OjqRF9dhySVeVCdDLCLf-E_LEGqDykw/edit?usp=sharing]
+
+[https://gyazo.com/43c952a7f0f8fafb60a2a9b4e671a7ae]
+[https://gyazo.com/2a3c6605e8ecdc90b564dcf8daaea242]
+
+
+自分の部分だけ転載しておく
+
+[https://gyazo.com/5ca2f96d27bcc44530548a7baf8a55c7]
+　[未踏ジュニア]
+
+[https://gyazo.com/ca71021c4f240dac8e3b1ba22660c203]
+	[Plurality Tokyo 2023]
+
+[https://gyazo.com/61688742f2bbdb577df4d3320577357e]
+	[ブロードリスニング]
+	[主観か客観かではなく、一人の主観から大勢の主観へ]
+
+[https://gyazo.com/5b0306c62c00c02873809829186e4ee1]
+	[/plurality-japanese]
+
+[https://gyazo.com/558069a4c9bb07e054274955c61479c5]
+	[激動の2024年5月下旬]
+
+[https://gyazo.com/7f49dd2fce2f19a7460fed35aecdd434]
+	[TTTC: AIと著作権に関するパブリックコメント]
+
+[https://gyazo.com/157295ad87669435b6eee0e7ef268499]
+	[Funding the Commons Tokyo 2024]
+		[FtC2024安野+Audrey]
+		[Plurality in Japan]
+
+[https://gyazo.com/3ceb5c9d20f1ef364bdd07c797b6eb0e]
+	[日テレNEWS×2024衆院選×ブロードリスニング]
+	[シン東京2050ブロードリスニング]
+
+[https://gyazo.com/02df5c5ebaab8415a215c8900b2aa276]
+	[デジタル民主主義2030]
+
+[https://gyazo.com/e472a026b531726dfc6d7be4ffb238a7]
+	[広聴AI]
+		[Talk to the City と広聴AIの歴史]
+
+[https://gyazo.com/e696d2da41bca9d63dadccf31e508bda]
+	[ブロードリスニングが国会で野党が総理大臣に質問するために使われた事例]
+	[りっけんAI井戸端会議]
+	[再生の道ブロードリスニング]
+
+[https://gyazo.com/2138949daacfd7b08383daecce2b1656]
+	[ブロードリスニングが1年で標準戦略に]
+[https://gyazo.com/802b6ebe62f16fa089bc6f92002eec9a]
+[https://gyazo.com/a6980af8ca3a75b9fec33e67b16a4f4e]
+	[Plurality本]
+
+[https://gyazo.com/c2feb3a23fccf9c6b81a909de30c3008]
+	[/plurality-japanese/Pluralityとは]
+
+[https://gyazo.com/9a6ad6afaa929a7e4cd2329f4e60f9aa]
+	[「Plurality」とは何か｜日本語版解説 | WIRED.jp https://wired.jp/article/what-is-plurality-book/]
+
+[https://gyazo.com/ccc9759dad53e71a9a69caf81f3863bf]
+	[「Plurality」とは何か｜日本語版解説 | WIRED.jp https://wired.jp/article/what-is-plurality-book/]
+	[協力の深さと広さのトレードオフ]
+
+[https://gyazo.com/2a213a0a7e0c1c8615b2ff3a0cf36f9c]
+	[偽情報]
+	[Audreyとd/accとdifferential]
+
+[https://gyazo.com/e29e794bd7b4b81bdcfe8b86c8d36fc6]
+	[民主主義は社会的技術]
+
+
+質疑
+　たくさんの人の意見を集めてそれをまとめるときにまとめるAIが歪める可能性があるのでは？
+　　それはもちろんある
+　　 関連質問: LLMにバイアスがあるのでは？
+　　　LLMによって多様なバイアスがある
+　　　　[Qarasu-14Bに質問をする]
+　　しかし、人間がまとめるならバイアスはないか？といえばもちろん人間にもバイアスがある
+　　なのでこれは「AIか人間か」の問題ではない
+　　プロセスをオープンにして第三者が検証可能にするなどの仕組みづくりで解決すべき問題
+　　　関連質問: AIはブラックボックスになるのでは？
+　　　　[Reasoningモデル]は思考過程を言葉にしてアウトプットしながら動く、黙って考える人間よりもブラックボックス度合いは低い
+　　　　タスク実行中のモデルの内部の発火具合を調べる研究も進んでいる。これは人間に例えるなら脳に電極を刺すようなもの
+　　　　公務員に電極を刺すことは倫理的に難しいが、公務に携わるAIの内部状態を開示することは将来的に可能になる
+　　　　ブラックボックスであることが問題だと考えるなら、むしろ人間ではなくAIを使う方が良い
+　政治について考えて発言できる人ばかりではない、考えてない人をどうするか？
+　　[無意識データ民主主義]のような過激な意見もあるが、それには賛成していない
+　　意見を聞いてもらえる機会、意見を言って良かったと思える機会が現状かなり乏しいのが、考えて意見を言う能力が育たない原因
+　　　特に[未成年者には投票権がない]、成人したらいきなり投票するべきと言われる、無茶な話
+　　　台湾ではJOINなどのシステムで学生の段階から意見を言う機会が作られた
+　　　　[台湾のJOINで高校生の提案が制度改善につながった]
+　　　　[シン東京2050ブロードリスニング]でも同様のクラスタが見られた
+　　今のメジャーなSNSは過激な意見を言う人が目立つ
+　　　大部分の人は過激な人と議論したくない
+　　　[親ソーシャルメディア]の考え方では異なる意見クラスタの人から賛成されるような「[橋渡しする意見]」に注目が集まるように設計される
+　　　 [ブリッジングボーナス]
+　国際社会に影響を与える？
+　　もちろん、言語の障壁がなくなることが大きい
+　Q:生成AIが「どういう意見が市民に受けるか」でマニフェストを作るとどの政党も同じになるのでは？
+　　大きなクラスタに集まると違いがなくなるので支持者が流動しやすくなる、これを既存の党は好まない
+　　可視化してみると現時点でも政党が代表してないクラスタがある
+　　　小さなクラスタであっても、1%あれば政党になれる
+　　　多数派を取りに行くのはレッドオーシャンなので、すべての党が大きなクラスタに行くはずだ、という前提は正しくない
+　　長期的にはそもそも政党政治が今と同じ感じで続くかどうかは不明
+　　　党議拘束のメリットデメリットのバランスに影響がある
+　　支持層がコロコロ変わると安定しないのでは
+　　　コロコロ変わりはしないだろう、コロコロ変わるという前提がどこから出てきたのかよくわからない
+
+[灘校土曜講座]
+
+</Page>
+
+
+
+<Page title="ブロードリスニングの「あの図」勉強会" url="https://scrapbox.io/nishio/ブロードリスニングの「あの図」勉強会" updated="2025-01-31T07:56:16.093Z" created="2024-09-10T04:36:47.808Z" type="1hopLink">
+ブロードリスニングの「あの図」勉強会
+2024-09-13 [サイボウズラボ勉強会]
+	自分でもかなり記憶が飛んでるのでまずは振り返りから
+	前回 8/2 [Plurality in Japan(サイボウズラボ)]
+		7/25の[Funding the Commons Tokyo 2024]で話すために用意した資料で1時間話した
+	前前回 6/14 [Talk to the City勉強会]
+		この時点で既に[" 口頭の質疑を加筆したいが、忙しくて遅れてる]って書いてるな...
+		[TTTC: AIと著作権に関するパブリックコメント]をやった経緯に関しては、その後 7/22 [サイボウズと語ろうPlurality 多元性の実践と期待] での関さんたちとの対談で話した
+	その後に公開された関連情報
+		[2024-09-08-民主主義を支える技術]
+			安野さんと[ブロードリスニング]について対談
+		9/10 [Meetup with Thomas Hardjono]
+			MIT Connection ScienceのCEO
+			2020-06-12にラボ勉強会で「[ソーシャル物理学]」の話をした、その著者Alex “Sandy” PentlandがFounderの組織
+		9/12 [テクノロジーとわたしたちの「距離感」が変われば、誰も取り残されない社会がつくれるかもしれない]
+			安野さんと青野さんの対談記事
+   >[aono https://x.com/aono/status/1834061991155302718] 都知事選にチャレンジされた安野さんと「[デジタル民主主義]」について対談させていただきました。
+   > テクノロジーの進化によって、今までよりも多くの意見を早く集め、そしてすぐに施策に反映できる社会に向かっています。“誰も取り残さない”社会を目指していきましょう！
+
+[ブロードリスニングの「あの図」]
+	[https://gyazo.com/d141c52d53b650c677266b0626eb8160]
+	安野さんがぜひ掘り下げたいということだったので、過去の記録を掘り返してみた
+		スライドは[2024-09-08-民主主義を支える技術]から
+	2018 [階層組織]
+		[https://gyazo.com/ed1bcf033451d608f4a06cea8087b615]
+		これは「[ティール組織]」がサイボウズ社内で話題になって、それを読んだところから思考が発展した
+			>著者は「人間意識のステージの変化が組織構造の変化をもたらす」と解釈しているが、僕は技術の進化がもたらしてると思う。
+			階層的な組織構造がなぜ発生するのか
+			>人間にはコミュニケーションを取れる人数に限界がある --- [階層組織]
+			>[https://gyazo.com/04b1e2ca50be37efbee8a8eb14b3aa6d]
+	2019 [個人情報とマネタイズ]
+		[成蹊大学]の連続講義[2019年度武蔵野市寄付講座「ITとルールの今・未来」]で講演を依頼されて「参加して話すだけでなく、聴く側もしたい」と言って聞いてきた授業ノートの一つ
+		ここでは[計画経済]はなぜうまくいかなかったかという議論が行われていた
+			>IT技術の発展によって情報伝達が強化された→計画経済が有利になるか？
+		国家のことはよくわからないが、企業のレベルでは逆の方向に動いているよな、と考えた
+		[https://gyazo.com/136aa2b89b473e9294b31b740a63b994]
+		>[ティール組織]で紹介されているように、色々な会社でピラミッド階層の解体が進んでいる これはなぜか ボトルネックは「人間の情報伝達能力」ではなく「人間の情報処理能力」だからだ --- [個人情報とマネタイズ]
+		当時はこれが解決すべき問題点だとは考えた、解決策はまだないと考えた
+ 		>現在の技術はまだこれを捌ける状態ではない
+ 		>計画経済がうまくいかなかった原因は「人間の情報伝達能力」ではなく「人間の情報処理能力」
+ 		>IT技術の進歩によって「情報伝達能力」がとても強化され「情報処理能力」はまだそれほどではない
+ 			>その結果、情報処理の負担が局所に集中することを避けるために権限の移譲が行われていく
+ 			>この流れが逆転するのは、意思決定自体をコンピュータが行うようになった場合
+	2023-03 [LLMがもたらす組織構造の変化]
+		ChatGPTがリリースされてLLMに注目が集まった
+		「これが懸案の課題を解決する技術じゃん！」となった
+		[https://gyazo.com/0a86e60d972aeb525ea9434e3cc60347]
+		>技術の力によって「[ティール組織]」で語られていた「[ブラウン組織]を作り出す力学」が陳腐化して、組織構造の変化が加速する
+	2023-04 Pluralityとの出会い([Plurality Tokyo]開催)
+		[https://gyazo.com/d1b1e36b680386b061321fb1ee8eeea6]
+		ここで「[ブロードリスニング]」の概念を知る
+		ずっと考えていた問題に名前がついて世界の文脈と接続した
+	2023-05 [PluralityとPolis勉強会]
+		Plurality Tokyoで学んだ概念を[サイボウズラボ勉強会]で解説
+		[https://gyazo.com/1ceeb9aea86eaf4cc9949a2d06918c37]
+		この時に「あの図」の要素は出揃った
+		この時期に次のアウトプットの準備をしていた
+	2023-08 [主観か客観かではなく、一人の主観から大勢の主観へ]
+		情報処理学会誌の寄稿依頼に答えて5月に執筆、8月にリリース
+		[https://gyazo.com/fff7c608b386ec688e9cb7ddcb03319f]
+		この時に誌面の都合で3つを選んだ
+   Fig2: [情報の複製により情報発信は効率化されたが、受信は改善しない、情報を減らす技術が必要]
+ 		[https://gyazo.com/8aed1a6ee239c672d1e504cdb48d0e9e]
+			結果的に[PluralityとPolis勉強会]の時よりも絞り込まれたメッセージになった
+	2024-05 [関 治之]さんの人工知能学会招待講演
+		[https://gyazo.com/aabf5dcb3671bfa11cc3e544bba3eeee]
+		詳しい経緯: [激動の2024年5月下旬]
+		ある意味最初にこの画像を[ミーム化]したのが関さん
+	2024-06 安野マニフェスト
+		[https://gyazo.com/ed10241eb471de4a5269f3a2413820a2]
+	その後テレビなどでも放映されたり、台湾での[Asia Blockchain Summit 2024]でも使われたりした
+		たぶん僕の絵の中でもっともみたことのある人が多い絵
+
+情報処理学会誌に使われていない図
+	[https://gyazo.com/8ee66701d32a80832b69f0cc051d92af][https://gyazo.com/541bef26da329f8c8e5d27728fb1d81b]
+	共通点は主人公が階層のトップではないところ
+	「社長が社員を理解する技術」ではなく「人々が人々を理解する技術」だと考えている
+		ただ、顕在化しているニーズや導入がトップダウンで進みがちなことなどを考えて前者を先に言ってる
+	全社のアクティビティを見ようとすると情報量が多すぎてあふれてしまう
+		そこで自然発生的に自分の所属している部署などの「より小さいグループ」で閉じる「[サイロ化]」が起きる
+	[https://gyazo.com/ac1be9263d609707fc8039766a04f65c]
+		このサイロ化による[組織の境界]を[なめらか化]する
+		これに関することを[Plurality in Japan]でも話した
+		[https://gyazo.com/af4dd234fecf36188c4734428d2f2d0e]
+		ブロードリスニングによる認知範囲の強化は境界のなめらか化にも寄与する
+		[https://gyazo.com/549b3e46cb7090d44a151f0ae374326e]
+
+
+余裕があったらする話
+
+[良い議論ができる場を可視化の後につける]
+　Talk to the Cityで人々からの意見を集めて可視化して、それで終わりではいけないよね、という話
+　> 西尾: 要するにこういう[可視化]ってのはよりよい議論をスタートするための足場を提供する土台なんですよね。人々のより良い議論がメインコンテンツで、それを促していく支援していく仕組みがこれ(Talk to the City)にくっつかないといけない
+ > 安野: うんうん、(現状では)ある意味本当にただウェブサイト見てるのと同じで、インタラクティブにこれを見てこうだなと思ったことを表せる場がない
+ > 西尾: そうそう、これはテレビで一方的に情報受信してるのと同じなんですよ。そうではなくて人々が自分の考えとか思ったことと、もしくはこれを見て疑問に思ったら質問できる場所が必要なんです。[AIあんの]は質問できる場所を提供してたわけですね
+ [Talk to the City勉強会]のAppendixにつけた[U理論]とのアナロジー
+		[https://gyazo.com/4af6ff261bf5d9399b1a3158120c28c6]
+  	1: 枠の中にこもっている
+  	2: 枠の外を見る
+  	3: 外からの視点によって元々持っていた枠が薄れていく
+  	4: 外からの視点が集まることによって「いくつもの視点から見た理解」が生まれる
+		TTTCは人々にUの谷を下らせて[ソーシャルフィールドを耕す]ことにつながる
+			耕した人を集めてソーシャルなインタラクションを引き起こせる場がなければならない
+	[https://gyazo.com/a310a4ed06d5a22fb29b0d552599b6d5]
+		左側: 台湾デジタル省[mashbean]によるフィードバックループ
+		右側: 安野都知事選におけるフィードバックループ
+			[https://gyazo.com/a939beb8b239e844b086bd51b9350020]
+				[DX&AI Forum 2024 生成AIで作るデジタル民主主義の未来 - Google Slides https://docs.google.com/presentation/d/1HEt23B6uzdxAVaeYw4gNRhIYSEkgQr5pnZrUdL-ws1o/edit#slide=id.g274ffc7e6e4_1750_2098]
+					[DX&AI Forum 2024] [生成AIで作るデジタル民主主義の未来]
+			[「聴く」「磨く」「伝える」のサイクル]
+		[Human in the loop]だけでなく[People in the Loop]の設計が必要
+			People in the Loopって言い出したのは 2023-08の [オモイカネ勉強会#64cbbf8faff09e0000131b97] だった
+	[ChatGPTとAIあんののコミュニケーションの形の違い]
+		[https://gyazo.com/2da024651d5da1d0b206f5b8c90289e9]
+	　AIにどんな質問の仕方をすると有益で、どういう質問の仕方をすると無益かを実際に質問する前に他人のやりとりを見て学ぶことができる
+		[ソーシャル物理学]の「[社会的学習]」の概念
+			>[アイデアの流れを混ぜてアイデアの多様性を増す]
+　　情報の流れる経路やインセンティブを工夫することによって、[組織としての学習]、[集団的知性]の増強などを引き起こす
+
+[複数組織とブロードリスニング]
+　ここまでは一つの組織の話をしてるけど現状の自分個人の実感は下記のような気持ち
+　　[https://gyazo.com/d0f0ed76ec64ad2d23a0a88c1e06feeb]
+
+　　Funding the Commonsの関連の連絡がTelegramとかSignalで来ると言われた時が一番爆発しそうだったw
+　　 まあ、あんまり大した連絡はなかったので結果オーライ
+　　今も継続的に複数のSlackとDiscordでのやりとりがあるので地味にしんどい
+　　　特に英語
+　　　　すべてのコミュニケーションツールはその場で翻訳できるようにしろ
+　　　早くアシスタントAIに包まれたいw
+　　　　すべてのコミュニケーションツールはAIから読めるようなAPIをつけろ
+　　　[https://gyazo.com/6d9b9da54cd37cee65284a7e5b323e59]
+　　　入ってきた情報の要約、翻訳、返信、スケジュールの調整、プロジェクト管理とかを全部やってくれ〜
+	個人的にはニーズ高いんだけど市場サイズは小さそう〜
+
+ChatGPT o1-preview
+	ちょうど今日o1-previewが出たので試してみる
+	prompt: 勉強会の資料を与えます。それを読んで考えて、　コメントを書いて。あなたの役割は人類の文明を一歩前進させることです。
+	[https://gyazo.com/5254dedb39874a2dfec79a9dbdd043ee]
+	[gpt.icon]ご提供いただいた勉強会の資料を拝見し、深く考察いたしました。以下にコメントと提案をまとめます。
+		1. 組織構造の進化と技術の影響
+			資料全体を通じて、組織構造が技術の進化によって変化している点が強調されています。
+			階層組織からティール組織へ：人間のコミュニケーション能力の限界から生じた階層的な組織が、情報伝達技術の発展によりフラット化しています。ティール組織は自己組織化を促進し、情報処理のボトルネックを解消します。
+			情報伝達と情報処理のバランス：情報伝達能力の向上により情報過多が生じ、人間の情報処理能力の限界が顕在化しています。これが新たな組織形態や技術の必要性を生んでいます。
+		2. LLM（大規模言語モデル）の可能性
+			ChatGPTなどのLLMは、人間の情報処理能力を補完し、組織の情報フローを改善する可能性を秘めています。
+			意思決定のサポート：LLMが情報を要約・分析し、意思決定者に必要な情報を提供することで、情報処理の負荷を軽減できます。
+			組織内コミュニケーションの強化：自然言語処理を活用して、異なる部門や階層間のコミュニケーションを円滑にします。
+		3. ブロードリスニングと多元性（プラリティ）
+   サイロ化の解消：ブロードリスニングは、組織内外の壁を取り払い、多様な意見や情報を収集・共有する手段として有効です。
+   境界のなめらか化：情報の可視化と共有により、組織の境界を曖昧にし、協働を促進します。
+		4. 良い議論の場の必要性
+   可視化から対話へ：情報の可視化は出発点であり、それを基にした対話や議論の場を設けることが重要です。
+   U理論の適用：個人が自己の枠組みを超えて新たな視点を得るプロセスを促進し、深い学習と変革を可能にします。
+		5. AIアシスタントの役割と必要性
+   情報過多の時代の支援：複数のプラットフォームや言語間でのコミュニケーションが増える中、AIアシスタントが情報の整理・翻訳・要約を自動化し、効率化を図ります。
+			個人と組織の生産性向上：情報処理の負担を軽減し、戦略的な思考や創造的な活動に注力できる環境を整えます。
+		ここまではまあきちんと要約できてるなという感じ[nishio.icon]
+	提案と次のステップ
+		ブロードリスニングのツール開発：組織内外での情報共有を促進するプラットフォームを開発・導入し、多様な意見を集約・分析する仕組みを構築します。
+		AIアシスタントの実装：個人やチームの情報処理を支援するAIツールを開発し、コミュニケーションの効率化と生産性向上を目指します。
+		学習と成長の文化醸成：ソーシャル物理学やU理論を活用し、組織全体での学習と成長を促進する文化を育てます。
+		多元的な対話の場の設置：可視化された情報を基に、ステークホルダー間での対話やワークショップを開催し、共同で問題解決を行います。
+		あんまり感動的な回答ではない[nishio.icon]
+			人間でもよくある
+			頭の悪くない人が頭で考えてきれいにまとめてる感じ
+			　未踏ジュニアで僕が書類審査で落とす類型の一つな感じ
+			論理的には辻褄があってるが作業者が不在
+			　行動する人個人の「[個人的文脈]」との接続がゼロだから「あなたがこれをやる意味は何？」となるパターン
+			　　[当事者意識]が読み取れない、[ファウンダーマーケットフィット]がない
+			　　作業者が抽象化されてしまってる
+			　　あー、これ、複数人で議論して「何々をやるといいですね」となった後、誰がそれをやるのか決まらないから誰もやらなくて結局進展しない状況に似てるんだな
+			　　きれいにまとまったプランを示しても誰の[熱意]も掻き立てることができていない
+			　今回のプロンプトでは個人的文脈が与えられなかったのでLLMがこういうのを生成しちゃうのは仕方ないね、使う人間の側の使い方が下手くそ
+	人類文明の一歩前進に向けて
+		技術の進化は組織や社会の在り方を大きく変えつつあります。しかし、技術はあくまで道具であり、その活用方法が重要です。ブロードリスニングやAIアシスタントを通じて、人々がより深く理解し合い、協働できる社会を築くことが、人類の文明を前進させる鍵となるでしょう。
+			共感と理解の促進：多様な意見や価値観を尊重し、共感を基盤としたコミュニケーションを推進します。
+			技術と人間性の調和：技術を人間性と調和させ、誰もが参加できる包摂的な社会を目指します。
+			持続可能な組織と社会の構築：短期的な成果だけでなく、長期的な視野で持続可能な発展を追求します。
+	結び
+		ご提供いただいた資料は、現代社会が直面する課題と可能性を的確に捉えています。これらの洞察を基に、具体的なアクションを起こすことで、人類の文明を一歩前進させることができると確信しています。
+
+ChatGPT o1-preview take2
+	上記のダメ出しを共有
+	具体的な行為者文脈を共有
+		私は上記の講義資料の著者であり、Twitterで1万人程度のフォロワーがいます。人類の文明を前進させるためにSNSを活用するのが良いのではないかと思っています。ChatGPT o1-previewがリリースされた今のタイミングで何らかそれに絡めた投稿をするのが良いのではないかと思います。
+	指示
+ 	私が現実的に実行できて、人類の文明の進歩に最も寄与するアクションを考えよ
+	結果
+		[https://gyazo.com/6a4416aeefcc01d7b317c5b628ca4def]
+		出力長いのでリンクで
+		https://chatgpt.com/share/66e39ff3-a790-8011-8137-398fe133fa8b
+		感想[nishio.icon]
+			「お、いいね、それをやろう！」という感じになるものはなかった
+			断片的には有益なアイデアもある
+				>(ブロードリスニングの過程や結果を)Twitterで連続投稿やスレッド形式で共有し、フォロワーと議論を深めます。
+					たしかに、クラスタごとの解説が生成されてるんだから、それをクラスタごとにTweetしてしまう手はあった、気づいてなかったな
+				>オンラインイベントの録画をSNSで拡散することで、より広い層に情報を届けます。
+					まあ、それが安野さんとの[2024-09-08-民主主義を支える技術]だよね
+				>Twitterでのディスカッションハブの形成
+					>多様なバックグラウンドを持つ人々の意見や考えを集約し、新たな視点や洞察を得ることができます。
+     > コミュニティのエンゲージメントを高め、継続的な情報交換の場を作り出します。
+     それはTwitterでやるべきではない、そこでCode for JapanのSlackに[proj-broadlistening]を作った
+				>記事やブログでの深堀りと知識の共有
+					うん、やってる
+				>コラボレーションプロジェクトの立ち上げ
+					これはある意味、安野さんの都知事選がコラボレーションプロジェクトだったし、今やってることもコラボレーションプロジェクトなので方向としては正しいが
+						>共同研究や開発の呼びかけ: ブロードリスニングやAI活用に関心のある研究者やエンジニアを募り、プロジェクトを開始します。
+      > 進捗状況の公開: プロジェクトの進行状況や成果を定期的にSNSで報告し、透明性を持って活動を進めます。
+      > コラボレーションを通じて、多様なスキルや知識を持つ人々が集まり、革新的な解決策を見出す可能性が高まります。
+      これは興味を持ってる人を新たにプロジェクトに巻き込むというニュアンスだな、確かにそれは有益
+				>教育リソースの提供とワークショップの開催
+    	>オンラインワークショップ: 実際に手を動かして学べるワークショップを開催し、参加者がスキルを身につけられる場を提供します。
+     	次の[Social Hack Day]でやるつもり
+     >学習意欲のある人々に対して具体的なスキル習得の機会を提供し、人材育成に貢献します。
+     >参加者が得た知識やスキルを各自の組織やコミュニティで活かすことで、波及効果が期待できます。
+						「各自の組織やコミュニティで活かす」は確かに自動的スケール
+			>あなたの専門知識と影響力を最大限に活用し、以下のポイントを意識して行動することで、人類の文明の進歩に寄与できます。
+	   >実践と共有: 自ら新しい技術や手法を試し、その結果や学びをオープンに共有する。
+ 	  >対話の促進: SNSを活用して多くの人々との対話を生み出し、多様な視点を集める。
+  	 >教育と協力: 知識やスキルを広めることで、他者の成長を支援し、共同で問題解決に取り組む。
+   >これらのアクションを通じて、あなたが提唱する「ブロードリスニング」や「情報処理能力の強化」の重要性を社会に伝え、多くの人々とともに人類の未来を切り拓いていきましょう。
+	take 3 明示的にタスクを振ってみる
+		[https://gyazo.com/d8681344f372cf34ae66aed1dedf8fc4]
+		実際に生成されたもの
+			https://x.com/nishio/status/1834419546180256047
+
+
+----- memo
+
+[GPT.icon]
+ブロードリスニングの応用
+　9月8日の安野さんとの対談を元に、ブロードリスニングが民主主義やテクノロジーにどう影響を与え、政策形成に活かせるかについて、より具体的な事例を共有する。
+
+AIと著作権
+　6月14日の「Talk to the City勉強会」や7月22日のセッションで取り上げた、AIと著作権の問題に関する進展や新しい視点について話す。これまでのパブリックコメントの反響や法改正の動向などを共有すると興味を引くかもしれません。
+
+テクノロジーとデジタル民主主義
+　9月12日の対談や9月10日のMIT Connection ScienceのThomas Hardjonoとのミートアップを踏まえて、テクノロジーがデジタル民主主義にどう貢献できるかを深堀りする。特に、日本の文脈でこれがどう機能するかを議論するのも有意義です。
+
+3の「ソーシャル物理学」とデジタル民主主義を絡めた話をするのはどうでしょうか？
+
+主なポイント:
+
+ソーシャル物理学：「良いアイデアはいかに広がるか」を探ることで、デジタル民主主義におけるアイデアの流れの速さや質をどう管理するかが議論の鍵となる。エコーチェンバーを避け、多様性を保つことが重要。
+デジタル民主主義：Thomas Hardjonoとの議論やDPIに関連する事例（India StackやAadhaar）を通じ、技術とデータがいかに民主主義を支えるかを検討。DFFTの観点からデータの信頼性と自由な流れも重要な議題です。
+これらをつなげて、組織や社会におけるブロードリスニングとアイデアの流れの関係を強調する内容にできると思います。
+
+
+ブロードリスニングの重要性
+	安野さんとの対談で触れた「ブロードリスニング」が、現代のデジタル社会において、どのように幅広い意見を集約し、効率的に理解するための技術として機能しているかを説明。ソーシャル物理学の「アイデアの流れ」との関連性を示し、多様な意見を取り入れ、エコーチェンバーを避けることが重要とする。
+
+技術とデジタル民主主義
+	安野さんとAono氏が話した「誰も取り残さない社会」に向けた技術の進化を例に、デジタル民主主義の可能性を強調。ここでThomas Hardjonoとの話や、Aadhaar・India Stackなどの技術的インフラが、どう民主主義やデータ共有に役立つかを具体例として引用する。
+
+ソーシャル物理学とデータ駆動型社会
+	ペントランドの「ソーシャル物理学」を通じて、技術が社会的学習や集団的知性にどう寄与し、デジタル民主主義をサポートするかを説明。安野さんが提唱するデジタル民主主義のビジョンとつなげて、技術がエンゲージメントを高め、政策形成に新たなインパクトを与えることを強調。
+
+
+テクノロジーと人間の歩み寄り
+青野さんが指摘したように、テクノロジーが人に寄り添う形で進化することで、地方の中小企業のデジタル化や少子化対策が進んでいます。安野さんも「誰も取り残さない」ためには、テクノロジーと人間がお互いに歩み寄る必要があると述べています。この視点から、ソーシャル物理学における「アイデアの流れ」を管理することが、社会の中でいかに重要かを強調できます。
+
+デジタル民主主義とオープンな議論
+安野さんが都知事選で実施した「オープンソースでのマニフェスト改善」や「AIあんの」を活用したブロードリスニングの実践を例に、テクノロジーがどのようにしてより良い意思決定を可能にするかを紹介できます。ソーシャル物理学の「社会的学習」の概念とつなげ、意見を集約する仕組みが重要であることを議論の中心に据えるとよいでしょう。
+
+「不幸にさせない」社会の実現
+安野さんの「幸福にすることは難しいが、不幸にさせないことはできる」というビジョンと、技術を使ってボトム層の生活を改善する取り組みを例に出し、ソーシャル物理学の「集合知」や「アイデアの流れ」がこのビジョンをどう支えるかを説明するのも良いアプローチです。
+
+
+</Page>
+
+
+
+<Page title="サイボウズと語ろうPlurality 多元性の実践と期待" url="https://scrapbox.io/nishio/サイボウズと語ろうPlurality_多元性の実践と期待" updated="2024-08-02T16:40:27.380Z" created="2024-07-20T05:16:36.121Z" type="1hopLink">
+サイボウズと語ろうPlurality 多元性の実践と期待
+7/22 20:00-21:00
+
+[サイボウズ]と語ろう[Plurality] 多元性の実践と期待
+>[DeSciTokyo https://x.com/DeSciTokyo/status/1814528151890108822] 【FtC Tokyo開催直前 】
+>  『サイボウズ @cybozushiki と語ろうPlurality 多元性の実践と期待』
+> 登壇者
+> サイボウズ
+> 高部さん @t2ot2o
+> 西尾さん @nishio
+> CfJ
+> 関さん @hal_sk
+	[音声ファイル@Dropbox https://www.dropbox.com/scl/fi/21um9dmqxudsosjbpcf7n/FtC-Tokyo-Plurality.m4a?rlkey=l0hnwyubdo6nknxmkf68w40iv&dl=0]
+		Transcriptをクリックしてジャンプしたり、再生速度を変えたりできる
+
+[claude.icon]
+1. イベント概要:
+ 名称: 「[Funding the Commons Tokyo]」
+ 日程: 7月24-25日
+ 規模: 登録300人以上、スピーカー含め360人程度
+ 1日目テーマ: サイエンス領域、[公共財としてのサイエンス]
+ 2日目テーマ: [デジタル公共財]と[デジタル民主主義]
+ 特別ゲスト: [オードリー・タン]氏、[グレン・ワイル]氏（来日予定）
+ ストリーミング配信あり
+
+2. Pluralityの概念:
+ 定義: 社会的分断を克服し、異なる視点を持つ人々の協力を促進する技術・社会運動
+ 主要概念: 「[ブロードリスニング]」（大勢の人の意見を吸収・強化する技術）
+ 背景: 2010年代のソーシャルメディアによる社会分断への対応策
+ 目的: 民主主義のアップデート、協力のための技術開発
+ 特徴: 人間の多様性を尊重しつつ、技術を活用して意見集約
+ サイボウズの理念とPluralityの概念の関係：
+	 サイボウズの理念:
+		 パーパス（存在意義）: "チームワークあふれる社会を創る"
+	 重視する価値観:
+   a) 多様な個性の重視
+   b) 対話と議論の促進
+	 Pluralityとの親和性:
+		 多様性の尊重: サイボウズの「[多様な個性を重視する]」という価値観とPluralityの「[異なる視点を持つ人々の協力]」という概念が合致
+		 対話の重要性: サイボウズの「[対話と議論]」の重視とPluralityの「[ブロードリスニング]」の概念が類似
+		 チームワークの促進: サイボウズのパーパスとPluralityの「[協力のための技術]」という側面が一致
+	 高部哲男氏の見解:
+   サイボウズの理念とPluralityの概念に強い親和性を感じた
+   この親和性が、Plurality本の日本語版出版を決定する要因の一つとなった
+	 期待される効果:
+   サイボウズの企業文化や理念の実現に向けて、Pluralityの概念や技術が有用なヒントを提供する可能性
+   チームワークや協働の新しい形態を模索する上で、Pluralityの考え方が参考になると期待
+	 技術と人間性の関係:
+		 サイボウズが目指す「チームワークあふれる社会」の実現に、Pluralityの技術が貢献できる可能性
+		 テクノロジーを通じて人間性や協調性を高めるという点で、両者の志向性が一致
+
+3. 参加者と取り組み:
+ a) 関治之氏(Code for Japan代表): 
+  経歴: 11年間[シビックテック]に携わる、東日本大震災をきっかけに活動開始
+  視点: オープンソース×コミュニティ×行政の融合
+  現在の関心: [デジタル民主主義]、[Plurality]
+  [Code for Japan]の活動: 市民による技術活用で社会課題解決
+
+ b) 西尾泰和氏: 
+  役割: Plurality本の翻訳に関与
+  興味の経緯: [知的生産性]向上の延長としてPluralityに注目
+  活動: [安野たかひろ]氏の選挙運動で[Plurality]を実践
+  見解: [AIと人間の協調]による未来の[統治形態]に関心
+
+ c) 高部哲男氏(サイボウズ式): 
+  役割: Plurality本の日本語版編集担当
+  興味: テクノロジーと人間性の関係
+  視点: テクノロジーによる人間性の回復可能性
+
+4. 東京都知事選での実践:
+ 候補者: 安野たかひろ氏
+ 使用ツール: 「[Talk to the City]」（AI活用の意見集約システム）
+ アプローチ: 従来の対立型選挙運動と異なる、ポジティブで参加型
+ 特徴: 市民の意見をAIで可視化、マニフェストに反映
+ 背景: 西尾氏からPluralityの概念を学び、関氏からTalk to the Cityを紹介される
+
+5. デジタル民主主義とAIの議論:
+ 主要論点: [AIによる統治] vs [人間の意思決定]の重要性
+ 西尾氏の見解: 
+  AIが人間より賢くなればAIが統治すべき
+  但し、人々の幸福の定義は人間が行う必要性がある
+  	一人の人が決めることではなく、多様な幸福の形があることをデータ化しなければならない
+  	それなしでAIが統治すれば誰かの決めつけた幸福の形を押し付けられることになる
+  なのでデジタル民主主義→統合テクノクラシーの順で進むべき
+ 関氏の見解: 人間の参加と熟慮の重要性
+ 議論されたモデル: 
+  成田悠輔氏の「[政治家は猫になる]」理論
+  	"[22世紀の民主主義] 選挙はアルゴリズムになり、政治家はネコになる"
+  統合テクノクラシー、デジタル民主主義、企業家的リバタリアニズムの3つのイデオロギー
+  	[21世紀のイデオロギー]
+
+6. Plurality本の日本語版:
+ 出版予定: 年内
+ 現状: Amazonで予約開始
+ イベントでの展開: ブース出展予定
+ 翻訳プロジェクト開始: 2022年10月頃
+
+7. イベントへの期待:
+ 目的: 新しい民主主義のあり方を模索する実験の場
+ 内容: 様々な自治体での実践例の共有、デジタル公共財の重要性の議論
+ 注目セッション: オードリー・タン氏と安野たかひろ氏の対談
+ 	[Broad listening in practice]
+ 期待される成果: 公共を支えるエコシステムの発展
+
+8. その他のトピック:
+ a) [Dig DAO]コミュニティの活動:
+  目的: Web3.0を支える環境や技術の研究開発
+  起源: [デジタル庁]の[Web3.0]研究会から派生
+  現状: デジタル庁から独立し、約10名で活動
+  取り組み: デジタルマッチングファンドの実験
+  	[DigDAOマッチングドネーション]
+
+ b) クアドラティックファンディング([Quadratic Funding]):
+  概念: より多様な選択肢に資金を分配する新しい仕組み
+  目的: 公共財への効果的な資金配分
+
+9. 民主主義の未来に関する議論:
+ 課題: 現行の[代表制民主主義]の限界（4年に1度の選挙の問題点）
+ 提案: より頻繁で具体的な[市民参加]の必要性
+ 方向性: テクノロジーを活用した新しい[意思決定プロセス]の模索
+ 目標: [納得感]のある[社会的合意形成メカニズム]の構築
+
+
+
+話すかもリスト
+	[激動の2024年5月下旬]
+	[Audrey+Glen+Halsk@Cybozu]
+
+[X Spaceの音声をダウンロードする]
+
+</Page>
+
+
+
+<Page title="ブロードリスニング本" url="https://scrapbox.io/nishio/ブロードリスニング本" updated="2026-05-02T01:27:43.947Z" created="2025-10-23T12:42:45.804Z" type="1hopLink">
+ブロードリスニング本
+背景
+	2024〜2025年にかけて日本ではブロードリスニングの実践事例が増えました。
+	一方で、概念やツールの説明、実践事例がまとまった資料は存在していませんでした。
+	DD2030コミュニティには知見が集まっていましたが、メンバーの頭の中や議事録に散在している状況で、まとめた文章を作らなければ散逸するという問題意識がありました。
+歴史
+	2025-08-13 中山心太氏(tokoroten)が 出版社に書籍化の相談、CC-BYでの執筆を交渉。
+	2025-10-15 企画が正式に通過し、GitHubで執筆開始
+	2025-12-03 安野貴博氏から序文を寄稿いただく
+	2026-02-09 Audrey Tang氏から推薦文をいただく
+
+https://github.com/digitaldemocracy2030/broad-listening-book
+[デジタル民主主義2030]
+	英訳版 by Luke Closs: https://github.com/lukec/broad-listening-book/tree/main
+		https://github.com/lukec/broad-listening-book/tree/main/en
+
+	Luke Closs
+		本日、https://broadlisteningbook.com/ を公開しました。
+	 サイトはCloudflareでホスティングしており、コードはこちらに置いています：https://github.com/lukec/broad-listening-book-site
+
+	Wiki
+		https://nishio.github.io/broad-listening-book-wiki/
+		https://github.com/nishio/broad-listening-book-wiki
+
+議事録 https://docs.google.com/document/d/1plggszRTxEEYUcZuCLiHkPrBsMtxr3RQpctKtZe5y4M/edit?tab=t.0
+レビュー https://docs.google.com/document/d/1JtdjkKore6WSo_bLJFkNAFarIrMCd58KPFTRyMTk4FY/edit?pli=1&tab=t.0#heading=h.ycp4kgtac614
+
+TODO(このセクションは破壊的に更新される 最終更新2026-04-10)
+	図解？
+
+2026-05-02
+	レビュー直し
+	[メガネをかけても目が不要にはならない]
+
+2026-04-20
+	安野氏の序文update✅
+	自分の記事の修正✅
+		see https://dd2030.slack.com/archives/C09J7A6HKRA/p1775156768098129
+
+
+2026-04-06
+	tokoroten: そういえばこれ、コラム化してほしい感ある。[空気が支配する日本ではブロードリスニングが重要]
+		nishio: 
+			Conneting Dotsみがあって面白いのはわかるが字数的にコンパクトに書けないんじゃないかw
+   まあWeb版記事にするとか、Note記事にするとか、X.comに投稿するとか
+
+	安野さん序文のupdate
+		Google Docsに誤字脱字の指摘
+			https://docs.google.com/document/d/13P7PDVu1IlM4EEr43dnW8KUGDi5HiZuamTut3XbOBP4/edit?tab=t.h9b0y89f3vv3#heading=h.stmefkxtsyez
+		大木さんの提案を踏まえて
+			https://github.com/digitaldemocracy2030/broad-listening-book/pull/13
+		→安野さんにボールがわたって今はリターン待ち
+2026-03-30
+	安野さん序文のupdate、西尾がやる
+
+2026-03-23
+	レビューdone
+	字数的にコラムを追加する時期ではないと思うので余裕があれば書こうとか言ってたコラムはなしにして、これで僕のタスクは一旦クリアという認識
+		E: Jigsawのファシリテーションの3つの類型 (nice to have)
+ 	H: [デジタル政策フォーラム講演2025-11-19]の西尾部分の図解を切り出してコラム化したいな、究極紙面に乗らなくてもいいけど参照しやすいパッケージの形にしたい
+ 		まあ余裕がなければNoteに書くのでもいいや
+
+2026-03-19
+	今日のメモ: 10_01まで読んだ(順番の入れかえをした)
+	Next Action: 10_02以降を読む
+
+2026-03-13
+	09-03: サイボウズ:✅
+		7434文字
+
+2026-03-10
+	[原稿:サイボウズ事例]
+
+2026-03-09
+	10-02: 台湾✅
+		10689文字
+		[思考の結節点2026-03-03]
+		[原稿:台湾]
+	next action:
+		サイボウズの事例紹介ページに白黒つけない会議での広聴AIの利用について書く
+			先にtkgshnの修正をレビューして反映
+			(from tokoroten) サイボウズのところにPlurarityの書籍化にお金出して、ゆるコンピュータ科学ラジオで動画作ってもらったら、大バズりしたという話がほしい
+
+
+2026-03-06
+	tkgshn:
+ 	>• 11章（多元現実）: サイボウズWSセクション（25行・画像4枚）を3行の簡潔な参照に圧縮し、「詳しくは第9章を参照」で誘導
+  >• 9章（サイボウズ）: 11章から画像4枚（会場全景・付箋ワーク・いどばたPC操作・重要論点画面）を適切な箇所に配置
+  >@NISHIO Hirokazu のレビュー待ちです！
+	  nishio: OK、サイボウズ側は台湾のを書き終わってから書き直すつもりなのでマージしてからやります
+
+2026-03-03
+	tokoroten
+ 	サイボウズのところにPlurarityの書籍化にお金出して、ゆるコンピュータ科学ラジオで動画作ってもらったら、大バズりしたという話がほしいな。
+  この記事を引き合いに出して。
+  https://cybozushiki.cybozu.co.jp/articles/m006278.html
+  nishio: 白黒つけない会議で連携するきっかけになったという形で入りそう
+ [熟議空間設計としての白黒つけない会議]
+
+2026-03-02
+	左: tokorotenの記事、右: Codexがそれをマージした記事
+	[https://gyazo.com/9427cb07e597e700bbccd168ee8de1d4]
+		わかりやすいな
+			ここの部分の構造化が明らかに足りていない
+				[https://gyazo.com/e346d7f2572ddb1095123ef745781ecc]
+
+
+2026-02-28
+	今こうなってるんだけど
+		[https://gyazo.com/1e3da2fc5503814170f98fc55c92d936]
+	概念的にここが一塊かな〜という感じがしている
+		[https://gyazo.com/97ff8a4599083bf3c0203c0de74af406]
+	一旦もうちょっと考えてみたい
+ こんな感じかな〜
+ 	[https://gyazo.com/02537a601a4bdd3e85a20e179cfb3ba9]
+	言語的に解説しておくと
+  1: 「熟義の土台から生まれたブロードリスニング」という上位テーマから
+  2: まず「台湾のUberX/Polisの事例」がスムーズに繋がる
+  3: そしてPolisが活用されてきた話からTalk to the Cityの必要性の話になる、ここでAI Assemblyの話やIsabel Houのコメントの話を軽く触れる、台湾編は一旦ここで終わり
+  4: 予定通りBG2050の事例、イスラエルの事例、と進む
+  5: Polis誕生のきっかけでは「~節では台湾でPolisが活用されて来た流れを見ました、ではこのPolisはどのように誕生したのでしょう」みたいな感じからSNS活動を制度に接続する必要性の話をして10-06の内容を語る
+	この方針で、`10_01_Polisの誕生`は一旦`10_0X_Polisの誕生`にリネームした。
+	 `10_01_台湾`と`10_02_台湾`のマージを検討する。
+	2つあった台湾のページはCodexがいい感じにマージしてくれました。
+	 tokorotenが書いた「他人の記事」を自分の記事の中で使うことに心理的ハードルがあったが、AIが飲み込んで吐き出したことによって「AIの出力」に変化して心理的抵抗なくバリバリいじれそうな気持ちになってきたw
+ 	このあとCodexのマージ提案を見ながら僕が清書したものを作ります
+ 中山心太（tokoroten）  
+ 	私にしてみても、ClaudeCodeが書いた記事なので、他人が切り刻んでこねくり回しても何も痛くないｗ
+
+2026-02-26
+	さてと、なんだっけな
+	多分台湾行く時の書きかけだった記事をdoneにしてからやることを整理した方がいい
+		✅
+	さて次なんだっけ
+		>(1/5)ざっくりまとめ: ざっくり書いてある状況 (A)読んできれいにしていく作業を今後やっていく感じ
+  	7-1→6-1 参院選チームみらい✅2026-02-26
+  	9-3 サイボウズ
+  	コラム: レビューから始めるブロードリスニング
+		>(1/5)9章 企業・NPOでの活用のサイボウズの事例に関して、今の公開状態の原稿をある程度までやった後、非公開で追記したい(B)、その場合のデッドラインなど(2/8ごろ公開される話題があるため)
+			[白黒つけない会議]のこと
+			結局選挙で締め切りがずれ込んだから公開が先になったw
+		>(1/5)Jigsawの3つのファシリテーション類型をコラムに書く(C)かな〜という気持ち
+  >(1/5)技術的な11章、12章を適当なタイミングでレビューした方がいい
+		(1/12) 世論地図
+			レビューのリマインドした✅
+  (2/16)
+  	>10_海外におけるブロードリスニング（TTTC）の利用.md: 179
+  		>10章のテーマ：国内は「単発のブロードリスニング」まで到達、海外では「熟議としてのブロードリスニング」まで到達しているよ
+  		>台湾は熟議のプラットフォームとしてPolisが導入され10年運用されていたあとにその可視化としてのTTTCだったが、日本はTTTCだけ着てしまった
+  		>Polis的なものが日本で使われてほしい。多元現実のでもよい(nishio)
+  		>3分割にするとよさそう
+  			>台湾：nishio、台湾の担当者と話していた～
+  			>イスラエルパレスチナ：中山がたたき台を作る、青山チェック入れてもらう
+  			>jigsaw BG：taka
+  			[喧嘩をしやすくするAI]
+
+僕のタスク
+	A: サイボウズの事例紹介ページに白黒つけない会議での広聴AIの利用について書く
+	B: コラム: レビューから始めるブロードリスニング　の清書
+	C: 10-01: 台湾の話を書く
+	D: 12,13章の技術記述をレビュー
+	E: Jigsawのファシリテーションの3つの類型
+		[AI時代のファシリテーション] / [変容型ファシリテーション]も絡めたい
+
+えーと、Cの不確実性が高すぎるからまずこれをやるかw
+そうこうしてる内にAの広聴AIのサイトが公開されると思うし。
+
+
+
+
+
+2026-02-23
+	from tokoroten
+		>台湾の話のところに、可能であれば、ここら辺のミニ・パブリクスの話をごそっと持っていってほしい。
+  > 3章が重くなりすぎたので削りに掛かっている。
+  > https://github.com/digitaldemocracy2030/broad-listening-book/blob/main/03_%E3%83%8[…]%81%84%E6%B0%91%E6%84%8F%E3%81%AE%E5%B1%8A%E3%81%91%E6%96%B9.md
+
+2026-02-16
+	[台湾視察2026]の行きの飛行機で途中まで書いてたんだが、その後のドタバタでなんだっけとなったw
+		どこを書きかけだったのかすら覚えてないw
+	まあ[白黒つけない会議]もリリースされたし、ぼちぼち書き進めていきましょう
+	会議
+		12章は消滅、Jigsaw
+		10章の1、台湾での熟議の流れを書く(nishio担当)
+			Isabel Houの「熟議をするコミュニティの構築が大事」を入れる、dd2030の活動として台湾に視察に行った話をしれっと書く
+			[デジタル民主主義の川の流れを見る]の前半部分
+	2026-02-23追記:
+		この後[サステナブル・ブランド国際会議 2026]で吹き飛んだw
+
+2026-01-20
+	doing 参院選チームみらい
+		いどばたの話を加筆している
+			2026-02-23追記:
+				[台湾視察2026]の行きの飛行機でこれを書いていた([飛行機でXreal One])
+				そして台湾での膨大な情報量と、返ってきてすぐの[衆院選2026]で吹き飛んだ
+
+2026-01-07
+	[日テレNEWS×2024衆院選×ブロードリスニング]
+
+2026-01-06
+	>05_01の原稿で使われているimage*.png に関して、適切な名前をつけてimages/に移動し、原稿中の参照も更新せよ
+		ちゃんとやってくれた、便利〜
+
+2025-12-31
+	再度レビュー
+ 	5-1 都知事選安野 ✅2026-01-07
+ 		[2024都知事選でのマイナ投票]
+ 		[ブロードリスニング：みんなが聖徳太子になる技術]
+ 	5-3_2 世論地図 ✅2026-01-08
+ 		https://github.com/mielka/yoronchizu2024-data/blob/main/README_ja.md
+ 	7-1 参院選チームみらい
+ 	9-3 サイボウズ
+ 	コラム: レビューから始めるブロードリスニング
+
+
+2025-12-28
+	キューに入ってたタスク、5-1、7-1、1〜3のレビュー、6のレビューが終わって、次は何をしようかなというところ。
+		角野さんの原稿が上がってきたらそれを読むとして、一旦は「原稿を寝かしてからもう一度読んで改善」を次のタスクにするかなという気持ち
+	>世論地図をpolis派生で作っていた話、これはこれでコラムかなにかで書いていいんじゃない？という話
+		これは2024衆院選でのリリースだったのでそこにいれる
+		Polisを中で使っていること、Polisとの違い(自由な投稿を受け付けていない)
+	9章 企業・NPOでの活用、サイボウズの事例を書くことは可能(nishio)
+
+2025-12-26
+	5章 都知事選でのブロードリスニング
+ 	>[annotakahiro24 https://x.com/annotakahiro24/status/1813184049558790444] ブロードリスニングを担当した  @m_datasci_ による、TTTC（Talk to the City）というツールの解説記事です
+  > #TOKYOAI で皆さんから頂いた声をどのように分析していたのか？裏側をぜひご覧ください
+ 	[SNS研究者から見た都知事選〜ここがすごいよTTTC〜 #安野たかひろ｜M https://note.com/m_datasci/n/n3a5f4b9cdee5?sub_rt=share_b]
+		[激動の2024年5月下旬]
+			[シビックテックによる、社会と民主主義のアップデート]
+		参考記事：
+   https://note.com/nishiohirokazu/n/n15a60978113d
+   https://note.com/nishiohirokazu/n/n799c9818b33d
+   https://note.com/nishiohirokazu/n/n0661204bda5b
+   https://note.com/nishiohirokazu/n/n0c7805faabca
+   https://note.com/m_datasci/n/n3a5f4b9cdee5
+
+	7章: 参院選チームみらい部分
+		[ブロードリスニングが1年で標準戦略に]
+		[チームみらいの社会実験「しゃべれるマニフェスト」から得られた知見]
+			[チームみらいの社会実験「しゃべれるマニフェスト」から得られた知見｜NISHIO Hirokazu https://note.com/nishiohirokazu/n/nb35e8d526fd4?sub_rt=share_pb]
+	1-3, 6章のチェック
+		[Polis: Scaling Deliberation by Mapping High Dimensional Opinion Spaces]
+	角野さんが書く部分
+		4章DD2030初期,5章日テレ特番
+	11章(要素技術)　15000文字 / 12章(技術スタック)　15000文字 もレビューしたほうがいいよね
+
+
+2025-10-27
+第3章 デジタル民主主義とブロードリスニング、新しい民意の届け方
+tokorotenとnishioが書く
+ 自分の意見が大勢の中でどこに位置するのかを把握する
+ 多様性を自覚するのが大事だよ
+
+
+第4章 DD2030による広聴AIの開発活動
+tokorotenとnishioが書く
+	デジタル民主主義2030 について
+
+第5章 日本国内におけるブロードリスニングの広がり
+2024年 東京都知事選 安野貴博の取り組み
+@nishioが書く
+
+第6章 東京都、シン東京2050、ブロードリスニングによる政策転換
+	要取材、 tokorotenとnishioが書く
+
+第7章 2025年衆院選でのブロードリスニングの活用
+チームみらい
+nishioが書く
+	[チームみらいの社会実験「しゃべれるマニフェスト」から得られた知見]
+
+第10章 海外における〜
+nishioが章題ごと再構成
+	[Code for Japan Summit 2025]
+		[デジタル民主主義の川の流れを見る]
+
+[Cartographerによる章立て変更]
+	7章チームみらい部分
+		広聴AIの話だけ書く
+	
+
+
+[シビックテックによる、社会と民主主義のアップデート]
+[主観か客観かではなく、一人の主観から大勢の主観へ]
+[デジタル民主主義の川の流れを見る]
+[チームみらいの社会実験「しゃべれるマニフェスト」から得られた知見]
+[デジタル民主主義をスケールさせるには？]
+
+2025-12-27
+5章 都知事選でのブロードリスニング について私が書く。
+現状を確認して。
+
+西尾と安野氏とは一般社団法人未踏が行う未踏ジュニアのメンター
+未踏ジュニアコミュニティでは2023年4月に開催されたPlurality Tokyoの発起人の一人新美 陸人氏が未踏ジュニアの修了生であるなどから2023年から話題
+筆者がPlurality本の日本語化プロジェクトリーダーをしていたこともあり、安野氏が詳しい話がしたいとなった
+その会で関さんがTTTCを紹介した
+
+
+前章で触れた狭義/広義の区別に沿うと、都知事選での実践は次の4経路に整理できる。
+ TTTC（#TOKYOAI／匿名意見箱）：自由記述を構造化・可視化して論点地図を作る。狭義のブロードリスニングそのもの。
+ マイナ投票→Polis：投票データから意見グループや合意点を可視化する。広義の熟議・合意形成の補助に寄る。
+ GitHubでのマニフェスト提案：提案→検討→反映が政策の意思決定に直結する。広義のプロセス設計に寄る。
+ AIあんの（AIあんの電話）：質問の収集・対話の入口として機能する。狭義の前段（収集）だが、参加プロセスの設計という意味では広義にも関わる。
+
+
+[アテンションリソースとレポーティングの分離]
+
+</Page>
+
+
+
+<Page title="2024年の7月、面白いことが起きる" url="https://scrapbox.io/nishio/2024年の7月、面白いことが起きる" updated="2024-08-21T03:57:17.620Z" created="2024-08-21T01:56:35.142Z" type="1hopLink">
+2024年の7月、面白いことが起きる
+from [日記2024-05-13]
+2024年の7月、面白いことが起きる
+>[HiroTHamadaJP https://twitter.com/HiroTHamadaJP/status/1790001995866067204/history] 今年の7月、面白いことが起きるだろうとしか思えない状況になっている。偶然もあるが、このタイミングに賭けたいろんな人たちのおかげ。一生ものの宝物になるよ。
+
+>[HiroTHamadaJP https://twitter.com/HiroTHamadaJP/status/1790008183165006126] 多くの人を集めるイベントは数年はしない予定なので、申し訳ないが今回支援してくださった方々としか動けない。
+> 次の10年を作る決定的に重要なイベントになると確信している。
+
+[身銭を切る]
+まったく別経路から7月に起きる面白い出来事の話を聞いたので[Funding the Commons Tokyo 2024]のことを紹介したらやっぱり面白いねという話になってた
+---
+
+2024-08-21追記
+[" まったく別経路から7月に起きる面白い出来事の話を聞いた] is [東京都知事選2024]
+	[激動の2024年5月下旬]
+ [安野 貴博]さんに「AudreyとGlenが来るよ」という話をした
+
+
+</Page>
+
+
+
+<Page title="陰謀論者は関係を見出すのが得意だけど因果関係の矢印の向きをしばしば間違えている" url="https://scrapbox.io/nishio/陰謀論者は関係を見出すのが得意だけど因果関係の矢印の向きをしばしば間違えている" updated="2026-02-20T02:42:03.306Z" created="2026-02-20T02:38:50.694Z" type="1hopLink">
+陰謀論者は関係を見出すのが得意だけど因果関係の矢印の向きをしばしば間違えている
+[陰謀論者]は関係を見出すのが得意だけど因果関係の矢印の向きをしばしば間違えているな
+	チームみらいの推してるプルラリティのサイトを作ってるのがサイボウズ！陰謀だ！とか言ってる
+	プルラリティの方がチームみらいよりも都知事選よりも先だ
+	順序としてはサイボウズの僕がプルラリティを日本に発信することをしてきて、安野さんがそれを見て都知事選のマニフェストに使った、という方向
+	この関係性は秘密ですらなく[激動の2024年5月下旬]に書いてるしあちこちで話してる
+
+</Page>
+
+
+
+<Page title="2025年5月の熱い1週間" url="https://scrapbox.io/nishio/2025年5月の熱い1週間" updated="2025-05-16T04:05:08.292Z" created="2025-05-06T16:47:27.973Z" type="1hopLink">
+2025年5月の熱い1週間
+[Tokyo Plurality Week 2025]から自分が参加しないのを削って、Plurality Weekではないものを追加した今週の事前週記
+
+ 2025-05-06 [20250506東大AI研究会特別講演会]
+	2025-05-07
+		[チームみらい]日テレ独自ニュース
+		[デジタル民主主義2030、新ボード体制のお知らせ]
+	2025-05-08
+		[2025-05-08安野たかひろ出馬会見] 13:00
+		[世論地図]OSS公開
+		エネ庁パブコメ到着
+			[パブコメDDoS攻撃]
+		17:00~ [ミステラ『眠る脳と脈打つ宿罪』]
+	2025-05-09
+		17:00~ [Open StarTer Village]
+ 2025-05-10 [Plurality Tokyo Namerakaigi #2]
+ 2025-05-11 [蔦屋書店PLURALITY刊行記念トークイベント]→[Audrey+Glen+青野鼎談@サイボウズ]→[Meetup with Colin]
+ 	10:30〜19:00
+ 2025-05-12
+  [東京大学Pluralityセミナー2025-05-12]
+ 		福武ホール 15:00〜16:40
+ 	[デジタル民主主義の未来(オードリータン/松尾豊/上野山勝也)]
+
+1週間と書いてるが「下旬」とかに広がる可能性も...
+	関連: [激動の2024年5月下旬]
+
+</Page>
+
+
+
+<Page title="某講義" url="https://scrapbox.io/nishio/某講義" updated="2025-03-05T14:38:13.179Z" created="2025-03-05T01:44:11.731Z" type="1hopLink">
+某講義
+5月後半
+5分
+
+	安野さんと一緒に活動するようになったきっかけ
+		Plurality本の英語版を読んで日本語で発信していたものが安野さんの目に留まった
+		都知事選で「ブロードリスニング」をマニフェストに入れると安野さんが決めた
+		ここにだいぶ書いてた: [激動の2024年5月下旬]
+
+</Page>
+
+
+
+<Page title="2024-11-17外部脳考える" url="https://scrapbox.io/nishio/2024-11-17外部脳考える" updated="2025-03-02T06:55:56.129Z" created="2024-11-17T07:49:24.484Z" type="1hopLink">
+2024-11-17外部脳考える
+from [日記2024-11-17]
+
+[自動英訳]が止まってそうな感じもある
+[https://gyazo.com/3917ba7c677367b442dfd29ecda7f8af]
+翻訳が止まってるのではなくimportでコケてるのか
+
+「[西尾泰和のScrapbox→西尾泰和の外部脳]」も踏まえて「[なんかもうScrapboxにimportするの辞めた方がいいんじゃないの]」感が高まっている
+
+[** 振り返り]
+そこで[mem.nhiro.org]のことを思い出した
+	が、これはデータを持つのではなく、アクセス時にScrapboxのAPIを叩いてレンダリングしているだけ
+	良い特徴:
+		Vercelでカスタムドメインで配信
+		UIの設計が自由
+	悪い特徴:
+		DBを持たずScrapboxのAPIでデータを取得しているのてScrapboxから得られないデータを用いた処理ができない
+	読んだ
+		[memとは]
+			>2022-02-24 「Scrapboxのコンテンツを元に、ビューをカスタマイズして、カスタムドメインでVercelを使って配信しているもの」といちいち言うのは面倒なので[mem]と呼ぶことにした
+		[2022-03-08]
+			複数のプロジェクトをまたぐことの問題/ニーズ
+		[Next-mem]
+			複数のサービスをまたぐことのニーズ
+	https://github.com/nishio/mem
+
+[etude-github-actions]をまとめたのがちょうど1年前だった(4月ごろから使い始めてる)
+	>2023-11-17 Github Actionのことを全然知らなかったので練習のつもりで作ったがそこで実験していた[Github ActionsでのScrapbox自動翻訳]が思ったよりうまく行ったのでそのまま運用フェーズになった
+	自動英訳している
+	良い特徴
+		言語の壁をまたいでる
+	悪い特徴
+		ViewがScrapboxなのでUI上で翻訳であることを示したりすることが困難
+	https://github.com/nishio/etude-github-actions
+
+[西尾のベクトル検索]も関連している
+	自動的にデータを取ってembedしている
+	実験的に複数のプロジェクトをまたいで検索できるようにしている
+	embeddingのデータから先日やったような[濃い塊の抽出]をすることができるはず
+	https://github.com/nishio/vecsearch-service
+		これはprivateなのか
+	embed側
+		https://github.com/nishio/omni
+		omoikane-embedを作ってからそれを/nishioに適用したのだった
+		from [omni] 2023-08-31
+  >[オモイカネプロジェクト]を自動的に埋め込みベクトルにする[Omoikane Embed]システムを、この Scrapboxプロジェクト/nishioに導入した。
+	その後[nihia]が生まれたんだよな
+		from [pNihia] 2024-05-05
+  	>[⿻Plurality Assistant]が便利だったのでこのScrapboxを読むアシスタントのGPTsを作る
+  	>サーバサイドはprivate repos: `nishio/vecsearch-service` にある
+	で[激動の2024年5月下旬]が始まって今に至るw
+
+
+[** 周辺探索]
+	[/villagepump/QuartzでObsidian Vaultを公開]
+		静的レンダリング
+	[/villagepump/JSON Canvas]
+		[Obsidian Canvas]
+	[/villagepump/Bluemo Obsidian vs Scrapbox検討202301]
+		>拡張可能性、他者とのコミュニケーション、Webサイト公開の三つが論点
+			いい整理だ、自分でもここまで書きながら「解決すべきニーズが複数混ざってるな」と思っていた
+			僕のニーズがこれとイコールであるとは限らないので自分でちゃんと考えなければならない
+
+
+[** 考察]
+[/villagepump/Bluemo Obsidian vs Scrapbox検討202301]をforkして[/villagepump/ビューの追加検討202411]を作った
+考えてみた結果[nishio.icon]
+　ObsidianかScrapboxかは誤った二者択一
+　「拡張の自由度が高い」は曖昧なので、どういう拡張をしたいかをもう少し明確にする
+　Viewを拡張したい
+　　バックエンドはScrapboxのままで良い
+　　　日本語リアルタイム部分は引き続きScrapboxでよい
+　　元々1日1回ペースで英訳して公開していたものの置き換えなので変換ディレイは問題ではない
+　　　今までScrapboxにインポートしてた
+　　　　けど、そうするとそもそも英語がネイティブ言語ではない人にとっては単に「なぜか機械翻訳できないサイト」になる？
+　　　　翻訳である旨をUIに足すことができないのが不満
+　　　　インポートがコケるようになったので、もう「書き込みAPIのないサービスをインポートで書き換える」というハックに頼るのはやめたいなーという気持ち
+　　つまり[自動英訳した後のものをホストする場が欲しい]
+　　　同じ仕組みで日本語版もホストできるのではとか、ついでに新しい機能をつけることができるのではとか考えている
+　　　[抽象度が高くなると応用範囲が広くなる]
+　　　　やりたいことが色々あるせいで、全部をできるように抽象度を高くしてしまい、その結果具体的な要件から離れすぎて意思決定の手がかりが減ってしまう問題
+　　　一旦英語版ホストに絞るべきか
+　　　　実際にやるとわかることも多い
+　Viewを置き換える上でObsidian経路を通るべきかどうかは未知数
+　この当時は2年前の[Quartz]の話をしてる
+　　>2023-08-20 にv4がリリースされていて構成が大きく変わっている
+　　>Hugo から[Preact]になった
+  > Hugoのテンプレートに書き慣れていなかったので、JSXでフロントエンドのカスタマイズができるのは助かる
+  　[Quartz v4でObsidianを公開した https://ikorihn.github.io/digitalgarden/blog/Quartz-v4%E3%81%A7Obsidian%E3%82%92%E5%85%AC%E9%96%8B%E3%81%97%E3%81%9F]
+  おっ、React的にJSXでカスタマイズできるようになってるぞ
+
+
+[** ネクストアクション]
+	https://github.com/nishio/etude-github-actions を読み返す
+	external-brainとかで新しく作る
+		JSONを保存
+	[ScrapboxToObsidian]で日英のObsidian形式を作成する
+	Quartz v4でGithub Pagesにする
+		(/nishio-en や mem.nhiro.org は一旦消さずに並行運用)
+
+想像
+	/nishio-enはこのままだと更新されないし、GitHub Pagesで動くようになったら「こちらをみてね」的ページをピン留めして終了
+	memはまた別の話
+		長期的には合流したらいいけど現時点では別にいいか
+		embeddingのデータを使った面白いことはomniから派生したらいい
+
+</Page>
+
+
+
+</PageList>

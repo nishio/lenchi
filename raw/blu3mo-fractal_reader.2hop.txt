@@ -1,0 +1,541 @@
+This text contains the content of https://scrapbox.io/blu3mo/Fractal_Reader (a page on Cosense, formerly known as Scrapbox) and its related pages in one file.
+Total pages included: 10 (main page + 5 directly linked + 4 indirectly linked pages).
+
+IMPORTANT: Bracketed [page title] are internal links. Most linked pages exist within this document - use them to navigate between related concepts.
+
+== GUIDE FOR AI AGENTS ==
+1. START with the first page (main topic: "Fractal Reader") - marked as type="mainpage"
+2. READ the <PageList> in order - pages are sorted by relevance and importance
+3. USE internal links [page title] to understand connections between concepts
+4. NAVIGATE by searching for "<Page title=" to jump to specific pages
+5. REFERENCE created/updated timestamps when handling conflicting information
+6. UNDERSTAND page relationships using type attribute:
+   - type="mainpage": The primary page you requested
+   - type="1hopLink": Pages directly linked from the main page (most relevant)
+   - type="2hopLink": Pages linked from 1-hop pages (contextually relevant)
+
+<PageList>
+<Page title="Fractal Reader" url="https://scrapbox.io/blu3mo/Fractal_Reader" updated="2024-04-22T17:20:24.194Z" created="2024-04-15T03:24:41.586Z" type="mainpage">
+Fractal Reader
+ さまざまな粒度で要約を生成・表示してくれるツールを作った[blu3mo.icon]
+  長い記事や論文などを放り込むとさまざまな粒度の要約を表示してくれる
+  　英語記事を放り込むとついでに日本語訳してくれる
+  デモ：https://fractal-summarizer-fe6eaa294c58.herokuapp.com
+　サンプル
+　　https://fractal-summarizer-fe6eaa294c58.herokuapp.com/view/04e0cc95-51f4-47b9-9fd6-d5e4930b5485
+  　ワンピースのあらすじまとめ（Wikipediaより）
+  　[https://gyazo.com/c3308ef09c4adcd681ff35303cbce921]
+　　　行をクリックすると、各カラムの該当する箇所が表示される
+　　日本史のまとめ：https://fractal-summarizer-fe6eaa294c58.herokuapp.com/view/bea3d735-3c87-42af-adf7-7c0a354ae182
+　　　元ネタはWikipedia
+　　　[https://gyazo.com/c413e2d1109c1f25ef2756c81edcf3b7]
+　　[The Profession of Human-Computer Interaction]
+　　 https://fractal-summarizer-fe6eaa294c58.herokuapp.com/view/c867292c-79fb-470d-aab4-f929eedf7b53
+　　[Plurality Book]
+　　 各章各節を突っ込んでみた
+　　 [/plurality-japanese/フラクタル要約 目次]
+
+[/villagepump/Fractal Summarizerをプロダクトとして展開する]
+[Fractal Reader 実装]
+
+</Page>
+
+
+
+<Page title="Fractal Reader 実装" url="https://scrapbox.io/blu3mo/Fractal_Reader_実装" updated="2024-04-28T19:30:17.553Z" created="2024-04-17T16:59:19.872Z" type="1hopLink">
+Fractal Reader 実装
+ [private.icon]
+ [Fractal Reader]実装メモ
+
+2024/4/28
+ 「このWEBサイトをFractalReaderに放り込みたい」と思ってから要約を見れるまでの速度が大事だな
+  例えば「入力の過程で色々出力設定を決めないといけない」とかは嫌だ
+ 改善
+  複数の要点を一文に詰め込んだみたいな文は嫌だな
+  　それが欲しかったら一個下の階層を見るので
+ 　セクション区切りの指定
+
+ [nztm]の知見がめちゃくちゃ有益、ありがたい[blu3mo.icon*2]
+  [ColorMagic]について
+   ここはオフレコ
+ 　[Product Hunt]について
+ 　 >これは僕らも割と手探りでやったので、色んなブログ記事を調べて参考にしたけど、やっぱり公式ガイドをしっかり読むのが一番だった。週末は個人開発プロダクトが多めで、競争率が低いのでおすすめ。プロダクトの英語化は必須で、英語喋れるならデモ動画とか撮ったほうが受けはいいと思う、投票数獲得しているプロダクトの構成や資料を色々と参考にするのが良い。日本人は殆どProduct Hunt使ってないので、票集めをするなら数日前にはProduct Huntの近日公開（Coming soon）にして事前登録を集めておく、当日にHacker Newsとかに投稿する（僕らはやっていない）、コメントには熱心に返信するとかかな。割と初速が重要で、最初の数時間で結果はある程度決まってしまう。
+ 　参考になるリソース
+ 　 >参考になる本やリソースはこれというものがないのだけど、色々なAI系のサービスのマネタイズを調べてみて良さそうなものを試してみるのが一番学びになる気がする。
+ 　  [サービスのマネタイズを調べる]
+   > フラクタル要約の場合、割と仕事や研究用途が多そうなイメージがあって、そういう人たちは割とお金を払ってくれそう。割と斬新なツールではあるし、他の人が作るかと言われるとビジネス的にはニッチなのでやらなそうで、完全有料でも売れそうだなと思った。
+   > コストを考えると月15ドル程度はとっても良い気がするね、C向けだし上限ありのサブスク+従量課金のクレジットモデルとかにもできそう。最近だと、http://v0.dev とか http://Humade.ai がそういうモデルかな。http://Mem.ai も最近は完全有料サブスク化していたり。
+   > お金払ってくれないユーザーは割と1回だけ使いたいとかだと思うので、無料枠を作ると課金率下がりそうで、やるなら機能や文字数制限を加えるとかGPT-3.5にするとかで差別化して、お金払ったほうが良い結果を得られるようにしたほうがよさそう。回数制限だけだと使われ損になる気がする。
+　マネタイズの仕組み案
+　 数字は決め打ち
+　　ベースラインとして、ここから改善していく
+　　案1
+　　 月$nでx文字?
+　　  文字数は日英で全然違うので、トークンで測るか?
+　　  日本語
+ 　　  ひと月 10万文字で1000円?
+ 　　  これで全部使われてざっくり利益率50%くらいかな
+ 　　  ひと月 100万文字で5000円
+ 　　   
+　　案2
+　　 買い切り
+　　 あんまりこのタイプ見ないよな
+
+2024/4/21
+ 費用の概算を自動で出せるようにしたいな
+
+ 　出した
+　　SHDの文字起こしで実験
+ 　　予測値 $2.35
+ 　　実測値 $2.45
+　　　計算は間違ってなさそうだな[blu3mo.icon]
+　　なめてき文字起こし実験
+　　　予測値 $5.06
+　　　実測値 $4.77
+　　　3回ほど実行されてしまった
+　　7.43-
+ LP
+  https://launchvir.al/
+
+2024/4/20
+>[nishio https://x.com/nishio/status/1781728791976665207?s=46&t=gkSZtjGEtUZPO0JCzBxCBw]: @blu3mo  6時間のイベントの文字起こしが手元にあって「これをフラクタル要約したら有用だ」と感じたけど、当然タイムアウトするので本当に有用かどうか試せない。実装的にはユーザにキーを入れさせてクライアントサイドでAPIを叩けばタイムアウトの問題はなくなるが、課金困難になるね
+ [blu3mo.icon]
+ フロントエンド側でタイムアウトしても裏側で処理は続いていて、データベースには結果が届いています
+  6時間のイベントの文字起こしの要約らしきもの: https://fractal-summarizer-fe6eaa294c58.herokuapp.com/view/eb8f4043-e39d-4f13-8236-b892c1fe30ac
+  念の為報告しておくと、これ一つに$20以上かかっています
+   急に謎の大量課金が来てびびった
+   [https://scrapbox.io/files/6623f68013ebbc00249420b3.png]
+   　一回のリクエストでbalanceをオーバーすると負の値になるのか
+   　	0で止まらないのかww[nishio.icon]
+   概算を出してみる
+    [https://scrapbox.io/files/6623fbfe43744b0025b88519.png]
+    文字起こしは46000 tokens, 1604行
+    要約は67000 tokens, 7カラム ([$ log_3 1604=6.72])
+    要約が合計
+    合計入力Token
+     46000 tokens * 7カラム = 322000 tokens
+     322000 tokens * ($10 / 1M tokens) = $3.22
+    合計出力Token
+     67000 * ($30 / 1M tokens) = $2.01
+    あれ、おかしいな[blu3mo.icon]
+    　これだと合計$5.23しかかからない計算だ
+
+  今のシステムではgpt-4-turboを使っている
+  　gpt-3.5-turboだとどの程度品質が悪化するのだろう
+   詳細度が高いカラムはgpt-3.5-turboでも良いかも
+   　お金かかるし要約が比較的簡単なので
+    試しにLevel 4以降はgpt-3.5-turboを使うようにしてみた
+     文字起こしの要約費用を$3.5(実測値)に抑えられた
+     https://fractal-summarizer-fe6eaa294c58.herokuapp.com/view/8dc2c44d-a87d-4042-b074-0587065e5cf1
+
+
+2024/4/19
+
+todo
+　async問題
+　timeout問題
+　 
+　tips
+　アルゴリズム改善
+　 
+
+[https://gyazo.com/45720bb3b9401af922e16ad03e0515d7]
+ [blu3mo.icon]がアホでなければ計算量はこれであってるはず
+ 改善案
+  kを減らす
+  　[https://gyazo.com/eeae675acdaf638128e9c4155ff35a0a]
+  　[https://gyazo.com/74708062b7b493f0af01200c889938d0]
+  　 どうみても非線形
+  　 2を4に減らすと半分まで落とせるけど、4を6に落としてもあんまり変わらない
+  sを減らす
+　　　
+  　一行当たりの要約をさらに簡潔にさせる？
+　　再帰的に要約する
+
+</Page>
+
+
+
+<Page title="The Profession of Human-Computer Interaction" url="https://scrapbox.io/blu3mo/The_Profession_of_Human-Computer_Interaction" updated="2022-11-17T21:50:37.208Z" created="2022-09-25T21:34:06.324Z" type="1hopLink">
+The Profession of Human-Computer Interaction
+[https://www.designdisciplin.com/hci-profession/ The Profession of Human-Computer Interaction]
+[HCI] as profession, [馬路ゼミ将来設計]
+
+>HCI is the branch of computer science that builds on social sciences and humanities.
+ いやー、やっぱやりたいのはこれだな[blu3mo.icon*2]
+
+>HCI is a field of academic and scientific research. The vast majority of HCI researchers are employed at universities. A smaller but still significant number of them are associated with large tech companies that allocate large budgets for research and innovation: Microsoft Research, Spotify, Nokia Bell Labs, IBM, Google...*
+> * Independent labs and individuals like [Ink & Switch] and [Andy Matuschak] exist, but their numbers are few, and they are somewhat outside the academic HCI community.  That said, I do believe this space will grow exponentially and eventually integrate with the academic world.
+
+</Page>
+
+
+
+<Page title="非対称なエディタ" url="https://scrapbox.io/blu3mo/非対称なエディタ" updated="2024-06-03T00:30:38.945Z" created="2024-05-10T22:07:18.623Z" type="1hopLink">
+非対称なエディタ
+　[Fractal Reader], [asym-chat(アンジャッシュ状態チャット)], Google翻訳などを合体させた先に見えるものが絶対に面白い[blu3mo.icon*2]
+
+具体的なUIのイメージ
+ 複数カラムがあって、それぞれのカラムの文章を共同編集できるUI
+ 　[asym-chat(アンジャッシュ状態チャット)]みたいな感じだけど、チャットではなくGoogle Docs的な
+　それぞれのカラムの編集が、LLMによって変換されつつ同期される
+　　カラムAを編集したら、その編集が変換されてカラムBでも適用される
+
+　どんな変換がありえる？
+　　様々な粒度
+　　 [フラクタル要約]みたいなイメージ
+ 　　 [フラクタル要約のレイヤ間編集伝播]
+　　 本文と、本文を三行で要約した文章が横並びで表示されている
+　　 　本文を編集するとそれが三行要約にも反映される
+　　 　逆に、三行要約の方を編集するとそれが本文にも反映される
+　　様々な言語
+　　　日本語文章と英語文章が横並びで表示されている
+　　　　一方を編集すると
+　　　日本語話者と英語話者が共同編集できるだけでもとても便利な気がする
+　　　　ありそうだけど見たことはない
+　　様々なトピック
+　　　[asym-chat(アンジャッシュ状態チャット)]みたいなイメージ
+　　　ある概念を一旦抽象化して別のトピックに変換する
+ 　　　例：システムの設計についての問題を、人間の組織の設計の問題に変換して眺めたら、解決策が思いつくかもしれない
+ 　様々な文化
+ 　　今自分が書いている文章を、「アメリカ人にはどう見えるか」「高齢者にはどう見えるか」などを疑似体験する
+ 　　　それぞれの視点から見つつそれぞれの視点から修正することで、原文も整えていく
+
+
+嬉しさ
+　コラボレーション、文化を超えた相互理解に役立つ
+　 --> こっちはAri先生と
+　一人で使うとしても概念の操作, 思考, 文章の執筆に役立つ
+　　ある文章を色々な角度, 色々な粒度から眺めつつ手入れしていくような体験になる
+　　これを使って思考をまとめたり文章を書く体験、面白そう
+　　--> こっちはラボユースで
+
+実装
+ リアルタイム共同編集を想定した時に、LLMの変換が絡む同期処理の実装はちょっと工夫が必要そう
+ カラムAにおける変換Xを、カラムBのどの行に適用するのか
+ 　対応を保持しておく? 全部LLM任せでいい感じに適用してもらう?
+ コンフリクトをどう解消する?
+ 「難しいことは全部LLMにいい感じにやってもらう」で解決する可能性も結構ある[blu3mo.icon]
+
+　空間とか体験も、言語に変換できればこの仕組みを応用できる
+　　空間の処理を言語の処理に帰着させるイメージ
+</Page>
+
+
+
+<Page title="経営者は意思決定が仕事" url="https://scrapbox.io/blu3mo/経営者は意思決定が仕事" updated="2024-04-28T23:16:53.233Z" created="2024-04-28T22:36:50.494Z" type="1hopLink">
+経営者は意思決定が仕事
+[経営]者は[意思決定]が仕事
+
+2024/4/28
+ この辺の[Fractal Reader]についての検討を経て
+ 　[/villagepump/FractalReaderの宣伝・運営#662e495b79e1130000ff3734]
+ 　[/villagepump/FractalReaderの宣伝・運営#662ed02579e113000080eea7]
+　まだ言うのが早いかもしれないが、「経営者は意思決定が仕事」みたいな話の実感が多少沸いている
+
+[/villagepump/2024/04/29]
+ 「経営者は意思決定が仕事」みたいな話も実感が湧いてくる
+ 　何をすると何が起きるかが不明瞭な状況で、制約がある中、どんなリスクをとって、どこにリソースを配分するのかを意思決定する必要がある
+ 　例えば、
+ 　　不明瞭な状況: ユーザーがどのくらい集まってどのくらい定着するのか分からない
+ 　　制約: 主に自分の貯金と時間（五日後に期末試験）
+ 　　リスク: どこまでお金を突っ込むか
+ 　　リソース配分: 自分の開発リソースを何に割くか
+ 　[Coffee Inc 2]みたいなことを現実世界でやっている感覚
+</Page>
+
+
+
+<Page title="Fractal Reader 収支" url="https://scrapbox.io/blu3mo/Fractal_Reader_収支" updated="2024-04-27T11:42:13.940Z" created="2024-04-23T14:56:32.957Z" type="1hopLink">
+Fractal Reader 収支
+[private.icon]
+　「何にせよ経験として価値があるだろう」という気持ちで深く考えずにお金を放り込んでる
+　 [一旦自分の時間の1~2割を割いて、顧客にとっての価値を最優先に一回何か作ってみたい]
+　けど、このままだと気がついたら銀行残高が0になっていそう
+　なので一応[Fractal Reader]関連の収支を記録していく
+
+
+---
+2024/4/27時点
+ 支出 $245
+ 　[https://gyazo.com/55624f6e2fe3c46e1b225150750ed1d3]
+  4/23までのAPI費用 $125.85
+  　自分で色々試したり
+  　[/plurality-japanese]や[nishio.icon]さんや他のユーザーが使ったり
+  4/23 - 4/26のAPI費用 $90
+   日本語Twitterで公開してついた初見ユーザーの費用
+ 　ドメイン費 $15
+ 　自分の人件費 🙃
+ 収入 $200
+　　Buy me a coffee
+　　 [yunolv3.icon] $100 
+　　  これはもう対価というより完全な寄付だな
+　　  大感謝[blu3mo.icon*4]
+  　[nishio.icon] $45
+  　 API費用分
+  　　正確な計測が難しいので概算で許して欲しい[blu3mo.icon]
+  　　Plurality Book  $13.77
+  　　　これは計測していたので正確
+  　　SHD要約 約$20
+  　　 計算だとここまでかからないので、なぜここまでかかったのか不明
+ 　　 　ただ実測値として$18以上かかってしまっているので、一旦$20とする
+  　　 [** [https://scrapbox.io/files/6623f68013ebbc00249420b3.png]　]
+ 　　　なめ敵会要約 約$10
+ 　　　その他Plurality関連
+ 　　　 英語のGlenの文章とか
+ 　　　こちらの費用負担なしに色々な使い方を試してもらえていてめちゃくちゃ助かっている[blu3mo.icon]
+ 　　　　モチベにもなる
+   その他 $55
+    井戸端のcFQ氏
+    全く面識ない @stomita 氏から$50飛んできた
+    　ありがたい〜〜
+</Page>
+
+
+
+<Page title="HCI" url="https://scrapbox.io/blu3mo/HCI" updated="2023-02-14T18:03:54.161Z" created="2020-01-27T18:34:52.000Z" type="2hopLink">
+HCI
+
+[HCI Research as Problem-Solving]
+[The Profession of Human-Computer Interaction]
+[HCIおもちゃ論]
+
+　以下はインタラクション2020のサイトより引用
+　 具体例がたくさん挙げられているので、広さ/曖昧さがわかる[blu3mo.icon]
+>  ユーザインタフェース，CSCW，可視化，入出力デバイス，仮想／拡張現実，ユビキタスコンピューティング，ソフトウェア工学といった計算機科学，さらには認知科学，社会科学，文化人類学，メディア論，芸術といった人文科学
+> 
+>   人と人工物，および人工物を介した人と人のインタラクションに関する研究成果一般．
+> 
+> 
+>  
+>  例えば以下を含みますがこれに限るものではありません．
+> 
+> 　　インタラクション基礎（哲学，人文科学的検討考察，実世界インタラクション分析等）
+> 
+> 　　インタラクティブシステム基礎（理論，デザイン，モデル，構成，分析評価技法等）
+> 
+> 　　インタラクティブメディア（デザイン，アート等）
+> 
+> 　　インタラクションの要素技術（マルチモーダル，言語，感性情報，グラフィクス，アニメーション，エージェント，バリアフリー等）
+> 
+> 　　インタラクティブなハードウェア（ウェアラブルコンピュータ，モバイルコンピュータ，ロボット，入出力デバイス等）
+> 
+> 　　マルチユーザインタラクション（グループウェア，CSCW，Web，組織知，コミュニティコンピューティング，ソーシャルコンピューティング等）
+> 
+> 　　インタラクティブシステムの応用（教育，福祉，エンタテインメント，ユビキタス，創造性，電子商取引，ヘルプデスク，パーソナルファブリケーション等）
+> 
+> 　　デジタルコンテンツクリエーション（制作，流通，利活用，管理，教育
+
+[-.icon]
+　なんで興味ある? （雑多なメモ）
+　　[研究とビジョン]の、Tech < Application < Visionの話は、自分が興味あること/その理由がすごい言語化されてるなーと思った
+　　　よく言語化されてるというより、先人がそういってるってことが安心感に繋がってるってだけか
+　　哲学的なこと考えるの結構好きだったり
+　　インターフェースとか使いやすさとかを凝るのは小学生くらいのころから好きだった
+　　　なんかUIの本を買ってたり
+　　ドラえもんのひみつ道具とかもルーツ?
+　　比較的[文系]的なトピックにも興味あるって点とか
+
+</Page>
+
+
+
+<Page title="馬路ゼミ将来設計" url="https://scrapbox.io/blu3mo/馬路ゼミ将来設計" updated="2022-09-26T04:06:59.958Z" created="2022-09-12T05:29:10.309Z" type="2hopLink">
+馬路ゼミ将来設計
+ [private.icon]
+  OBにコンタクトを取れる
+  　取りたい[blu3mo.icon]
+  　人生相談すると良さそうな人、誰だろう
+  　 髙島崚輔
+ 　　　 ちょうど卒業? 色々話は聞きたい
+ 　　　 2015年入学ってことは3年休学してたのか、結構年代は上か
+ 　　　 [20220926 高島さんZoom]
+ 　　　メルペイの人
+ 　　　　ありえそうなキャリアではあるけど案外イメージついてないので話聞きたいな
+  　　成田ゆうすけ氏
+  　　　OBかい、驚き
+  　　　若干ミーハー心もある
+  　　　分野は違うかと思ったけど、MITでアルゴリズム系の研究してPhDとってるのか
+　　それこそ別にOBじゃなくてもこれを口実に他の人に話したりしても良いのか
+　　　うかいさんとか
+　　　[ryosuzk]とか
+　　　medialab to uchicagoの人とか（名前忘れた）
+　　 持ち合わせているコネでそれなりに広く届きそうなので使いたい
+    未踏やmasasonや柳井
+
+　8分で将来設計を話す
+　　前提/long-termの抽象的な話 -> 直近の具体的な話、みたいな構成かな
+
+構成
+ 前提
+  しらんが、何も想像しないよりとりあえず方向性を想像して検討した方が意味ありそう
+   [自分が将来やりたいこと]
+ 　どう意味ある? 
+ 　　それから逆算して直近の行動を考えるのはあまり意味なさそう?
+ 　　一つあれば、他の可能性を相対的に捉えられる様になると言うところかな
+ 　やりかた
+   シナリオをいくつか考えて、それをやりたい事と重ねて評価
+  　[人生の根本的な評価関数を考えて追求したい]
+ やりたいこと
+ シナリオA: 研究者
+ 　多分いける
+ 　想像ルート:
+   [The Profession of Human-Computer Interaction]
+ 　辛そう
+ シナリオB: エンジニア
+  ソフトウェアエンジニア
+  多分いける
+  　コード書く力突き詰めたい訳ではない
+  　プロダクトを設計する様な所からやりたい
+  
+ メタ的な話
+　　そもそも固定的でないし、「やりたいこと」ってなんの意味がある?
+　　
+
+</Page>
+
+
+
+<Page title="デジ民レポートたかぎ案件" url="https://scrapbox.io/blu3mo/デジ民レポートたかぎ案件" updated="2025-04-29T03:02:29.443Z" created="2025-02-16T06:20:25.849Z" type="2hopLink">
+デジ民レポートたかぎ案件
+ [private.icon]
+
+20250429
+
+	[Plurality メカニズム サーベイレポート]をやってても思うけど、数ヶ月前に書いた文章はあんまり意味がなくなっている[tkgshn.icon]
+		仮説を書いておいて、そこから実験を通して観察する方がいい
+		　アグリー[blu3mo.icon]
+		なので、とりあえず雑な形でも世に出すことが重要なのではと思っている
+		[スマートニュースメディア研究所]としてやると遅くなってしまうので、なんでもいいから出す方が重要かな...[tkgshn.icon]
+　　　把握 書いてみて、すぐ出るならスマニューでいいし、無理そうなら一旦個人で出す[blu3mo.icon]
+  [20250429 デジタル民主主義、いどばた、熟議についての現在の仮説を文章化する]
+
+[2025/2/28]
+	関連リンク: https://docs.google.com/document/d/1mphaIxM7N1ApuU5YzANWxpYwwf9sYCYjLJyREO5HfRc/edit?usp=sharing
+		今までどういう立ち位置で、[tkgshn.icon]が[kensuzuki], [yusuke shimasaki]とコミュニケーションをとっているのか書いてる
+			「[Plurality Book]日本語版」に対する副読本として[Plurality PMFレポート]を受け持っている
+			どうせ書くなら各メカニズムのインサイトを取りにいこうというモチベーション
+				なので、（少なくとも日本語圏で）「その人がそこで書く意味」みたいなのを意識している
+
+[2025/2/17]
+	金額: 8万円でやることに[tkgshn.icon]
+	締切: [/tkgshn-private/2025年5月初旬予定 日本語 Plurality Book 発売イベント]までにあればいいかな
+		これは[kensuzuki]との定例（2025/2/17）で頭出ししておくので、今日の夜にはまた折り返しできます[tkgshn.icon]
+
+ d/accとの接続
+  cybernetic humanityが行為主体感をハックする技術を提供するなら、それに対するdefensiveな技術があるといいよね
+
+---
+ 1. 熟議を支援する技術で追求したいこととして、「効力感」「納得感」みたいなKPIが挙げられがち
+  政治学だと「政治的有効性感覚」とか呼ばれる
+  これを最大化したい？一見そう思える。
+ 2. 一方で、これにとても近い概念として認知科学だと「行為主体感」がある
+  これはハック可能なものとされている。[Cybernetic Humanity]の研究を色々引用できる
+ 2の手段を1の目的に適応すると、政治家や政府が「効力感」を演出することになる。それって本質的にやりたいことではなくない？
+  具体的に考えられることとして、例えば〜〜
+  なんでこのコンフリクトが起きているかというと、そもそも[近代個人主義が民主主義の思想的基盤]になっているが、テクノロジーはその近代個人主義的な考え方を壊しにかかっているから。
+ 「個人の自由意志」みたいな概念を前提とせずに、1の目的を再定義する必要がある。
+ 
+ 上の内容をo1 proに突っ込んで説明させた
+  https://chatgpt.com/share/67b27c39-ed54-8002-b009-a8ede7f108ae
+  だいたいあってる
+
+----
+ >ブロードリスニングっていうめっちゃでかいトピックに関して、インターネットにない独自のインサイトや諦めはありますか？
+  今見たら適当すぎるプロンプト[tkgshn.icon]
+  素材になりそうな話
+   前提
+    [中国のデジタル市民参加]
+    [熟議支援系研究サーベイ]
+    [熟議民主主義]
+    [庭の話]
+   その上で、
+    [デジタル民主主義ってdead endでは]とかの話
+    [（伊予柑ぶるーも議論）テクノロジーによる政治的意思決定支援の可能性と課題：熟議民主主義の未来を探る], [(伊予柑ぶるーも議論）庭の話]
+     これは結構土台になりそう
+     [/tkgshn-private/テクノロジーに対する不信感が募る時代に、納得感のある合意形成ができるテクノロジーを考える][tkgshn.icon]
+      近そう
+    [Cybernetic Humanity]的な自由意志を否定する方向の技術を踏まえると[近代個人主義が民主主義の思想的基盤]みたいな前提は成り立たないよね。そのうえでAgency/行為主体感/手触り感を設計することは可能だけど何を目指したいの？   みたいな話をかけそう
+     これは結構普遍性高く重要な議論だと思っているが、日本で書けるのは僕だけだと思う[blu3mo.icon]
+      HCI/行為主体感とかの研究と、デジタル民主主義周りの活動を両方やっていないと書けないと思う
+       おもしろそー！！！[tkgshn.icon]
+      日本以外でも書けそうな人は思い浮かんでいない
+       [ポジションを取る]だね[tkgshn.icon]
+
+ 確認したいこと
+  「ブロードリスニング」という設定はどういう由来/理由?
+   例えば自分が今書きたいこと書けと言われたら「熟議」をテーマにすると思う[blu3mo.icon]
+    それでいいと思う[tkgshn.icon]
+  分量は？
+   > [tkgshn.icon]自分の場合は適当に言いたいこと書いたら8,000文字ぐらい（これでも少ない）のだが、レビューを通してほぼ2倍になったのであんまり参考にはならないと思う。
+   > 10,000文字前後ぐらいを目安に書いてみるのがいいと思う。
+  形式は？
+   基本的には、高木が前書いたやつを目指していくのがいいと思う
+   ただ、結構レビューで指摘されるので、ここら辺は次回の鈴木さんとの定例でも頭出ししておくね。
+  誰のために？何のために？
+   これが1番見えていないかも[blu3mo.icon]
+    元々、[スマートニュースメディア研究所 デジタルデモクラシー部門]で[kensuzuki]がやりたかったのは、「Pluralityメカニズム色々あるけど、実際のところバラ色なのかね？」というのをまとめよう！という流れ
+    その後、[tkgshn.icon]がPluralityメカニズム サーベイ論文 https://docs.google.com/document/d/1NkJKQQXW4laGsp8OtxqrEcrbKo7HaYyk3STyOOlKXfs/edit を書いたら、「これは[概念東大生]がやればいいよね」「バリュー出てないよね」という話になり、その後に「[現場取材からみえた台湾デジタル民主主義の理想と課題、そして日本発『デジタル民主主義2030』への指針]を書いた
+    これは、細分化すれば[polis]と[vTaiwan]の項目について書いたということになる
+     これの後編みたいな感じになるかな？
+     だからこそ、「これは今まではPluralityだよね」と言われていないことやものに焦点を当てて論じるのは面白そう。逆に、Plurality思想の悪いところをあげてもいいと思うし、
+      [d/acc]的な話になる気もする
+      逆に「[デジタル民主主義]」とかかっこいい単語使ってても、ここを間違えると[テクノ全体主義]だよね」みたいなのを深掘りするのも良さそう
+       （もちろん[監査資本主義]とかの文脈を踏まえてる必要はあるけど）
+       「これは過小評価されてる」と書いてるが、ここでは書かれてるので概念見落としをしてないか注意[tkgshn.icon]
+
+ [デジ民レポートたかぎ案件#67b1850b79e1130000b08b2a] この辺の話を1回口頭で説明して認識のズレがないかを確認するとよさそう[blu3mo.icon]
+  （ちょっとスマホなので行をメンションするのができてないのだけど、これはいわゆるd/accの話だというふうに解釈してるのでおkだと思ってる。まぁ話すか。[tkgshn.icon]）
+
+[tkgshn.icon]
+参考: https://docs.google.com/document/d/1gYW-iW07NLLxRPC3BUoIgI2AqnDnvPn7RP0pTaoMLhk/edit
+
+</Page>
+
+
+
+<Page title="~20240421" url="https://scrapbox.io/blu3mo/~20240421" updated="2024-04-22T15:14:05.382Z" created="2024-04-15T13:03:02.350Z" type="2hopLink">
+~20240421
+第16週
+2024年 30.60％経過
+
+今週のn年前
+ [~20230423]
+ [~20220424]
+
+2024/4/20
+ -12pm 
+  溜まっているタスクをやる
+   
+
+2024/4/19
+ ai hw
+ 
+
+2024/4/17
+ Ai講義
+ -9
+  slack返信
+  line返信
+  riise 確認
+ fractal 修正
+  [Fractal Reader 実装]
+ 本読む
+
+今日やること
+　robotics 講義を全部見る
+　 2h * 3
+　asym chat
+　 gaze対応
+　 ダッシュボード実装
+　 
+　インスタ投稿
+　line返信・basi対応
+
+[~20240414]←~20240421→[~20240428]
+[private.icon]
+</Page>
+
+
+
+</PageList>

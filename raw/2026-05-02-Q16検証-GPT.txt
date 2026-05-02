@@ -1,0 +1,265 @@
+# human
+
+下記の解釈が正しいか、正しいならそれは何によって支持されるか、をサーベイして検討して。多分究極的にはClaude Codeがうまくやったことだが、LLMの記憶の仕組みについての研究論文などの形で傍証もあるはずだ
+
+
+コンテキストの維持の問題をKarpathyのLLM Wikiは大きく改善した
+　これは、この手法一つが発明であるというよりは、LLMが賢くなったこととコンテキスト幅が広くなったことによってある種のやり方の有用性がジワジワと上がってきたと認識するのが適切だろう
+　早い段階ではClaude CodeのSkillsという形で実現されていた
+　　長期的な知識の保管と必要に応じた発見の仕組み
+
+# GPT
+
+## 判定
+
+西尾さんの解釈は、**かなり妥当**だと思います。ただし少し精密に言うと、**「Claude CodeのSkillsがそのままLLM Wikiの先行形だった」よりも、「Claude Code周辺のSkills、CLAUDE.md、auto memory、filesystem/tool use、progressive disclosureが、LLM Wiki型の外部化された記憶運用を実用に近づけた」**と見る方が正確です。
+
+要するに、KarpathyのLLM Wikiが改善しているのは「LLMの内部記憶」そのものではなく、**コンテキスト維持を、会話履歴の中に詰め込む問題から、LLMが読み書きできる外部のMarkdown知識体系を保守・検索する問題へ移すこと**です。Karpathy自身も、RAGが問い合わせ時に断片を取ってくるのに対して、LLM WikiはLLMが永続的なwikiを増分的に作り、既存ページへ新情報を統合し、持続的に複利的な成果物を育てる、という対比で説明しています。([Gist][1])
+
+## 命題ごとの評価
+
+| 命題                                          |    評価 | 理由                                                                                                                             |
+| ------------------------------------------- | ----: | ------------------------------------------------------------------------------------------------------------------------------ |
+| 「KarpathyのLLM Wikiはコンテキスト維持の問題を大きく改善した」     | 概ね正しい | ただし、厳密なベンチマークで実証済みというより、設計原理として強い。wiki、index、log、lint、source groundingにより、会話ごとの揮発的文脈を外部化する。([Gist][1])                         |
+| 「これは単一の発明ではなく、LLMの賢さとコンテキスト幅の拡大により有用性が上がった」 |   正しい | 長文コンテキストは有用だが万能ではない。長い文脈では情報位置による性能劣化が報告されており、単に全部入れるより、必要なものを見つけて読む仕組みが重要になる。([arXiv][2])                                     |
+| 「早い段階ではClaude CodeのSkillsという形で実現されていた」      | 半分正しい | Skillsは主に**手続き知識・作業手順の外部化**で、LLM Wikiは主に**意味知識・出典付き統合知識の外部化**。ただし、必要時だけ読むprogressive disclosureという設計は強く対応している。([Anthropic][3]) |
+| 「長期的な知識の保管と必要に応じた発見の仕組み」                    |   正しい | Anthropicのmemory toolやClaude CodeのCLAUDE.md/auto memoryは、セッションをまたいで知識を保持し、必要時に読む設計として説明されている。([Claude][4])                     |
+
+## KarpathyのLLM Wikiが何を改善したか
+
+KarpathyのLLM Wikiは、知識管理を「プロンプトに長い文脈を入れる」でも「毎回RAGで関連断片を取る」でもなく、**LLMが保守するwikiという中間物**に置き換えています。構成は、変更しないraw sources、LLMが生成・更新するMarkdown wiki、そしてwikiの構造や運用規約を書いたschema文書、という三層です。操作としては、ソースを読んで複数ページへ反映するingest、必要ページを読んで答えるquery、矛盾・古い記述・孤立ページを点検するlintが想定されています。([Gist][1])
+
+この点で「コンテキスト維持の改善」という表現は妥当です。改善の中身は、モデルが過去会話を魔法のように覚えることではなく、**文脈を再利用可能な外部構造へ移し、現在のタスクに必要な部分だけを戻す**ことです。Anthropicもcontext engineeringを、限られたコンテキストに何を入れるかを最適化する問題として説明し、Claude Codeでは`CLAUDE.md`とglob/grepなどによるjust-in-timeな取得を組み合わせていると述べています。([Anthropic][5])
+
+## Claude Code / Skillsとの関係
+
+Claude CodeのSkillsは、KarpathyのLLM Wikiより前に公開されており、Anthropicは2025年10月にAgent Skillsを「instructions, scripts, resourcesを含むフォルダ」として説明しています。重要なのは、起動時に全内容を読むのではなく、skillのname/descriptionだけを事前ロードし、関連すると判断されたときだけ本文や追加ファイルを読む点です。これはAnthropicがprogressive disclosureと呼ぶ設計です。([Anthropic][3])
+
+ただし、Skillsは「長期的知識の保管」一般というより、**繰り返し使う作業手順、規約、スクリプト、参照資料を外部化しておく仕組み**です。Claude Codeのドキュメントも、skillにはdomain knowledge、patterns、step-by-step procedures、supporting filesなどを入れられると説明しています。([Claude][6])
+
+一方で、Claude CodeにはSkillsとは別に、セッションをまたぐ記憶のための`CLAUDE.md`やauto memoryがあります。Claude Codeのドキュメントは、各セッションは新しいコンテキストで始まるが、`CLAUDE.md`とauto memoryがプロジェクト知識を持ち越す、と説明しています。また、memory toolは会話をまたいでmemory directory内の情報を保存・取得し、すべてをコンテキストに入れずに時間をまたいだ知識を構築するための仕組みとされています。([Claude][4])
+
+したがって、より正確にはこうです。
+
+> Claude CodeのSkillsはLLM Wikiの「必要時だけ読む外部化知識」の手続き知識版であり、`CLAUDE.md`、auto memory、memory tool、filesystem accessを含めたClaude Codeの運用全体が、LLM Wikiにかなり近い先行形だった。
+
+## 研究論文からの傍証
+
+研究の流れとしても、この解釈は支持されます。
+
+RAGは、パラメータ内に閉じた知識だけでは更新性・出典性・アクセスに限界があるため、外部の非パラメトリック記憶、典型的にはWikipediaなどの検索インデックスを組み合わせる方向を示しました。これはLLM Wikiの「知識を外部に置き、必要時に読む」という基礎的な発想に近いです。([arXiv][7])
+
+Generative Agentsは、経験を自然言語のmemory streamに保存し、関連性・新しさ・重要度に基づいて動的に取り出し、さらにreflectionやplanningを記憶へ戻すアーキテクチャを示しました。これは「外部化された記憶を、検索・統合・再記録する」という点でLLM Wikiとかなり近いです。([arXiv][8])
+
+MemGPTは、固定長コンテキストの制約を前提に、階層的メモリをLLM自身に管理させる方向を示しました。Reflexionは、試行から得た反省をテキストのepisodic memoryとして保持し、後続試行で利用する方式です。Voyagerは、Minecraftエージェントに「増え続けるskill library」を持たせ、複雑な行動をコードとして保存・検索する設計を採りました。([arXiv][9])
+
+さらに最近のA-MEMは、Zettelkasten的な動的インデックスとリンクによるagentic memoryを提案しており、新しい記憶が既存記憶の更新や接続を誘発する設計を取っています。これはKarpathyのLLM Wikiの「新しいソースを既存wikiへ統合し、クロスリファレンスを作る」という発想にかなり近い傍証です。([arXiv][10])
+
+また、LLM agent memoryのサーベイは、長期的で複雑なagent-environment interactionにはmemoryが必要であり、会話履歴の短期記憶だけでなく、外部文書・ベクトルDB・構造化ストアなどの非パラメトリック記憶が重要だと整理しています。([arXiv][11])
+
+## 「LLMが賢くなったこと」と「コンテキスト幅が広くなったこと」の位置づけ
+
+この部分も基本的に正しいですが、少し補足が必要です。
+
+長いコンテキスト幅は、LLM WikiやSkillsの有用性を高めます。なぜなら、一度に読める周辺文脈が増え、複数ページや複数ソースを照合しやすくなるからです。一方で、長いコンテキストだけでは不十分です。Lost in the Middleは、長い入力を扱えるモデルでも、情報が文脈の中央にあると性能が落ちやすいことを示しました。RULERも、needle-in-a-haystack型の単純評価だけでは長文理解を測れないと論じています。([arXiv][2])
+
+したがって、重要なのは「長いコンテキストに全部入れる」ではなく、**外部の知識構造を保ち、現在の問いに関係する部分を選んで入れる**ことです。Anthropicのcontext engineering記事も、contextは有限資源であり、just-in-time retrieval、compaction、note-taking、memory toolなどで長期タスクを扱う必要があると整理しています。([Anthropic][5])
+
+## 私ならこう言い換える
+
+元の解釈を、少しだけ精密にするとこうなります。
+
+> KarpathyのLLM Wikiは、コンテキスト維持の問題を「会話履歴の中に覚え続ける」問題から、「LLMが保守する外部Markdown知識ベースを、必要時に検索・読解・更新する」問題へ移した。その有効性は、単一手法の発明というより、長文コンテキスト、tool use、filesystem access、agentic memory、progressive disclosure、Claude Code的な作業環境の成熟によって高まった。Claude Code Skillsはこの流れの中で、特に手続き知識を必要時に読み込む仕組みとして先行しており、`CLAUDE.md`やauto memory、memory toolまで含めるとLLM Wiki型の外部化記憶にかなり近い。
+
+結論として、「長期的な知識の保管と必要に応じた発見の仕組み」という理解は正しいです。ただし、それはLLM内部の記憶能力というより、**LLMの外に記憶を置き、LLMがそれを編集・検索・再統合できるようになったこと**として捉えるのがよいと思います。
+
+[1]: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f "llm-wiki · GitHub"
+[2]: https://arxiv.org/abs/2307.03172?utm_source=chatgpt.com "Lost in the Middle: How Language Models Use Long Contexts"
+[3]: https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills "Equipping agents for the real world with Agent Skills \ Anthropic"
+[4]: https://code.claude.com/docs/en/memory "How Claude remembers your project - Claude Code Docs"
+[5]: https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents "Effective context engineering for AI agents \ Anthropic"
+[6]: https://code.claude.com/docs/en/skills "Extend Claude with skills - Claude Code Docs"
+[7]: https://arxiv.org/abs/2005.11401?utm_source=chatgpt.com "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
+[8]: https://arxiv.org/abs/2304.03442 "[2304.03442] Generative Agents: Interactive Simulacra of Human Behavior"
+[9]: https://arxiv.org/abs/2310.08560?utm_source=chatgpt.com "MemGPT: Towards LLMs as Operating Systems"
+[10]: https://arxiv.org/abs/2502.12110?utm_source=chatgpt.com "A-MEM: Agentic Memory for LLM Agents"
+[11]: https://arxiv.org/abs/2404.13501 "[2404.13501] A Survey on the Memory Mechanism of Large Language Model based Agents"
+
+# human
+
+auto memoryやmemory toolが出てきた時代はSkillsの後じゃない？確認して
+
+filesystem accessの進歩が「ファイルを普通に置いといて普通のツールで検索する」という振る舞いを生んだ、これは特にソースコードがファイルシステム上に構造化されて配置されたものであったことによって需要があった
+
+progressive disclosureというキーワードは大事だね
+この発想の系譜についても詳しく知りたいな
+
+# GPT
+
+確認すると、西尾さんの指摘どおり、**前回の私の整理は「memory tool」「Claude Code auto memory」「Skills」をやや混ぜていました。** 正確には次の順序です。
+
+| 時期         | 出来事                                   | 位置づけ                                                                                                                     |
+| ---------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| 2024-11-25 | AnthropicがMCPを発表                      | AI assistantをGitHub、Git、Postgres、Google Driveなどの外部システムにつなぐ標準として提示。文脈を外部データ・ツールに接続する基盤。([Anthropic][1])                   |
+| 2025-02-24 | Claude Code research preview          | ターミナル上でbash toolとfile editing toolを使うコーディングエージェントとして公開。([Anthropic][2])                                                  |
+| 2025-09-29 | **APIのmemory tool beta**              | Claudeが会話をまたいで情報を保存・参照できるAPI機能として公開。これはSkillsより前。([Claude API Docs][3])                                                  |
+| 2025-10-16 | **Agent Skills / Claude Code Skills** | instructions, scripts, resourcesを含むフォルダを動的に読み込む仕組みとして公開。Claude Code changelogにも同日Skills対応が記録されている。([Claude API Docs][3]) |
+| 2026-02-05 | **Claude Code auto memoryの初期記述**      | Claude Code changelogに「Claude now automatically records and recalls memories」とある。これはSkillsより後。([Claude][4])              |
+| 2026-02-26 | **auto-memoryが明示化**                   | 「Claude automatically saves useful context to auto-memory. Manage with /memory」と記録されている。([Claude][4])                    |
+| 2026-03-12 | autoMemoryDirectory                   | auto-memoryの保存先ディレクトリを指定する設定が追加。([Claude][4])                                                                            |
+
+なので、結論はこうです。
+
+**「auto memoryはSkillsの後」は正しい。
+「memory toolもSkillsの後」は、API memory toolを指すなら正しくない。API memory toolはSkillsより少し前。
+ただし、Claude Code内で自動的に記憶を保存・想起するauto memoryはSkillsより後。**
+
+ここは用語を分けた方がよいです。**memory tool**はAPI側の「記憶ディレクトリを読み書きする道具」で、ドキュメント上も「必要な時に文脈を取り出すjust-in-time retrieval」のための仕組みとして説明されています。**auto memory**はClaude Codeが作業中に有用な文脈を自動保存・想起する振る舞いで、こちらは2026年2月以降のClaude Code機能として見るのが自然です。([Claude Platform][5])
+
+## filesystem accessについての指摘はかなり重要
+
+「ファイルを普通に置いておき、普通のツールで検索する」という振る舞いは、かなりClaude Code的な発展の中心にあります。特にソースコード領域で需要があった、という見方は妥当です。
+
+理由は単純で、ソースコードはもともとファイルシステム上に構造化されています。リポジトリにはディレクトリ、ファイル名、import、README、テスト、設定ファイル、Git履歴、エラーログがあり、これらはすでに「探索可能な外部記憶」になっています。Anthropicのcontext engineering記事も、ファイルパス、保存済みクエリ、Webリンクなどの軽量な識別子を先に置き、必要になった時だけ読み込むjust-in-timeな方式を説明し、ファイル名・フォルダ階層・命名規則・タイムスタンプが探索の手がかりになると述べています。Claude Codeについても、`CLAUDE.md`を最初に読み、globやgrepで必要な情報をその場で取るハイブリッド方式だと説明しています。([Anthropic][6])
+
+これはRAGとは少し違います。RAGはしばしば「文書断片を検索してプロンプトに入れる」方向ですが、Claude Code的なfilesystem accessでは、エージェントが**ファイルツリーを歩く、grepする、読む、編集する、実行する、ログを見る**という形で作業します。AnthropicはMCPとコード実行を組み合わせる説明の中でも、ツール定義やAPIをファイルシステム上のコードとして置き、エージェントが必要なものだけを探索・読解する方式を示しており、これをprogressive disclosureとして説明しています。([Anthropic][7])
+
+つまり、filesystem accessの進歩は単なる入出力機能ではなく、**LLMにとっての外部記憶を、人間にも機械にも扱いやすい既存形式に寄せた**という意味を持ちます。ソースコードはその最初の有力な適用領域でした。
+
+## progressive disclosureの系譜
+
+progressive disclosureは、LLMエージェント以前からある考え方です。もともとはUI/HCIの用語で、初期画面には重要な選択肢だけを出し、高度な選択肢や詳細情報は必要になった時に開示する、という設計原理です。Jakob Nielsenは2006年の記事で、ユーザーには最初に少数の重要な機能だけを見せ、追加の専門的機能は要求された時に見せる、と説明しています。([Nielsen Norman Group][8])
+
+この考え方は、情報可視化では Shneiderman の “overview first, zoom and filter, then details-on-demand” に近いです。まず全体像を見せ、ズームやフィルタで対象を絞り、必要になった時に詳細を見る。これは人間向けの可視化原理ですが、LLMエージェントに置き換えると、「最初にindexやmetadataだけを見せ、必要になったら本文やソースを読む」という設計になります。([欧州データポータル][9])
+
+情報アーキテクチャでも同じ発想があります。Shopify PolarisのIAガイドは、情報過多を避け、ユーザーが求めた時に情報を開示するprogressive disclosureを推奨しています。これはREADME、目次、index、リンク、パンくず、カテゴリ設計などと相性がよい。LLM WikiやSkillsでいう「まずdescription、次にSKILL.md、さらに必要なら関連ファイル」という構造は、この延長にあります。([Polaris React][10])
+
+LLM以前の機械学習・NLP側では、RAGが近い位置にあります。RAGは、モデル内部のパラメータ記憶だけでなく、Wikipediaなどの外部の非パラメトリック記憶を検索して生成に使う方式を示しました。これは「全部を内部に覚えさせない。必要な時に外から取る」という方向の初期の重要な例です。([arXiv][11])
+
+ただし、RAGだけでは「作業の文脈を育てる」ことは弱い。そこで、ReAct、Reflexion、MemGPT、Voyagerのような流れが重要になります。ReActはモデルが推論と外部行動を交互に行い、必要な情報を外部から取得する枠組みを示しました。Reflexionは反省をテキストのepisodic memoryとして保持し、後続試行で使う方式です。MemGPTは固定長コンテキストの制約を前提に、階層的メモリをLLM自身が管理する方向を示しました。Voyagerは、Minecraftエージェントが獲得した行動を実行可能コードのskill libraryとして蓄積・検索する構成を取りました。([arXiv][12])
+
+ここからClaude Code / Skillsに至ると、progressive disclosureはかなり明示的な設計になります。AnthropicのAgent Skills記事では、起動時にはskillのmetadataだけを読み、関連すると判断されたらskill本文を読み、さらに必要なら追加ファイルを読む、という三段階の開示が説明されています。Anthropicはこれを明示的にprogressive disclosureと呼んでいます。([Anthropic][13])
+
+ClaudeのSkillsドキュメントではさらに踏み込んで、Skillsが「ファイルシステムからのprogressive disclosure」に依存していると説明されています。metadataは常に読まれるが、`SKILL.md`は必要時だけ、resourcesやscriptsはさらに必要になった時だけ読む。しかもスクリプトは実行できるので、コード全体を文脈に入れなくても能力を使える。これは、コンテキスト節約だけでなく、能力の部品化でもあります。([Claude Platform][14])
+
+OpenAI側にも同じ方向があります。Codex Skillsの公式ドキュメントは、skill name、description、pathだけを最初に見せ、必要になった時に`SKILL.md`を読む方式をprogressive disclosureとして説明しています。Tool Searchも、全ツール定義を最初から入れず、namespaceやserver descriptionを先に見せ、関連する関数だけをロードする方式として説明されています。これはAnthropic固有のアイデアというより、LLMエージェント設計全体に広がったパターンと見るのがよいです。([OpenAI Developers][15])
+
+## LLM Wikiはこの流れの統合に近い
+
+KarpathyのLLM Wikiは、この系譜の中では、**progressive disclosureを長期知識管理に適用したもの**と見られます。Karpathyは、RAGが各質問時に知識を再発見するのに対して、LLM Wikiは永続的なwikiを増分的に構築・保守し、成果物を蓄積する、と説明しています。構成としても、raw sources、Markdown wiki、schema、index、log、lintという要素を置いています。([Gist][16])
+
+ここでの第一層はschemaやindexです。第二層はwikiページです。第三層はraw sourcesです。必要に応じて深掘りする。さらに新しい情報を既存ページに統合し、リンクやindexを更新する。これは「情報を隠す」ではなく、**発見可能性を保ったまま、最初に読む量を減らす**設計です。
+
+この点で、元の解釈は次のように修正するとより強くなります。
+
+> Claude Codeのfilesystem accessとcoding agent需要が、「ファイルを外部記憶として置き、grep/glob/read/bashで必要時に探索する」運用を自然に育てた。Skillsはその上に、metadata → SKILL.md → scripts/resources という明示的なprogressive disclosureを与えた。auto memoryはその後、Claude Code内で作業文脈を自動保存・想起する方向に進んだ。一方、API memory toolだけはSkillsより少し前に出ており、これはClaude Code auto memoryとは分けて扱うべきである。KarpathyのLLM Wikiは、これらの流れを知識管理・wiki保守に寄せた統合形として理解できる。
+
+補足すると、長コンテキスト化だけではこの問題は解けません。長い文脈では、関連情報の位置によって性能が落ちる “Lost in the Middle” 型の問題が報告されています。だからこそ、「全部入れる」よりも、**よいindexを置き、必要なものだけ読む**progressive disclosureが重要になります。([arXiv][17])
+
+[1]: https://www.anthropic.com/news/model-context-protocol "Introducing the Model Context Protocol \ Anthropic"
+[2]: https://www.anthropic.com/news/claude-3-7-sonnet "Claude 3.7 Sonnet and Claude Code \ Anthropic"
+[3]: https://docs.anthropic.com/en/release-notes/api?utm_source=chatgpt.com "Claude Platform - Claude API Docs"
+[4]: https://code.claude.com/docs/en/changelog "Changelog - Claude Code Docs"
+[5]: https://platform.claude.com/docs/en/agents-and-tools/tool-use/memory-tool "Memory tool - Claude API Docs"
+[6]: https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents "Effective context engineering for AI agents \ Anthropic"
+[7]: https://www.anthropic.com/engineering/code-execution-with-mcp "Code execution with MCP: building more efficient AI agents \ Anthropic"
+[8]: https://www.nngroup.com/articles/progressive-disclosure/ "Progressive Disclosure - NN/G"
+[9]: https://data.europa.eu/apps/data-visualisation-guide/the-information-seeking-mantra "The inverted pyramid"
+[10]: https://polaris-react.shopify.com/foundations/information-architecture "Information architecture — Shopify Polaris React"
+[11]: https://arxiv.org/abs/2005.11401?utm_source=chatgpt.com "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
+[12]: https://arxiv.org/abs/2210.03629?utm_source=chatgpt.com "ReAct: Synergizing Reasoning and Acting in Language Models"
+[13]: https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills "Equipping agents for the real world with Agent Skills \ Anthropic"
+[14]: https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview "Agent Skills - Claude API Docs"
+[15]: https://developers.openai.com/codex/skills "Agent Skills – Codex | OpenAI Developers"
+[16]: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f "llm-wiki · GitHub"
+[17]: https://arxiv.org/abs/2307.03172?utm_source=chatgpt.com "Lost in the Middle: How Language Models Use Long Contexts"
+
+# human
+
+良いインデックスの作り方として、チャンクに刻んでベクトル埋め込みして検索するスタイルが一時期注目を集めた、その後のバックラッシュがあったよね
+
+# GPT
+
+はい。整理すると、バックラッシュの対象は**「ベクトル埋め込み検索」そのもの**ではなく、主に次の素朴な定式化でした。
+
+> 文書を固定長チャンクに切る
+> → 各チャンクをembeddingする
+> → vector DBに入れる
+> → 質問embeddingとの近傍top-kを取る
+> → それをLLMに渡せばよい
+
+これは一時期、RAGの標準形のように扱われました。ただしその後、「それは検索エンジンとしてはかなり粗い」「インデックスとしては情報構造を捨てすぎている」という反省が出た、という理解でよいです。
+
+## 何がうまくいかなかったか
+
+第一に、**チャンクが文脈を失う**。たとえば「売上は前四半期比で3%増加した」というチャンクだけを取り出しても、どの会社、どの四半期、どの資料かが消えます。AnthropicのContextual Retrievalはまさにこの問題を例示し、チャンクごとに短い文脈説明を付けてからembeddingとBM25 indexを作る方法を提案しています。実験ではContextual Embeddings単体でtop-20 retrieval failure rateを35%減らし、Contextual Embeddings + Contextual BM25で49%減らしたと報告しています。([Anthropic][1])
+
+第二に、**意味的類似度は、回答に必要な根拠の一致とは違う**。ベクトル検索は言い換えや曖昧な意味の近さには強い一方、型番、金額、エラーコード、関数名、日付、固有名詞のような「その文字列があること」が重要な場合に外すことがあります。Microsoftの“Vector search is not enough”記事は、RAGではvector searchだけでなく、BM25による全文検索、Reciprocal Rank Fusion、semantic rankerを組み合わせるべきだと説明し、`$45.00`のような正確な値の検索では全文検索が効く例を示しています。([TECHCOMMUNITY.MICROSOFT.COM][2])
+
+第三に、**top-k近傍は「使える順」ではない**。似ている断片、重複した断片、古い断片、文脈を欠いた断片が混ざる。RAG surveyも、Naive RAGではprecision/recallの問題により無関係なチャンクを選んだり重要情報を落としたりし、生成段階では取得文脈に支えられていない内容を出す可能性があると整理しています。さらに、複雑な問題では単一の検索だけでは十分な文脈が取れないとも述べています。
+
+第四に、**固定長チャンク化は、インデックス作成時点で構造を壊す**。見出し、章立て、表、コードのスコープ、issueとPRの対応、議事録の話題遷移などが、単なる近傍探索用の点群に変換される。Late Chunkingの論文も、短いチャンクはdense retrievalに向くことが多いが、独立にエンコードすると周辺文脈を失って表現が悪くなる、と問題設定しています。([arXiv][3])
+
+## バックラッシュの中身
+
+これは「RAGはだめ」「vector DBは不要」というより、**Naive RAGへの反発**でした。研究側の整理でも、Naive RAGからAdvanced RAG、Modular RAGへ進んだと説明されます。Advanced RAGでは、sliding window、細粒度セグメンテーション、metadata、mixed retrieval、query rewriting、query expansion、reranking、context compressionなどが導入される。つまり、単純な「チャンク + embedding + top-k」から、検索エンジンや情報アーキテクチャに近い設計へ戻ったわけです。
+
+実務側では、だいたい次の方向に修正されました。
+
+| 素朴なRAG           | 反省後の設計                                                      |
+| ---------------- | ----------------------------------------------------------- |
+| 固定長チャンク          | 文書構造、見出し、表、コード単位、話題単位を尊重                                    |
+| vector searchのみ  | BM25/全文検索 + vector search のhybrid                           |
+| top-kをそのまま投入     | reranking、重複除去、context compression                          |
+| チャンク単体をembedding | チャンクに文書内文脈、タイトル、metadataを付与                                 |
+| 黒箱のvector DB     | grep、glob、SQL、metadata filter、filesystem、knowledge graphも併用 |
+| 一回検索             | query rewrite、multi-query、反復検索、agentic retrieval            |
+| 検索精度を感覚で評価       | retrieval eval、answer eval、failure analysis                 |
+
+ここで重要なのは、**古典的IRが再評価された**ことです。BM25、全文検索、メタデータ、階層インデックス、ランキング、クエリ拡張、検索ログ分析などは、検索エンジンの世界では長く蓄積されてきた技術です。RAGブーム初期には、それらを飛ばして「embeddingすれば意味で検索できる」と見られがちだった。しかし現実の質問応答では、意味の近さだけでは足りなかった。
+
+## progressive disclosureとの関係
+
+ここが前の話題とつながります。
+
+Naive RAGのベクトルインデックスは、ある意味で**平坦なインデックス**です。すべてのチャンクが同じ粒度の点として並び、質問と近い点を取る。これは便利ですが、「どこに何があるか」「どの文書のどの位置か」「上位概念は何か」「隣接情報は何か」が見えにくい。
+
+一方、progressive disclosure的なインデックスは、次のような多段構造になります。
+
+> コーパス全体の目次
+> → 文書一覧
+> → 文書ごとの要約・見出し・metadata
+> → 関連セクション
+> → 原文チャンク
+> → 必要なら周辺文脈や一次ソース
+
+これはLLM WikiやSkillsに近い。最初に全部読ませるのではなく、**発見可能な手がかりだけを浅く置き、必要になったら深く読む**。Anthropicのcontext engineering記事も、Claude Codeでは`CLAUDE.md`を初期文脈に入れつつ、globやgrepでファイルをjust-in-timeに取得する、と説明しています。これは、複雑なindexを事前に作るというより、ファイルシステムそのものを探索可能な外部記憶として使う設計です。([Anthropic][4])
+
+## 長コンテキスト化との関係
+
+長いコンテキストが出てきたことで、「ではRAGはいらないのでは」という別種の反発もありました。ただし、これも単純ではありません。Lost in the Middleは、長文コンテキストを扱えるモデルでも、重要情報が文脈の中央にあると性能が落ちやすいことを示しています。つまり、単に全部入れるのではなく、**どの情報をどの順序で、どの濃度で入れるか**が依然として重要です。([ACL Anthology][5])
+
+だから現在の流れは、「ベクトル検索 vs 長コンテキスト」ではなく、むしろこうです。
+
+> 外部に大きな知識を置く。
+> よいindexで候補を絞る。
+> rerankやagentic searchで必要部分を選ぶ。
+> 必要な原文と周辺文脈だけをLLMに渡す。
+> 使った知識を更新・統合する。
+
+## 今回の文脈での結論
+
+西尾さんの言う「よいインデックスの作り方として、チャンクに刻んでベクトル埋め込みして検索するスタイルが注目され、その後バックラッシュがあった」という見方は正しいです。
+
+ただし、より正確にはこうだと思います。
+
+> バックラッシュはembedding検索への否定ではなく、**チャンクを平坦な点群にして近傍検索すれば知識管理になる、という単純化への反発**だった。
+> その後の流れは、BM25、metadata、文書構造、reranking、contextual chunking、filesystem探索、agentic retrieval、progressive disclosureを組み合わせる方向に進んだ。
+
+LLM WikiやClaude Code的な発想は、この反省の後にかなり自然に見えてきます。つまり、「検索用に全部をベクトル化する」よりも、**人間にもLLMにも読める構造化された知識を置き、必要に応じて浅く見たり深く読んだりする**方が、長期的な知識管理には向いている。ベクトル検索はその中の一部品であって、中心原理ではなくなった、という整理がよさそうです。
+
+[1]: https://www.anthropic.com/news/contextual-retrieval "Contextual Retrieval in AI Systems \ Anthropic"
+[2]: https://techcommunity.microsoft.com/blog/azuredevcommunityblog/doing-rag-vector-search-is-not-enough/4161073 "Doing RAG? Vector search is *not* enough"
+[3]: https://arxiv.org/abs/2409.04701 "[2409.04701] Late Chunking: Contextual Chunk Embeddings Using Long-Context Embedding Models"
+[4]: https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents "Effective context engineering for AI agents \ Anthropic"
+[5]: https://aclanthology.org/2024.tacl-1.9/ "Lost in the Middle: How Language Models Use Long Contexts - ACL Anthology"
