@@ -2,6 +2,52 @@
 
 Ingest / Query / Lint の時系列ログ。`## [YYYY-MM-DD] {ingest|query|lint} | 概要` の書式で1エントリ1行を起点に追記する。
 
+## [2026-05-03] lint | Day 12 後の Wiki 健康診断と前向き整備
+
+実施項目: 孤児ページ、古い主張、欠落概念、章ドラフトの「次にやるべきこと」鮮度、未解決の問い更新状況。
+
+### 発見
+
+- **A. 孤児ページなし** — 全 19 概念・14 エンティティが最低 4 件の incoming reference。
+- **B. 古い主張**: index.md の現行モデル分類で 2024/2026 区分が弱い。発散と収束.md の「課題」節が時系列読みにくい。KJ法とLLM.md の GPT-4o 観察は 2024 年のままで Q10 関連。第二章.md の Naive RAG 構想が Day 12 Session B/C の Modern RAG への構造変化を反映していない。
+- **C. 欠落概念**: **Claude Code** が頻出するが独立エンティティページなし。Plurality / ブロードキャスティングは独立化不要（既存集約で十分）。
+- **D. 章ドラフト鮮度**: 前書き・第一章・第二章の「残課題」が Day 12 進展を反映していない。第二部 導入章の見取り図は更新済み。
+- **E. 未解決の問い**: 最新（直近で Q14/16/17 解決、Q15/19/20/21/22 新設、Q3/Q4 に LLM Wiki 追加）。
+
+### 実施した整備
+
+1. 新規 [entities/ClaudeCode.md](entities/ClaudeCode.md) — Skills / CLAUDE.md / auto memory / memory tool / filesystem access を時系列で整理、LLM Wiki の先行的実装として位置づけ、NISHIOアシスタントとの対比、関連概念へのリンク。
+2. [index.md](index.md) — 2024 期モデル群に「歴史記録として保存」注記、2026 現行モデルを「第二部以降の主役」に改名、新カテゴリ「エージェント基盤」を追加し Claude Code を登録。
+3. [chapters/第二章.md](chapters/第二章.md) — 残課題冒頭に「構造的な再考が必要」の Lint 注記を追加、節 3 を NISHIO アシスタント＋Claude Code + Wiki の二段構成に書き換え、節 5 に [後段としてのWiki](concepts/後段としてのWiki.md)・[段階的開示](concepts/段階的開示.md) を追記。
+4. [chapters/前書き.md](chapters/前書き.md) と [chapters/第一章.md](chapters/第一章.md) — 残課題に Day 12 進展への接続項目（[Q13](questions/未解決の問い.md) / [Q15](questions/未解決の問い.md)）を追加。
+5. [concepts/発散と収束.md](concepts/発散と収束.md) — 「何が課題か」節を 2024 年期の観察として明示し、5 候補をそれぞれ年代タグ付きに整理。
+6. 本 Lint 結果を log.md に記録（このエントリ）。
+
+### 設計判断
+
+- 2024 年期の章ドラフト本文（前書き・第一章・第二章の本文部）は **書誌的事実として保存** し更新しない。残課題セクションのみ Lint 注記を追加。
+- Plurality は独立エンティティ化しない。本書主題から外れるため [デジタル民主主義](entities/デジタル民主主義.md) と [ブロードリスニング](concepts/ブロードリスニング.md) 内の集約で十分。
+
+## [2026-05-02] query | NISHIO アシスタントと Claude Code + LLM Wiki を「同じ機能の別実装」として位置づけ
+
+- 著者の指摘: 「NISHIO アシスタントの『特化した記憶を持って話し相手になる』性質も、LLM Wiki とセットになった Claude Code によって実現されている」
+- 整理: 両者は **同じ機能の別実装**。NISHIO アシスタントは **Naive RAG 型**、Claude Code + LLM Wiki は **段階的開示型**。これは Day 12 Session B の「Naive RAG → Modern RAG」構造変化が個人知識アシスタントにも当てはまる構図
+- 更新:
+  - [questions/未解決の問い.md](questions/未解決の問い.md) Q4 — 中間層の 2 選択肢（A: NISHIO アシスタント、B: Claude Code + LLM Wiki）を明示
+  - [entities/NISHIOアシスタント.md](entities/NISHIOアシスタント.md) — 別実装としての Claude Code + LLM Wiki を比較表で対比、発散用の窓口としての継続価値と、著者自身の知的生産パートナーとしての主役交代を整理
+  - [concepts/有限化と無限ネットワーク.md](concepts/有限化と無限ネットワーク.md) — 「接続装置の進化」節を追加。2024 年 vs 2026 年の中間層を比較
+
+## [2026-05-02] query | LLM Wiki を Q3（収束支援）の第 4 候補として位置づけ
+
+- 著者の指摘: 「この収束支援は現状 LLM Wiki がとても有望」
+- [Q3](questions/未解決の問い.md) の解候補に LLM Wiki を **第 4 候補（現状もっとも有望）** として追加
+- [concepts/発散と収束.md](concepts/発散と収束.md) に「LLM Wiki による収束支援」節を新設。三段構えで整理：
+  1. 概念抽出そのものが収束操作
+  2. 段階的開示で overview ↔ 詳細の往復
+  3. 後段としての Wiki が並列発散を時間をかけて吸収・収束
+- 従来の 4 候補（コンテキスト幅／フラクタル要約／KJ法／Kozaneba）との関係を「Wiki がそれらを **束ねるメタ装置**」として整理
+- [chapters/第二部-LLM_Wikiの導入.md](chapters/第二部-LLM_Wikiの導入.md) の見取り図に「収束支援装置としての LLM Wiki」節を追加候補として登録
+
 ## [2026-05-02] ingest | Day 12 Session C — Q14・Q17 解決、ナラティブの価値 言語化
 
 - Sources: 3 ファイル

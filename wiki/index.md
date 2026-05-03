@@ -56,13 +56,15 @@ LLM時代の知的生産論を構成する概念群。
 - 著者の前著
   - [『エンジニアの知的生産術』(2018)](entities/エンジニアの知的生産術2018.md) — 本書が問い直す対象
   - [『コーディングを支える技術』(2013)](entities/コーディングを支える技術2013.md)
-- LLM モデル — 2024年期（プロジェクト第一部）
+- LLM モデル — 2024年期（プロジェクト第一部、**歴史記録として保存**）
   - [Claude 3 Opus](entities/Claude3Opus.md) — Day1〜8の主たる対話相手
   - [ChatGPT / GPT-4 / GPT-4o](entities/ChatGPT.md)
   - [o1 pro](entities/o1pro.md) — Day10で総合振り返りに使用
-- LLM モデル — 現行（2026, 第二部以降の対話相手候補）
+- LLM モデル — 現行（2026, 第二部以降の主役）
   - [Claude 4 系](entities/Claude4系.md) — Opus 4.7 / Sonnet 4.6 ほか
   - [GPT-5 系](entities/GPT-5系.md) — GPT-5 / 5.2 / 5.5
+- エージェント基盤
+  - [Claude Code](entities/ClaudeCode.md) — Skills / CLAUDE.md / auto memory / memory tool / filesystem access。**LENCHI 自身の運用基盤**、LLM Wiki の先行的実装
 - ツール
   - [Scrapbox（現Cosense）](entities/Scrapbox.md) — 著者の知識ベース、本書 raw 資料の源
   - [Kozaneba](entities/Kozaneba.md) — 著者作のデジタル KJ法ツール
