@@ -1,0 +1,973 @@
+# human
+
+ネットを検索して僕が面白いと思いそうな話題を見つけてまとめて
+
+# GPT
+
+2026年の論文・研究機関発表・最近の記事を中心に見て、**「AIで成果物を増やす」より「AIで思考・研究・表現・検証の単位が変わる」**という軸で拾いました。西尾さんに合いそうなのはこのあたりです。
+
+## 1. 研究は「論文を書く」から「実行可能な研究プロセスを書く」へ
+
+Natureの *The AI Scientist* は、研究アイデア生成、文献確認、実験、可視化、論文執筆、自己レビューまでを一つのパイプラインとして扱っています。論文では、AIが生成した原稿の一つが機械学習系ワークショップの査読第1ラウンドを通過したことも報告されています。ただし、そのワークショップの採択率は70%なので、「人間研究者を置き換えた」と読むより、「研究プロセスを機械が実行可能な単位に分解した」と見る方が面白いです。([Nature][1])
+
+近い方向で、*The Agentic Researcher* は、CLI型のコーディングエージェントを研究助手化するための方法論、サンドボックス環境、報告規約、プロンプト化された研究規範を提示しています。ここで面白いのは、AIモデル単体ではなく、**研究の作法をエージェントに渡せる形式にする**という発想です。([arXiv][2])
+
+## 2. AIと一緒に「知識構造」を育てるツール
+
+MindTrellisという研究は、複数文書から得た情報とユーザ自身の理解を、同じ視覚的な知識グラフ上で育てていくシステムです。ユーザは文書に基づく質問をしながら、概念を追加し、関係を修正し、階層を組み替えられます。12人の参加者による実験では、検索だけのベースラインより知識整理と認知負荷の面で良い結果が報告されています。([arXiv][3])
+
+これは西尾さんの関心にかなり近いと思います。単なるRAGではなく、**AIが出した構造を仮説として扱い、人間がその構造を編集する**という設計だからです。著者らも、AI生成の構造は最終決定ではなく、ユーザがあらゆるレベルで調整できるべきだと述べています。([arXiv][3])
+
+## 3. 論文中の図表が「知識資源」として掘り起こされる
+
+東北大学系のDIVEは、水素貯蔵材料の研究で、4,000本超の科学論文・30,000件超のデータベースから、図表に埋もれた情報を抽出し、新材料候補を提案するマルチエージェントワークフローです。商用モデルより10〜15%、オープンソースモデルより30%以上よい抽出精度・カバレッジを示したと説明されています。([フリースペース][4])
+
+ここで面白いのは、「図解」は人間に説明するための補助物ではなく、**機械が読み取って研究を進めるための知識の容器**にもなる、という点です。西尾さんのイラストによる情報表現の蓄積とも接続できる話題です。DIVEの発表は、論文図表に隠れた実験結果を機械可読データに変換するパイプラインの意義を強調しています。([フリースペース][4])
+
+## 4. AI時代のプログラミングは「生成」より「検証」が重要になる
+
+AIがコードを大量に生成できるようになると、次の制約は「書くこと」ではなく「正しいと示すこと」になります。MoonBitの2026 Software Synthesis Challengeは、LLMとMoonBitのツールチェーンを組み合わせ、AI-nativeなソフトウェアファクトリーを探るチャレンジとして位置づけられています。([MoonBit][5])
+
+この方向で、Rocq/Coq系の自動定理証明研究も動いています。ReCent-Proverは、LLMに単にタクティックを出させるのではなく、高水準の証明計画と自己批判を使わせる設計で、CoqStoqベンチマーク上で既存手法より22.58%多くの定理を証明したと報告しています。([arXiv][6])
+
+さらにAutoRocqは、Rocq定理証明器からのフィードバックを使って反復的に証明を改善し、AI coding agentと組み合わせた「生成して検証する」ループの可能性を述べています。Leanも、最小信頼カーネルによる数学的証明・ソフトウェア検証・ハードウェア検証を特徴として掲げています。([arXiv][7])
+
+## 5. Tools for Thoughtは「手伝うAI」から「考えを守るAI」へ
+
+Microsoft ResearchのTools for Thought周辺では、生成AIが仕事・学習・創造のワークフローを変える一方で、批判的思考や学習への影響も問題にしています。CHI 2026のワークショップ説明では、生成AIを単なる自動化ではなく、批判的思考を促し、個別指導を行い、新しいsensemakingを可能にする道具として設計する課題が示されています。([Microsoft][8])
+
+関連するMicrosoft Researchの調査では、319人の知識労働者から936件の利用例を集め、GenAIへの信頼が高いほど批判的思考の発動が少なく、タスク固有の自己信頼が高いほど批判的思考が多い、という傾向が報告されています。つまり、AIを「楽にする道具」としてだけ見ると、思考の筋力が落ちる可能性がある。AIはむしろ、反証、比較、再構成、メタ認知を促す設計に寄せた方がよさそうです。([Microsoft][9])
+
+## 6. 人間とAIの集合知：差異を消すのではなく構造化する
+
+PNAS Nexusの人間–AIチーミング論文は、人間とAIの協働を、推論・記憶・注意をどう分担するかという集合知の枠組みで整理しています。ここでの問いは「AIを入れるか」ではなく、**人間だけ・AIだけよりよい補完性をどう設計するか**です。
+
+熟議民主主義に関するCI4DDの研究は、意見の相違を含む社会技術的問題に対して、集合記憶・集合注意・集合推論を支えるシステムとしてAIを使う方向を示しています。これは「合意形成AI」というより、対立や多様性を可視化し、議論を持続可能にする道具として読むと面白いです。([arXiv][10])
+
+一方で、LLMエージェント同士の社会的相互作用を調べたEACL 2026の研究では、Chirper.ai上の32,000エージェント・700万投稿を分析し、同質性、社会的影響、有害投稿、イデオロギー的傾向、分極化を調べています。AIエージェント社会にも、人間社会に似たネットワーク現象や別種の失敗モードが出るという点が興味深いです。([ACL Anthology][11])
+
+## 7. 「図解」は静止画から、対話的な生成UIへ移っている
+
+AI生成図表に関する2026年の論文は、Nature、Science、Cell Press、Elsevier、PLOSなどの方針を調べ、AI生成の科学図・グラフィカルアブストラクト・データ可視化について、再現性、著者性、視覚的誤情報が主要論点だと整理しています。科学的な図解は、見栄えではなく、検証可能性と出典管理が中心課題になっています。([arXiv][12])
+
+さらにGoogle ResearchのGenerative UIは、AIが文章を返すだけでなく、ユーザの問いに応じてWebページ、ゲーム、ツール、シミュレーションなどの対話的インターフェースを生成する方向を示しています。AnthropicのClaudeも2026年3月のリリースノートで、会話内にインタラクティブなチャート、図、可視化を生成できるようになったと説明しています。([Google Research][13])
+
+これはかなり大きい変化です。イラストや図解が「完成物」ではなく、読者の問いに応じて変形する**説明空間**になる。西尾さんの強みである図による思考伝達は、ここで「生成UIの設計思想」と接続できると思います。
+
+## 8. AIの能力は伸びているが、凹凸も大きい
+
+International AI Safety Report 2026は、100人以上の独立専門家のガイダンスを受けて作成され、汎用AIの能力・リスク・リスク管理を整理しています。報告書は、コード生成、画像生成、数学・科学の専門的質問などで能力が伸びる一方、空間推論、単純な数え上げ、長いワークフローでの基本的な失敗など、能力が「jagged」であることも強調しています。([International AI Safety Report][14])
+
+この話題は、AI賛美でもAI否定でもなく、**どこで強く、どこで壊れるかの地図を作る**という方向で面白いです。知的生産にAIを入れるなら、モデル性能の比較より、認知負荷、検証可能性、出典、反証、失敗時の回復設計の方が長期的に重要になりそうです。([International AI Safety Report][14])
+
+## まず深掘りするなら
+
+優先順位をつけるなら、僕はこの順に読みます。
+
+1. **MindTrellis**：西尾さんの図解・知識構造化の関心に直結する。
+2. **The Agentic Researcher / The AI Scientist**：知的生産を「実行可能な作法」として外部化する話。
+3. **ReCent-Prover / AutoRocq / Lean**：AI時代のプログラミングで、生成後の検証が主題になる。
+4. **Tools for Thought + 批判的思考調査**：AIを使って考える力を失わない設計。
+5. **集合知・熟議AI**：差異を消すのではなく、扱える構造にする話。
+
+* [The Verge](https://www.theverge.com/ai-artificial-intelligence/893625/anthropic-claude-ai-charts-diagrams?utm_source=chatgpt.com)
+* [The Guardian](https://www.theguardian.com/technology/2026/apr/29/making-ai-chatbots-more-friendly-mistakes-support-false-beliefs-conspiracy-theories-study?utm_source=chatgpt.com)
+* [WIRED](https://www.wired.com/story/david-silver-ai-ineffable-intelligence-reinforcement-learning?utm_source=chatgpt.com)
+* [The Guardian](https://www.theguardian.com/commentisfree/2026/apr/30/tax-ai-slop?utm_source=chatgpt.com)
+* [reuters.com](https://www.reuters.com/business/accenture-roll-out-copilot-all-743000-employees-boost-microsoft-2026-04-27/?utm_source=chatgpt.com)
+
+[1]: https://www.nature.com/articles/s41586-026-10265-5 "Towards end-to-end automation of AI research | Nature"
+[2]: https://arxiv.org/html/2603.15914v1 "The Agentic Researcher: A Practical Guide to AI-Assisted Research in Mathematics and Machine Learning"
+[3]: https://arxiv.org/html/2604.23129v1 "MindTrellis: Co-Creating Knowledge Structures with AI through Interactive Visual Exploration"
+[4]: https://www.fris.tohoku.ac.jp/en/feature/topics/detail---id-1682.html "\"DIVE\" into Hydrogen Storage Materials Discovery with AI Agents｜ Frontier Research Institute for Interdisciplinary Sciences"
+[5]: https://www.moonbitlang.com/2026-scc "MoonBit"
+[6]: https://arxiv.org/html/2604.19558v1 "On Reasoning-Centric LLM-based Automated Theorem Proving"
+[7]: https://arxiv.org/html/2511.17330v3 "Agentic Verification of Software Systems"
+[8]: https://www.microsoft.com/en-us/research/project/tools-for-thought/workshops/ "Tools for Thought - Microsoft Research: Workshops"
+[9]: https://www.microsoft.com/en-us/research/publication/the-impact-of-generative-ai-on-critical-thinking-self-reported-reductions-in-cognitive-effort-and-confidence-effects-from-a-survey-of-knowledge-workers/ "The Impact of Generative AI on Critical Thinking: Self-Reported Reductions in Cognitive Effort and Confidence Effects From a Survey of Knowledge Workers - Microsoft Research"
+[10]: https://arxiv.org/html/2603.16260 "Human/AI Collective Intelligence for Deliberative Democracy: A Human-Centred Design Approach"
+[11]: https://aclanthology.org/2026.eacl-long.344/ "An Empirical Study of Collective Behaviors and Social Dynamics in Large Language Model Agents - ACL Anthology"
+[12]: https://arxiv.org/html/2603.16159v1 "AI-Generated Figures in Academic Publishing: Policies, Tools, and Practical Guidelines"
+[13]: https://research.google/blog/generative-ui-a-rich-custom-visual-interactive-user-experience-for-any-prompt/?utm_source=chatgpt.com "Generative UI: A rich, custom, visual interactive user ..."
+[14]: https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026 "International AI Safety Report 2026 | International AI Safety Report"
+
+# human
+
+MindTrailsをもっと詳しく教えて
+
+# GPT
+
+まず綴りだけ補足します。前回僕が挙げたのは **MindTrellis** です。**MindTrails** という名前の別物もあり、こちらは不安に関する認知バイアス修正プログラムです。今回の文脈では、AIと人間が知識構造を一緒に作る **MindTrellis** の話として説明します。([MindTrails][1])
+
+## 何をするシステムか
+
+MindTrellisは、複数文書を読んで理解するときに、AIと人間が一緒に**編集可能な知識グラフ**を作るシステムです。普通のRAGチャットは「質問→答え」を返しますが、MindTrellisは答えを一回きりの文章として終わらせず、ノードとエッジからなる構造に追加していきます。ユーザはその構造を見ながら、質問したり、ノードを追加したり、関係を変えたり、階層を組み替えたりできます。([arXiv][2])
+
+中心の発想は、**知識構造をAIの出力物ではなく、人間とAIの共有作業物にする**ことです。論文ではこれを “co-created knowledge graph” と呼んでいて、文書由来の知識とユーザ由来の洞察が同じグラフ上に共存します。([arXiv][2])
+
+## 既存ツールへの不満から出てきた設計
+
+論文の問題意識はかなり明確です。手動のマインドマップは自由に編集できるが、複数文書を読むときの知的支援が弱い。一方、LLM/RAGは情報検索には便利だが、返答が線形の文章になりやすく、ユーザが知識の構造そのものを育てにくい。さらに、AIが作った図があっても、ユーザがそれを自分の理解に合わせて組み替えられないことが多い、という整理です。([arXiv][2])
+
+事前調査では、参加者が「文書間を行き来して統合するのが疲れる」「違う用語で表現された同じ概念をつなげにくい」「チャットの返答は一時的で、理解の蓄積になりにくい」「出典が見えないと信頼しにくい」「AI生成の構造を自分用に直したい」といった不満を述べています。([arXiv][2])
+
+ここが面白いです。MindTrellisは「AIに正しい答えを出させる」だけでなく、**理解が育つ過程そのものをUIにする**ことを狙っています。
+
+## UIの構成
+
+UIは大きく3つです。
+
+左にファイル管理パネルがあり、ユーザが文書をアップロードして整理します。中央にKnowledge Canvasがあり、知識グラフが表示されます。右にチャットパネルがあり、自然言語で質問したり、ノード追加やリンク変更を命令したりできます。([arXiv][2])
+
+Canvasではノードをクリックして、そのノードに関する追加質問、削除、拡張候補の表示、重要ノードのハイライトなどができます。ズームアウト時にはタイトルだけを見て全体構造を把握し、ズームインするとノード内の詳細が読める、というセマンティックズームも入っています。([arXiv][2])
+
+この設計は、単なる「チャット＋図」ではありません。チャットでの操作と、キャンバス上の直接操作が同じ知識グラフに反映されます。つまり、自然言語は粗い操作や一括変更に向き、ドラッグやクリックは配置・構造の細かい調整に向く、という役割分担になっています。([arXiv][2])
+
+## 知識グラフの表現
+
+MindTrellisのグラフは、マインドマップとコンセプトマップの中間です。
+
+マインドマップからは、上位概念から下位概念へ展開する階層構造を借りています。ノードは概念を表し、親子リンクは「一般→具体」の探索経路を作ります。コンセプトマップからは、エッジラベルを借りています。たとえば “Fossil Fuel Combustion” と “Greenhouse Gas Emissions” の間に “is caused by” のような関係ラベルを置くことで、単に近くにあるだけでなく、どう関係しているかを明示します。([arXiv][2])
+
+さらに、あるノードが複数の親に属することもできます。たとえば “Deforestation” は “Causes of Climate Change” と “Biodiversity Loss” の両方に関係しうる。これにより、同じ概念を重複ノードとしてコピーするのではなく、横断的な概念として扱えます。([arXiv][2])
+
+## 内部構造：3つのエージェント
+
+MindTrellisの中核は、3つのコンポーネントからなるマルチエージェント・パイプラインです。
+
+**Oracle** は、ユーザの入力が「質問」なのか「グラフ編集」なのか「既存ノードの拡張」なのかを判定します。たとえば「森林破壊の影響を広げて」は、情報検索にも、ノード拡張にも、編集命令にも見えます。ここを分類して、後続の処理へ振り分けます。([arXiv][2])
+
+**Adaptive Retriever** は検索担当です。通常のRAGのように固定サイズのチャンクを取るだけではなく、RAPTOR型の階層検索を使い、広い概観が必要なときは上位要約、細部が必要なときは下位チャンクを引く設計です。検索パイプラインには、クエリ書き換え、RAPTOR検索、関連度判定、出典へのバックトラックが含まれます。([arXiv][2])
+
+**Map Manager** は編集担当です。ユーザが「温室効果ガス排出は投資判断に重要になっている」と入力した場合、既存グラフ中の “Greenhouse Gas Emissions” をアンカーとして見つけ、新しいノードを作り、適切なエッジラベルで接続します。内部的には、LLMが操作計画を作り、AddNode、AddEdge、DeleteNode、UpdateNodeのような関数呼び出しとして実行します。失敗した場合はエラーメッセージをもとに修正・再計画します。([arXiv][2])
+
+実装としては、フロントエンドがReact、バックエンドがFlask、ワークフロー管理にLangGraph、ベクトルストアにChromaDB、埋め込みにOpenAIのtext-embedding-3-smallを使っています。OracleとMap Managerの計画系にはGPT-4o、より単純な処理にはGPT-4o-miniを使ったとされています。([arXiv][2])
+
+## 使い方の流れ
+
+典型的には、まず文書群をアップロードします。たとえば気候変動について複数記事を入れる。最初に「気候変動の主要概念を概観したい」と尋ねると、AIが大まかなノード群を作る。そこから「このノードを展開して」「森林破壊の具体例を追加して」「このノードを温室効果ガス排出と同じ階層に移して」のように、質問と編集を行き来します。([arXiv][2])
+
+重要なのは、探索と構築が別フェーズではないことです。参加者は、まず質問して不足を見つけ、そこに自分の知識を足し、さらにその追加ノードから再検索する、という循環をしていました。逆に、先に自分の仮説や既有知識をノードとして置き、そこから文書検索で肉付けする参加者もいました。([arXiv][2])
+
+これは、知的生産の道具としてかなり示唆があります。AIを「検索者」としてだけ使うのではなく、自分の理解の仮構造を外に出し、それをAIに調べさせ、また構造を直す、というループになります。
+
+## 評価結果
+
+ユーザスタディは12人で行われました。参加者は気候変動とAI倫理の文書セットを使い、MindTrellisと比較用システムの両方でスライドデッキを作成しました。比較用システムは、同じ検索器を使いつつ、ユーザがグラフを編集・追加できないRAG＋静的グラフ可視化です。([arXiv][2])
+
+結果として、MindTrellisは知識整理、使いやすさ、トピック理解、スライド構成支援などで高く評価されました。参加者は、情報が最初から全部出るのではなく、グラフが段階的に拡張される点や、自分の考え方に合わせて構造を変えられる点を評価しています。([arXiv][2])
+
+パイプラインの定量評価もあります。Oracleの意図分類は全体で91.4%の精度。Map Managerの編集実行成功率は93.0%、完全に正しく統合できた率は78.1%。Adaptive RetrieverはナイーブなRAGより高い回答品質を示し、正答率は82.5%対58.8%。エンドツーエンドの全体成功率は83.6%でした。([arXiv][2])
+
+ただし、これは大規模実運用の検証ではありません。参加者は12人で、しかも生成AI経験のある学生中心です。また、作成されたスライドの品質を専門家が独立評価したわけではなく、長期利用でグラフが大きくなったときの安定性も未検証です。([arXiv][2])
+
+## どこが面白いか
+
+僕が特に面白いと思う点は、**AI生成構造を暫定物として扱っている**ところです。
+
+多くのAI可視化ツールは、「AIが構造を作る→人間が見る」という片方向です。MindTrellisでは、AIの配置、階層、関係ラベル、グルーピングはすべて仮説です。ユーザはそれを自然言語でも直接操作でも直せます。論文の議論でも、AI生成の組織化は最終決定ではなく、すべてのレベルでユーザが調整できるべきだと述べています。([arXiv][2])
+
+これは「AIが考える」ではなく、**AIが提示した構造と人間の違和感の差分から理解が進む**という設計です。西尾さんの関心に寄せて言うなら、図解を「説明の完成形」ではなく、「思考の途中状態を編集する媒体」として扱っている点が重要です。
+
+## 弱点と未解決点
+
+一つ目の弱点は、意図解釈です。自然言語でグラフを操作する場合、同じ入力が質問にも編集命令にも見えます。論文でも、エンドツーエンド失敗の52%はOracleの誤分類に由来すると述べています。これは、UI上で「あなたの入力をこう解釈しました」と事前表示し、実行前にプレビューする設計が必要そうです。([arXiv][2])
+
+二つ目は、表現形式の固定です。MindTrellisは階層的なノードリンク図を使っていますが、すべての知識作業が階層構造に向いているわけではありません。論文でも、空間クラスタ、行列ビュー、タイムラインなどの別表現が必要になる可能性を挙げています。([arXiv][2])
+
+三つ目は、文書以外の情報です。今回の実験では検索器がテキストのみ対応のため、Wikipedia文書から図を除去しています。科学論文、スライド、図解、手書きメモのような視覚情報を扱うには、別の設計が必要になります。([arXiv][2])
+
+## 自分用に作るなら、どこから始めるか
+
+最小構成で再現するなら、次の形で十分近いものが作れます。
+
+ObsidianやLogseqのようなノード・リンク型メモをベースにして、各ノードに「本文」「出典」「親子関係」「意味ラベル」を持たせる。LLMには、質問への回答だけでなく、`add_node`、`add_edge`、`move_node`、`rename_edge` のような操作を出させる。操作前には必ず「予定される変更」を表示する。検索は通常のRAGで始め、後から階層検索にする。
+
+MindTrellisの本質は、高度なグラフ描画そのものではなく、**読む、問う、足す、直す、確かめる**が同じ構造物の上で循環することです。ここを外さなければ、かなり小さな試作でも思想は取り出せると思います。
+
+[1]: https://mindtrails.virginia.edu/?utm_source=chatgpt.com "MindTrails"
+[2]: https://arxiv.org/html/2604.23129v1 "MindTrellis: Co-Creating Knowledge Structures with AI through Interactive Visual Exploration"
+
+# human
+
+すごく面白そう、僕が以前作ったKozanebaとも関連しそう
+
+# GPT
+
+はい、かなり強く関連しそうです。
+ただし、僕の見立てでは **MindTrellis は「Kozanebaの上位互換」ではなく、Kozanebaが扱っていた問題の一部を、AI/RAG時代の文脈で別方向から再定式化したもの**です。
+
+Kozanebaの説明では「かんがえをまとめるためのデジタル文房具」であり、KJ法的な手法を紙でやる不便さから、デジタルな道具として作られた、とされています。機能としても、グループを畳む、重要なものを大きくする、ものの間に関係の線を引く、といった操作が挙げられています。([Cosense][1])
+
+一方、MindTrellisは、複数文書を読むユーザとAIが、文書由来の知識とユーザ自身の洞察を同じ知識グラフ上で共同編集するシステムです。ユーザは文書に基づく質問をしつつ、新しい概念を追加し、関係を修正し、階層を組み替えられます。([arXiv][2])
+
+## 近いところ
+
+一番近いのは、どちらも **「理解は、断片を配置し直すことで進む」** という前提を持っている点だと思います。
+
+Kozaneba読書の説明に、「難解な文章を分解再配置しながら構造を読み解いていく実験」とあります。これはMindTrellisの問題意識とかなり近いです。MindTrellisも、複数文書から得た情報を一回の要約に閉じ込めず、ノードとリンクとして少しずつ展開し、再編成しながら理解を進めます。([Cosense][3])
+
+つまり両者は、知識を「文章の列」ではなく、**操作可能な空間構造**として扱っています。
+
+## 違うところ
+
+違いは、出発点です。
+
+**Kozaneba** は、人間の内側にある未整理な断片を外に出し、並べ替え、束ね、線を引くための道具です。いわば、思考の外部化に近い。
+
+**MindTrellis** は、外部文書群からAIが情報を取り出し、それを人間が編集できる知識グラフにしていく道具です。いわば、読解・調査・統合の共同作業に近い。
+
+なので、ざっくり言うとこうです。
+
+| 観点    | Kozaneba               | MindTrellis               |
+| ----- | ---------------------- | ------------------------- |
+| 主な素材  | 自分の考え、読書中の断片、こざね       | 複数文書、検索結果、ユーザの追加入力        |
+| 主な操作  | 分解、配置、グループ化、線を引く、大きさ変更 | 質問、検索、ノード追加、関係修正、階層再編     |
+| AIの位置 | もともとは文房具的・人間主導         | AIが検索・提案・構造化に参加           |
+| 強み    | 思考の手触り、自由な再配置、KJ法的身体性  | 文書根拠、RAG、出典、知識グラフの共同成長    |
+| 弱み    | 情報探索・出典管理は別途必要         | UIが知識グラフ寄りで、KJ法的な自由配置は弱そう |
+
+## Kozanebaから見ると、MindTrellisの核心は「AIがこざねを生成・配置する」こと
+
+Kozaneba的に翻訳すると、MindTrellisはこう見えます。
+
+1. 文書を読む
+2. AIが候補こざねを抽出する
+3. AIが仮の関係線を引く
+4. 人間が違和感に基づいて配置・関係・粒度を直す
+5. 直した構造から、さらにAIに質問する
+6. 新しいこざねが追加される
+
+この循環が面白いです。
+
+普通のRAGは「質問→答え」で終わります。MindTrellisは「質問→答え→構造への反映→構造の編集→次の質問」になります。Kozanebaは、もともとこの「構造の編集」の側に強い。だから、MindTrellisのAI検索・文書根拠・出典管理をKozanebaに接続すると、かなり自然な拡張になると思います。
+
+## Kozanebaに足すなら何が本質的か
+
+僕なら、KozanebaにMindTrellis的な機能を足すとき、最初から巨大な知識グラフシステムにはしません。Kozanebaの良さは、紙片を触るような軽さにあるはずなので、AI機能は控えめに入れた方がよいです。
+
+まず効きそうなのは、次の3つです。
+
+## 1. 「文書からこざね候補を出す」
+
+文書、Scrapboxページ、PDF、Markdownを入れると、AIがこざね候補を出す。
+
+ただし、自動でキャンバスに全部置くと邪魔になるので、右側に「未採用こざね棚」を作るのがよさそうです。人間が必要なものだけキャンバスへ投げ込む。
+
+これはMindTrellisよりKozanebaらしいと思います。AIに構造を決めさせるより、**AIには材料を出させ、人間が配置する**。
+
+## 2. 「こざねに出典を持たせる」
+
+MindTrellisの強みは、文書に基づく質問・検索ができる点です。([arXiv][2])
+
+Kozanebaでも、各こざねに次のようなメタ情報を持たせるとよさそうです。
+
+```text
+text: こざね本文
+source: 出典URL / Scrapboxページ / PDFページ
+quote: 根拠となる短い抜粋
+created_by: human | ai
+confidence: high | medium | low
+```
+
+これがあると、こざねを動かしても根拠が失われません。
+思考の自由配置と、出典の追跡が両立します。
+
+## 3. 「線をAIに提案させるが、確定は人間」
+
+Kozanebaには「ものの間に関係の線を引く」機能があります。([Cosense][1])
+MindTrellisは、ノード間の関係や階層をAIと人間が共同で作るところが中核です。([arXiv][2])
+
+ここを接続するなら、AIにこういう提案をさせるのがよさそうです。
+
+```text
+A は B の原因かもしれない
+A は B の具体例かもしれない
+A と B は同じ概念を別名で言っているかもしれない
+A は B と対立しているかもしれない
+A は B の前提かもしれない
+```
+
+ただし、自動で線を引くとキャンバスが汚れる。
+だから、提案線は薄く表示し、人間がクリックして確定するのがよいと思います。
+
+## 面白い設計上の分岐
+
+KozanebaとMindTrellisを接続するとき、重要な分岐があります。
+
+**MindTrellis寄りにすると、知識グラフになる。**
+ノード、エッジ、ラベル、階層、出典、検索。これは調査や論文読解に強い。
+
+**Kozaneba寄りにすると、思考の作業場になる。**
+配置、距離、大きさ、束、畳み込み、違和感、手触り。これは発想や構成づくりに強い。
+
+この2つは似ていますが、同じではありません。
+知識グラフは「意味関係」を明示したがる。
+KJ法的な配置は「まだ言語化できない近さ」も扱える。
+
+ここを潰してしまうと、Kozanebaの良さが消えると思います。
+
+なので、僕の仮説はこうです。
+
+**Kozanebaは、MindTrellisよりも“前言語的な構造化”に強い。MindTrellisは、Kozanebaよりも“文書根拠を持つ構造化”に強い。**
+
+この差分を活かすなら、Kozanebaに足すべきAIは「構造を完成させるAI」ではなく、**こざね・関係・根拠・反対例を差し出すAI**です。
+
+## Kozaneba版MindTrellisの最小プロトタイプ
+
+最小で作るなら、こういう構成がよさそうです。
+
+```text
+[左] 入力文書・Scrapboxページ
+[中央] Kozanebaキャンバス
+[右] AI提案パネル
+```
+
+AI提案パネルには、次の4種類だけ出す。
+
+```text
+こざね候補
+関係候補
+要約候補
+反証・別視点候補
+```
+
+ユーザは、候補をキャンバスにドラッグする。
+AIは勝手に確定配置しない。
+出典付きのこざねだけ、あとから根拠にジャンプできる。
+
+これならMindTrellisの良さを取り込みつつ、Kozanebaの「自分で並べ替えて考える」性質を守れます。
+
+## 研究テーマとしての言い方
+
+外向けに整理するなら、こう言えそうです。
+
+> MindTrellis is AI-assisted knowledge graph construction.
+> Kozaneba can become AI-assisted fragment arrangement for thinking.
+
+または日本語なら、
+
+> MindTrellisは、文書理解のためのAI共同知識グラフ。
+> Kozanebaは、思考形成のためのAI共同こざね配置。
+
+この違いはけっこう大きいです。
+MindTrellisは「構造化された理解」を支援する。
+Kozanebaは「構造化される前の思考」を支援できる。
+
+そこにAIを入れるなら、Kozanebaの方向性はかなり独自性があると思います。
+
+[1]: https://scrapbox.io/nishio/%E3%81%8B%E3%82%93%E3%81%8C%E3%81%88%E3%82%92%E3%81%BE%E3%81%A8%E3%82%81%E3%82%8B%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E6%96%87%E6%88%BF%E5%85%B7Kozaneba "かんがえをまとめるデジタル文房具Kozaneba - 西尾泰和の外部脳"
+[2]: https://arxiv.org/html/2604.23129v1?utm_source=chatgpt.com "MindTrellis: Co-Creating Knowledge Structures with AI ..."
+[3]: https://scrapbox.io/nishio/Kozaneba%E8%AA%AD%E6%9B%B8 "Kozaneba読書 - 西尾泰和の外部脳"
+
+
+# human
+
+> MindTrellisは、Kozanebaよりも“文書根拠を持つ構造化”に強い。
+
+ここは僕のConneatingDotsシステムがやろうとしていたことに近い
+
+ConnectingDotsだね
+ConnectingDotsシステム https://scrapbox.io/nishio/ConnectingDots%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0
+
+# GPT
+
+はい、かなり近いです。公開されているページを見る限り、表記は **ConnectingDotsシステム** で、そこでは「事実と解釈を明瞭に分離したい」「事実の集合は人間が読むには向かないが、AIが読む場合には有益」「事実の間の関係性は多すぎて一次元の文章で表現困難」と整理されています。これは、MindTrellisの「文書根拠を持つ知識グラフを人間とAIが共同編集する」という方向と強く重なります。([Cosense][1])
+
+僕の理解では、関係はこうです。
+
+| システム               | 主な役割                | 強いところ                    |
+| ------------------ | ------------------- | ------------------------ |
+| **Kozaneba**       | こざねを空間的に並べ替える       | 思考の外部化、KJ法的操作、前言語的な近さの扱い |
+| **MindTrellis**    | 文書由来の知識をAIとグラフ化する   | 出典つき読解、文書横断の構造化、関係・階層の編集 |
+| **ConnectingDots** | 事実・解釈・ストーリー・ビューを分ける | 根拠と物語の分離、複数の読み筋、価値判断の可視化 |
+
+Kozanebaは「かんがえをまとめるためのデジタル文房具」で、グループを畳む、重要なものを大きくする、関係の線を引く、といった操作を持つと説明されています。これは、素材を人間が触って配置する作業場です。([Cosense][2])
+
+一方でConnectingDotsは、素材を単に並べるだけではなく、**何が事実で、何が解釈で、どの事実を選んでストーリーにしたのか**を分けようとしている。さらにページ上では、「ストーリーを作る上では取捨選択があり、何を重要とみなすかには人間の価値判断が混じる」と明示されています。([Cosense][1])
+
+ここがMindTrellisより一段深いと思います。
+
+MindTrellisは、ユーザが文書に基づく情報を問い合わせ、新しい概念・関係・階層を追加して、発展中の理解を知識グラフに反映するシステムです。([arXiv][3]) ただし、論文の中心は「文書理解のための共同知識構造」です。ConnectingDotsが見ているのは、それに加えて、**事実の集合からどのストーリーを立ち上げるか**です。
+
+つまり、こう言えると思います。
+
+**MindTrellisは、ConnectingDotsにおける Dots と Relations をAI支援で作る部分に近い。
+ConnectingDotsは、その上に Stories と Views を明示的に置こうとしている。**
+
+公開ページにも、ConnectingDotsシステムの要旨として「点(Dots:検証可能な事実)・線(Stories:キュレーション)・面(Views:表示)」の3層で扱う設計、という記述があります。([Cosense][1])
+
+この観点で見ると、三者はかなりきれいに接続できます。
+
+```text
+文書・経験・記録
+    ↓
+Dots: 検証可能な事実、引用、観察、出来事
+    ↓
+Relations: 支持、反証、原因、例示、時系列、同一性、対立
+    ↓
+Stories: 目的に応じて選ばれた読み筋
+    ↓
+Views: Kozaneba的配置、年表、因果図、自己紹介、記事、スライド
+```
+
+MindTrellisが得意なのは、このうち **Dots → Relations** の生成・編集です。
+Kozanebaが得意なのは、**RelationsやStoriesを空間的に触ること**です。
+ConnectingDotsが得意なのは、**Dots / Stories / Views を混ぜない設計思想**です。
+
+特に重要なのは、ConnectingDotsでは「ストーリーは主観的」とされている点です。事実に基づいていても、どの事実を選ぶか、どの順序で並べるか、何を重要とみなすかで、そこには解釈が入る。([Cosense][1]) これはAI時代にかなり大事です。AIに「まとめて」と頼むと、事実抽出と物語化が一体化してしまうからです。
+
+なので、MindTrellis的な機能をConnectingDotsに取り込むなら、単に「AIが知識グラフを作る」では足りないと思います。むしろ、こう分けるのが良さそうです。
+
+```text
+AI Extractor:
+  文書から事実候補を抽出する
+
+AI Linker:
+  事実間の関係候補を出す
+
+AI Critic:
+  その関係は本当に根拠があるか、反証はないかを見る
+
+AI Storyteller:
+  目的に応じたストーリー候補を作る
+
+Human Curator:
+  どの事実を採用し、どの関係を信じ、どのストーリーを語るかを選ぶ
+```
+
+ここでAI Storytellerを無制限に走らせると、事実と解釈がまた混ざります。だから、ConnectingDots的には、AIの出力を次のように分けて表示するのがよさそうです。
+
+```text
+Fact:
+  出典に直接支えられる主張
+
+Inference:
+  複数のFactからの推論
+
+Interpretation:
+  見方、意味づけ、価値判断
+
+Story:
+  特定の目的のためにFact/Inference/Interpretationを並べたもの
+
+View:
+  そのStoryやFact集合の表示形式
+```
+
+この分離は、MindTrellis論文の射程よりも広いです。MindTrellisは「文書由来知識とユーザ由来知識を同じ知識グラフ上で共同構築する」ことを狙っていますが、ConnectingDotsはさらに「それを読む人間に向けて、どのストーリーとして提示するか」まで扱おうとしている。([arXiv][3])
+
+僕が面白いと思う接続点は、**KozanebaをViewの一種として扱う**ことです。
+
+つまり、KozanebaはConnectingDotsの全体ではなく、ConnectingDots内の事実・関係・ストーリーを人間が操作するためのViewになる。
+
+```text
+ConnectingDots = データモデル / 思想 / 事実と解釈の分離
+MindTrellis = 文書からDotsとRelationsを育てるAI機構
+Kozaneba = Dots, Relations, Storiesを触る空間UI
+```
+
+こう置くと、役割が衝突しません。
+
+さらに言うと、ConnectingDotsの独自性は「知識グラフ」ではなく、**ストーリー化の責任をどこに置くか**にあります。MindTrellisは知識構造を作る。ConnectingDotsは、その構造からストーリーを作るときに混入する価値判断を明示する。
+
+これは実装方針にも直結します。
+
+まず作るなら、MindTrellis全部を再現するより、ConnectingDots用の最小単位として次のデータ構造を作るのが良さそうです。
+
+```ts
+type Dot = {
+  id: string
+  claim: string              // 検証可能な事実としての短文
+  source: SourceRef[]        // URL, 文書, ページ, 行, timestamp
+  quote?: string             // 根拠抜粋
+  createdBy: "human" | "ai"
+  status: "candidate" | "accepted" | "rejected"
+}
+
+type Relation = {
+  id: string
+  from: DotID
+  to: DotID
+  type:
+    | "supports"
+    | "contradicts"
+    | "causes"
+    | "precedes"
+    | "elaborates"
+    | "same_as"
+    | "example_of"
+  evidence: SourceRef[]
+  status: "candidate" | "accepted" | "rejected"
+}
+
+type Story = {
+  id: string
+  purpose: string            // 何のための語りか
+  selectedDots: DotID[]
+  selectedRelations: RelationID[]
+  interpretation: string
+  omittedDots?: DotID[]      // あえて捨てた事実
+}
+
+type View = {
+  id: string
+  kind: "kozaneba" | "timeline" | "essay" | "slide" | "causal_map"
+  storyId?: string
+  dotIds: DotID[]
+  layout: unknown
+}
+```
+
+この設計だと、AIは事実候補と関係候補を出せる。人間は採用・棄却できる。Storyは「客観的まとめ」ではなく、目的を持つ構成物として扱える。ViewはKozanebaでも、年表でも、記事でも、スライドでもよい。
+
+かなり大事なのは `omittedDots` です。
+ストーリーは「何を入れたか」だけでなく、「何を入れなかったか」にも価値判断が出るからです。ConnectingDotsページにも、ストーリー作成では取捨選択があり、重要視するもの・捨てるものに人間の価値判断が混じるとあります。([Cosense][1])
+
+結論として、僕ならこう整理します。
+
+**Kozanebaは、考えを並べる道具。
+MindTrellisは、文書根拠つきの知識構造をAIと育てる道具。
+ConnectingDotsは、事実・関係・解釈・物語・表示を分離するための枠組み。**
+
+この3つをつなぐなら、目指すものは「AIつきKozaneba」より少し広くて、
+
+> 出典つきの点を集め、関係候補を出し、人間が価値判断を明示しながらストーリーとビューを作るシステム
+
+になると思います。MindTrellisは、その中の強力な部品として位置づけるのが自然です。
+
+[1]: https://scrapbox.io/nishio/ConnectingDots%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0 "ConnectingDotsシステム - 西尾泰和の外部脳"
+[2]: https://scrapbox.io/nishio/%E3%81%8B%E3%82%93%E3%81%8C%E3%81%88%E3%82%92%E3%81%BE%E3%81%A8%E3%82%81%E3%82%8B%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E6%96%87%E6%88%BF%E5%85%B7Kozaneba "かんがえをまとめるデジタル文房具Kozaneba - 西尾泰和の外部脳"
+[3]: https://arxiv.org/html/2604.23129v1?utm_source=chatgpt.com "MindTrellis: Co-Creating Knowledge Structures with AI ..."
+
+# human
+
+来週以降に手を動かすことも含めてよく考えてアクションプランを作って
+
+# GPT
+
+僕なら、来週からの方針は **「MindTrellisを作る」ではなく、「ConnectingDotsの最小実用品を作る」** に絞ります。
+
+理由は、ConnectingDotsの核心が「AIでよい話を自動生成すること」ではなく、**事実・解釈・ストーリー・表示を混ぜないこと**にあるからです。ページにも、ストーリーは主観的で、歴史的事実にも解釈が混じるので、何が事実で何が解釈かを分けたい、という問題意識が書かれています。また、事実の関係性は多すぎて一次元の文章では表現しにくく、ストーリー化では取捨選択と価値判断が入る、と整理されています。([Cosense][1])
+
+MindTrellisは、文書由来の知識とユーザ由来の知識を同じ知識グラフ上で育てるシステムで、ユーザが質問・ノード追加・関係修正・階層再編を行える点が強みです。([arXiv][2]) ただ、ConnectingDotsではまず、知識グラフよりも **「検証可能なDotを蓄積し、人間がStoryを編み、Viewで見せる」** という線を太くした方がよいと思います。
+
+## 方針
+
+来週以降の第一目標は、これです。
+
+> **同じDotsから、複数のStoryを作れることを、静的HTMLで動く形にする。**
+
+まず作るものは、AIチャットでも、グラフUIでも、Kozaneba統合でもありません。
+
+最初に作るべきなのは、次の3点です。
+
+```text
+Dots:   検証可能な事実カード
+Stories: Dotsを選び、順序づけ、短い語りを添えたもの
+Views:  StoryやDotsを静的HTMLで表示するもの
+```
+
+この3層は、すでに西尾さんのページ内でも「Dots」「Stories」「Views」として整理されており、Dotsは検証可能な最小単位、StoriesはDotsを並べて語りを添える作品、Viewsはそれらをタイムラインなどで見せるUIとして説明されています。([Cosense][3])
+
+重要なのは、**Relationを最初から独立データ化しない**ことです。
+Relationをデータモデルに入れると、すぐにMindTrellis風の知識グラフ作りへ逸れます。今は、Storyの中の「並び」「章立て」「caption」「note」に関係性を担わせる方が軽いです。ページ内でも、StoryはDotの並びと任意の見出し・導入文で成立する、という整理に西尾さんが同意しています。([Cosense][3])
+
+## 来週、2026年5月4日〜10日にやること
+
+### 1. 月曜：リポジトリと最小スキーマを作る
+
+作るものはこれだけでよいです。
+
+```text
+connecting-dots/
+  data/
+    dots.json
+    stories/
+      profile-ja.json
+  src/
+    render.ts
+    validate.ts
+  public/
+    index.html
+    stories/
+  README.md
+```
+
+Dotの最小スキーマは、これくらいで始めるのがよいです。
+
+```json
+{
+  "id": "dot-2026-04-26-connecting-dots",
+  "date": "2026-04-26",
+  "title": "ConnectingDotsシステムの設計を考えた",
+  "claim": "西尾泰和は、事実・ストーリー・ビューを分けるConnectingDotsシステムの設計を検討した。",
+  "refs": [
+    {
+      "url": "https://scrapbox.io/nishio/ConnectingDots%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0",
+      "label": "ConnectingDotsシステム"
+    }
+  ],
+  "entities": ["西尾泰和", "ConnectingDots"],
+  "tags": ["connecting-dots", "self-history"],
+  "status": "accepted"
+}
+```
+
+Storyはこうです。
+
+```json
+{
+  "id": "profile-ja-2026-05",
+  "title": "西尾泰和の現在地",
+  "audience": "日本語で西尾泰和を初めて知る人",
+  "dots": [
+    {
+      "dot_id": "dot-2026-04-26-connecting-dots",
+      "caption": "事実と解釈を分け、複数の文脈で再利用できるカードとして蓄積する構想を進めている。",
+      "note": "ここでは思想の紹介として使う。"
+    }
+  ]
+}
+```
+
+`claim` は事実。
+`caption` と `note` はStory側の解釈。
+ここを分けるのが肝です。
+
+月曜の完了条件は、**手で書いたDotsが5個あり、validateが通ること**です。
+レンダリングはまだ不要です。
+
+### 2. 火曜：自己紹介用Dotsを20個作る
+
+最初の対象は「自己紹介」がよいです。理由は、データが自分の手元にあり、事実確認がしやすく、Storyの良し悪しを西尾さん自身がすぐ判断できるからです。
+
+ページ上でも、「自己紹介は固定的なプロフィールではなく、活動履歴から動的に生成されるべき」という問いに対して、活動履歴データを溜め、何をStoryとして見せるかは人間のキュレーションだ、と整理されています。([Cosense][3])
+
+火曜は、次のようなDotを20個だけ作ります。
+
+```text
+公開したもの
+書いたもの
+登壇・発表
+関わったプロジェクト
+思想の転換点
+人との接点
+```
+
+ここで欲張ってはいけません。
+20個で十分です。
+
+火曜の完了条件は、**20個のaccepted Dotがあり、各Dotに最低1つの根拠リンクがあること**です。
+
+### 3. 水曜：Storyページを静的HTMLで出す
+
+水曜は、Viewを1個だけ作ります。
+つまり、`profile-ja.json` をHTMLにするだけです。
+
+表示要素はこれでよいです。
+
+```text
+Storyタイトル
+audience
+短い導入文
+Dotカードの列
+  - caption
+  - date
+  - title
+  - source link
+  - note
+末尾に「このStoryで使ったDots」
+```
+
+ページ内にも、最終的なViewは静的HTMLとして出力できるべき、とあります。([Cosense][3])
+ここはかなり重要です。静的HTMLにしておくと、Webサービスを作る前に、Storyそのものの価値を検証できます。
+
+水曜の完了条件は、**`public/stories/profile-ja.html` が生成され、ブラウザで読めること**です。
+
+### 4. 木曜：all-dotsページを作る
+
+木曜は、全部入りのDot一覧を作ります。
+
+```text
+public/all-dots.html
+```
+
+表示は時系列でよいです。
+
+```text
+date
+title
+claim
+tags
+refs
+used in stories
+```
+
+ConnectingDotsのページ内でも、詳細の「全部入り」ページを作った上で、状況によってピックアップする、という方向が書かれています。([Cosense][3])
+
+これを作ると、Storyに採用されたDotと、採用されていないDotが分かれます。
+ここで初めて、「人間が選んだことによって、そのDotの価値が上がる」という構造が見えるようになります。
+
+木曜の完了条件は、**all-dotsから各Storyへの逆引きが見えること**です。
+
+### 5. 金曜：Storyを人間が直す
+
+金曜は実装しない方がよいです。
+実際にStoryを読んで、手で直します。
+
+見るポイントは4つです。
+
+```text
+1. Dotのclaimに解釈が混じっていないか
+2. captionがStory側の語りとして機能しているか
+3. 読み物として退屈すぎないか
+4. 根拠リンクを見たくなる場所に出せているか
+```
+
+ここで「AIに整えさせる」は後回しにします。
+最初に確認すべきなのは、**このデータ分離が自分の編集感覚に合うか**です。
+
+金曜の完了条件は、**1本の自己紹介Storyを、人間が納得できる最低限の形に直すこと**です。
+
+### 6. 土日：小さく見せる
+
+土日は、1〜3人に見せるだけでよいです。
+広く公開する必要はありません。
+
+見る人には、こう聞くのがよいです。
+
+```text
+この人が何をしてきた人か分かるか
+根拠リンクがあることは信頼感につながるか
+Storyとall-dotsの関係は理解できるか
+退屈なデータ羅列に見えるか、読み物に見えるか
+```
+
+この段階でKozanebaやMindTrellisの話はしない方がよいです。
+まず、ConnectingDots単体で読めるかを確認します。
+
+## 2週目、2026年5月11日〜17日
+
+2週目は、AIを入れます。
+ただし、AIの役割は **生成者ではなく、候補作成者** に限定します。
+
+ページ内でも、「収集の自動化」ではなく「候補のインボックス化」として、拾ってきた候補をInboxに積み、キュレーションによってDotsへ昇格させ、DotsからStoryを作る、という流れが書かれています。([Cosense][3])
+
+作るものはこれです。
+
+```text
+data/candidates/dots.jsonl
+src/extract_candidates.ts
+src/prompts/extract_dot_candidates.md
+```
+
+AIには、ScrapboxページやMarkdownを渡して、次の形式で候補を出させます。
+
+```json
+{
+  "claim": "候補となる事実文",
+  "date": "YYYY-MM-DD or null",
+  "source_url": "...",
+  "source_quote": "根拠になる短い抜粋",
+  "entities": [],
+  "tags": [],
+  "why_candidate": "なぜDot候補だと思ったか"
+}
+```
+
+この候補は、accepted Dotにはしません。
+人間が見て、採用したものだけ `dots.json` に移します。
+
+2週目の完了条件は、**AIが30個以上のcandidateを出し、そのうち10個を人間がacceptedに昇格すること**です。
+
+## 3週目、2026年5月18日〜24日
+
+3週目は、同じDotsから別Storyを作ります。
+
+候補は2つあります。
+
+```text
+A. 英語圏向けの自己紹介Story
+B. 日本におけるPluralityの歴史Story
+```
+
+僕なら、Aを先に作ります。
+理由は、既存の自己紹介Dotsを再利用できるので、「同じDotsから別Storyを作る」ことの検証が早いからです。
+
+ただし、Plurality史も重要です。ページ内では、自己紹介と公共史の両方に同じ仕組みを使う方針が書かれています。([Cosense][3]) また、Plurality史については、翻訳プロジェクトの運用史、Broad Listening実装史、コミュニティ形成史など、複数Storyが自然に生えると整理されています。([Cosense][3])
+
+3週目の完了条件は、**同じDotが2本以上のStoryで使われること**です。
+これができないなら、ConnectingDotsの「再利用可能な事実部品」という仮説が弱いことになります。
+
+## 4週目、2026年5月25日〜31日
+
+4週目にKozanebaを接続します。
+最初からKozanebaを本体にしない方がよいです。
+
+Kozanebaは、考えをまとめるためのデジタル文房具で、グループを畳む、重要なものを大きくする、ものの間に関係の線を引く、といった操作を持っています。([Cosense][4]) これは、Storyを作る前の作業場として向いています。
+
+4週目に作るものは、Kozaneba本体の改造ではなく、エクスポートです。
+
+```text
+src/export_kozaneba.ts
+public/kozaneba/profile-ja-cards.json
+```
+
+DotをKozanebaカードとして出します。
+
+```json
+{
+  "id": "dot-2026-04-26-connecting-dots",
+  "text": "ConnectingDotsシステムの設計を考えた",
+  "meta": {
+    "date": "2026-04-26",
+    "tags": ["connecting-dots"],
+    "source": "..."
+  }
+}
+```
+
+Kozaneba上では、次の作業だけします。
+
+```text
+Storyに入れるDotを選ぶ
+Dot同士の近さを見る
+不要なDotを脇に置く
+章立て候補を作る
+```
+
+4週目の完了条件は、**Kozaneba上で並べた配置から、1本のStory順序を更新すること**です。
+
+ここで分かるのは、KozanebaがConnectingDotsの「View」なのか、「Story編集器」なのか、「思考用の足場」なのかです。
+僕の仮説では、Kozanebaは本体ではなく、**Storyを編む前の作業View**です。
+
+## 5週目以降
+
+5週目以降に、MindTrellis的な機能を入れます。
+ただし、MindTrellisをそのまま再現する必要はありません。
+
+MindTrellisの強みは、ユーザが文書に基づいて質問し、同じ知識構造に自分の概念や関係を追加できることです。([arXiv][2]) ConnectingDotsに取り込むなら、次の3機能だけで十分です。
+
+```text
+1. このStoryを支えているDotを探す
+2. このDotに関連しそうなcandidate Dotを探す
+3. このStoryに欠けている反対例・別視点を提案する
+```
+
+ここでもAIは確定しません。
+提案だけです。
+
+5週目以降の完了条件は、**AIがStory改善のための候補を出し、人間が採用・棄却できること**です。
+
+## やらないこと
+
+来週やらない方がよいことも明確にした方がよいです。
+
+```text
+知識グラフUIを作らない
+Relationテーブルを本格設計しない
+AIにStoryを完成させない
+多言語対応を先に作らない
+閲覧者が自由に組み替えるUIを作らない
+Kozaneba統合を先にやらない
+```
+
+特に、Relationを先に作ると危険です。
+関係は無限に増えます。ConnectingDotsのページでも、事実間の関係性は多すぎて一次元の文章で表現困難だと書かれています。([Cosense][1]) だから最初は、関係をStory内の順序・見出し・captionで表現する方がよいです。
+
+## Codexに投げるなら
+
+来週すぐ手を動かすなら、Codexにはこう投げるのがよいです。
+
+```text
+Create a minimal TypeScript static site generator for a project called ConnectingDots.
+
+Data model:
+- data/dots.json: array of Dot
+- data/stories/*.json: Story files
+
+Dot fields:
+id, date, title, claim, refs, entities, tags, status
+
+Story fields:
+id, title, audience, intro, dots[]
+Each story dot item has dot_id, caption, note.
+
+Requirements:
+1. Validate that every story dot_id exists.
+2. Validate that every accepted Dot has at least one ref.
+3. Generate public/all-dots.html sorted by date.
+4. Generate public/stories/{story.id}.html.
+5. In each Story page, show caption, date, title, source links, and note.
+6. In all-dots.html, show which Stories use each Dot.
+7. Keep the implementation small. No database. No server. Static HTML only.
+```
+
+AI抽出器は、別Issueにします。
+
+```text
+Create an extraction script that reads a Markdown or Scrapbox-like text file and asks an LLM to produce candidate Dots.
+
+Important:
+- Output candidates only.
+- Do not modify data/dots.json.
+- Each candidate must include claim, date if available, source_quote, source_url, entities, tags, and uncertainty.
+- The human curator will later promote candidates to accepted Dots.
+```
+
+## 1か月後の到達点
+
+2026年5月末に、こうなっていれば十分です。
+
+```text
+accepted Dots: 40〜80個
+candidate Dots: 50個以上
+Story: 2〜3本
+View: 静的HTML
+all-dots: あり
+dot→story逆引き: あり
+Kozaneba export: あり
+AI candidate extraction: あり
+```
+
+ここまでできると、次の判断ができます。
+
+```text
+Dotsの粒度は合っているか
+Storyは本当に再利用可能なDotsから作れるか
+自己紹介と公共史を同じ仕組みで扱えるか
+AI候補生成は役に立つか
+Kozanebaは編集Viewとして必要か
+MindTrellis的なグラフ機能が本当に必要か
+```
+
+## 判断基準
+
+このプロジェクトの初期成功条件は、「きれいなシステムができた」ではなく、次の4つです。
+
+```text
+1. 同じ事実を二重に書かずに済んだ
+2. Storyの語りとDotの事実が分離できた
+3. 根拠リンクを失わずに読み物にできた
+4. ひとつのDotが複数Storyで再利用された
+```
+
+この4つが確認できれば、ConnectingDotsは前に進める価値があります。
+
+逆に、これが確認できないままMindTrellis風のUIやKozaneba統合を作ると、面白い試作にはなっても、ConnectingDotsの本質からズレる可能性が高いです。
+
+## 僕の結論
+
+来週は、**自己紹介Storyを題材にして、Dot/Story/Viewの最小実装を作る**。
+2週目に、AIをcandidate生成だけに使う。
+3週目に、同じDotsから別Storyを作る。
+4週目に、KozanebaをStory編集の作業Viewとして接続する。
+5週目以降に、MindTrellis的な文書根拠探索・関係提案を足す。
+
+この順番なら、ConnectingDotsの「事実と解釈を分ける」という核を守ったまま、AI・Kozaneba・MindTrellis的な要素を順に取り込めます。
+
+[1]: https://scrapbox.io/nishio/ConnectingDots%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0 "ConnectingDotsシステム - 西尾泰和の外部脳"
+[2]: https://arxiv.org/html/2604.23129v1 "MindTrellis: Co-Creating Knowledge Structures with AI through Interactive Visual Exploration"
+[3]: https://scrapbox.io/nishio/%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B%E3%81%A8%E6%AD%B4%E5%8F%B2%E3%81%AF%E5%85%B1%E9%80%9A%E3%81%AE%E6%A7%8B%E9%80%A0%E3%82%92%E6%8C%81%E3%81%A4 "自己紹介と歴史は共通の構造を持つ - 西尾泰和の外部脳"
+[4]: https://scrapbox.io/nishio/%E3%81%8B%E3%82%93%E3%81%8C%E3%81%88%E3%82%92%E3%81%BE%E3%81%A8%E3%82%81%E3%82%8B%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E6%96%87%E6%88%BF%E5%85%B7Kozaneba "かんがえをまとめるデジタル文房具Kozaneba - 西尾泰和の外部脳"

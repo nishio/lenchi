@@ -45,6 +45,7 @@ LLM時代の知的生産論を構成する概念群。
 - [段階的開示](concepts/段階的開示.md) — 浅いインデックス+必要時に深く読む。Nielsen→Shneiderman→Skills→LLM Wiki
 - [ナラティブの価値](concepts/ナラティブの価値.md) — wiki化で失われる6次元。raw/+wiki/二層分離の根拠
 - [ブロードリスニング](concepts/ブロードリスニング.md) — 集団における知的生産性向上。LENCHI主題の集団版
+- [ConnectingDots](concepts/ConnectingDots.md) — 西尾の並走システム。事実/関係/解釈/物語/表示の4層分離
 
 ## 3. エンティティ（entities/）
 
@@ -72,6 +73,8 @@ LLM時代の知的生産論を構成する概念群。
 - 関連プロジェクト
   - [デジタル民主主義](entities/デジタル民主主義.md) — 著者の並走プロジェクト
   - [ブロードリスニング本](entities/ブロードリスニング本.md) — 並走中の別書籍（2026-09 出版予定）
+- 外部研究
+  - [MindTrellis](entities/MindTrellis.md) — AIと共同編集する知識グラフ研究（arXiv:2604.23129、Day 13で取り込み）
 
 ## 4. タイムライン（timeline/）
 
@@ -93,10 +96,11 @@ LLM時代の知的生産論を構成する概念群。
   - Session A: Wiki初読、並列実行、後段としてのWiki／思考の熟成 言語化
   - Session B: GPT 5.5 Pro による Q16 検証、段階的開示／Naive RAG反省 言語化
   - Session C: Q14・Q17 解決、ナラティブの価値・ブロードリスニング 言語化
+- [Day 13](timeline/Day13.md) — 2026-05-03 / MindTrellis / ConnectingDots / Kozaneba 三者対比、5週間アクションプラン整理
 
 ## 5. 未解決の問い
 
-- [questions/未解決の問い.md](questions/未解決の問い.md) — 22個の問い（理論的・編集上・運用上）。Q14・Q16・Q17 は **解決（条件付き含む）**
+- [questions/未解決の問い.md](questions/未解決の問い.md) — 23個の問い（理論的・編集上・運用上）。Q14・Q16・Q17 は **解決（条件付き含む）**
 
 ## 6. 一次資料（raw/）
 
@@ -107,3 +111,4 @@ LLM時代の知的生産論を構成する概念群。
 - `../raw/nishio-激動の2024年5月下旬.1hop.txt` — Day 12 Session C。デジタル民主主義への注力の経緯（27 ページ）。**改変禁止**
 - `../raw/blu3mo-fractal_reader.2hop.txt` — Day 12 Session C。Fractal Reader 実装と派生（10 ページ）。**改変禁止**
 - `../raw/nishio-直線的でない時間.1hop.txt` — Day 12 Session C。思考の熟成の機構と「ナラティブの価値」概念（10 ページ）。**改変禁止**
+- `../raw/2026-05-03-mindtrellis-connectingdots-GPT.txt` — Day 13。GPT との4ラウンド対話。MindTrellis 解説、ConnectingDots との対比、5週間アクションプラン。**改変禁止**（当初 `wiki/concepts/gpt-mindtrellis-connectingdots-20260503.md` として誤配置されていたものを移動）

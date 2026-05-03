@@ -2,6 +2,24 @@
 
 Ingest / Query / Lint の時系列ログ。`## [YYYY-MM-DD] {ingest|query|lint} | 概要` の書式で1エントリ1行を起点に追記する。
 
+## [2026-05-03] ingest | Day 13 — MindTrellis / ConnectingDots / Kozaneba 三者対比
+
+- Source: `raw/2026-05-03-mindtrellis-connectingdots-GPT.txt`（西尾 × ChatGPT GPT-5系の4ラウンド対話、973行）
+- 当初 `wiki/concepts/gpt-mindtrellis-connectingdots-20260503.md` として誤配置されていた → `raw/` に改名移動（生対話ログは raw の領分）
+- 新規ページ:
+  - [timeline/Day13.md](timeline/Day13.md) — 三者対比と5週間アクションプランの記録
+  - [concepts/ConnectingDots.md](concepts/ConnectingDots.md) — 西尾自身の並走設計システム。**事実・関係・解釈・物語・表示の4層分離**（Dots/Relations/Stories/Views）。LENCHI Wiki と「同じ問題への別アプローチ」
+  - [entities/MindTrellis.md](entities/MindTrellis.md) — 2026年研究システム（arXiv:2604.23129）。AI と人間が同じ知識グラフを共同編集。「AI 生成構造を暫定物として扱う」設計思想
+- 軽微な更新:
+  - [entities/Kozaneba.md](entities/Kozaneba.md) — 隣接システム MindTrellis / ConnectingDots との関係節を追加。Kozaneba は ConnectingDots の View の一種、独自性は「前言語的な構造化」
+  - [concepts/ナラティブの価値.md](concepts/ナラティブの価値.md) — ConnectingDots を「6軸損失問題への別アプローチ」として明示。LENCHI は raw/wiki 二層、ConnectingDots は Story 層で対応
+  - [questions/未解決の問い.md](questions/未解決の問い.md) — Q19 に MindTrellis を追加、Q23（ConnectingDots プロジェクトと LENCHI Wiki の連動）を新設
+  - [index.md](index.md) — 新概念1件、新エンティティ1件、Day 13、新 raw ファイルを登録、外部研究カテゴリを新設、問い数を 23 に更新
+- 設計判断:
+  - **MindTrellis をエンティティ化**: 特定の研究システムでありエンティティページが妥当（[Q19](questions/未解決の問い.md) で挙げた他の研究 RAG / ReAct / MemGPT 等は概念ページ内の言及のみだが、MindTrellis は LENCHI と接続点が深い）
+  - **ConnectingDots を概念ページに**: 西尾の設計思想であり実装はこれから。エンティティ（実体）ではなく設計パターン
+  - **5週間アクションプラン自体は ingest しない**: LENCHI 側で週次追跡するかは [Q23](questions/未解決の問い.md) で著者と要否を判断
+
 ## [2026-05-03] lint | Day 12 後の Wiki 健康診断と前向き整備
 
 実施項目: 孤児ページ、古い主張、欠落概念、章ドラフトの「次にやるべきこと」鮮度、未解決の問い更新状況。
