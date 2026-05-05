@@ -2,6 +2,19 @@
 
 Ingest / Query / Lint の時系列ログ。`## [YYYY-MM-DD] {ingest|query|lint} | 概要` の書式で1エントリ1行を起点に追記する。
 
+## [2026-05-06] schema | 解決済みの問いを別ファイルに分離
+
+- 著者の指摘: 解決したものは解決日時とセットで別のページに移動すべき
+- 新規 [questions/解決済みの問い.md](questions/解決済みの問い.md) を作成、Q14・Q16・Q17 を解決日付き（いずれも 2026-05-02）で移動
+- [questions/未解決の問い.md](questions/未解決の問い.md) からは Q14・Q16・Q17 を削除（Q 番号は安定識別子なので欠番のまま保持）
+- [questions/未解決の問い.md](questions/未解決の問い.md) 冒頭に「アクティブ vs アーカイブの分離」節を追加
+- [CLAUDE.md](../CLAUDE.md) のスキーマ記述に分離方針を追記、ディレクトリレイアウトの注記も更新
+- [index.md](index.md) で両ファイルを並列に登録、active 件数を 20 に更新
+- 設計判断:
+  - **部分対応・半解決はアクティブ側に残す**（Q11/Q12/Q20 など、残課題があるため）
+  - **Q 番号は両ファイルにまたがって一意**。アーカイブによる欠番は OK（履歴の残し方として番号の連続性より「解決日付きで保存」を優先）
+  - Q を「いつ解決したか」が時間軸で navigable になることで、second-class artifact だった解決事例が first-class に昇格
+
 ## [2026-05-04] query | Day 14 — 3-Wiki 比較実験と自己観察の fill back
 
 - 著者が同じ問いを 3 Wiki（Karpathy LLM Wiki / ConnectingDots / LENCHI）に並列照会し、差分を 5 観点で分析
