@@ -2,6 +2,20 @@
 
 Ingest / Query / Lint の時系列ログ。`## [YYYY-MM-DD] {ingest|query|lint} | 概要` の書式で1エントリ1行を起点に追記する。
 
+## [2026-05-04] query | Day 14 — 3-Wiki 比較実験と自己観察の fill back
+
+- 著者が同じ問いを 3 Wiki（Karpathy LLM Wiki / ConnectingDots / LENCHI）に並列照会し、差分を 5 観点で分析
+- LENCHI Wiki 側で A3 の特徴づけを **自己修正**: 「ingest が新概念ではなく未決 Q 追加として記録される」は不正確 → 正確には「**新概念追加 + 未決 Q 層の状態変化として二重に記録される**」
+- 新規ページ:
+  - [concepts/Wikiの人格化.md](concepts/Wikiの人格化.md) — wikis-as-personas、手動 orchestrator パターン、5 つの差分観察
+  - [timeline/Day14.md](timeline/Day14.md) — 本セッション
+- 軽微な更新:
+  - [questions/未解決の問い.md](questions/未解決の問い.md) — 冒頭にファイル自体の位置づけ（first-class artifact、二層記録の question layer）を明示
+  - [index.md](index.md) — Wikiの人格化、Day 14 を登録
+- 設計判断:
+  - A3 の特徴づけ修正を Day 14 timeline に記録（自己観察を一級の知的資産として扱う）
+  - Wikiの人格化 を独立概念ページに（LENCHI 主題と他 Wiki との対比から、本書全体の理論枠を補強する位置づけ）
+
 ## [2026-05-03] ingest | Day 13 — MindTrellis / ConnectingDots / Kozaneba 三者対比
 
 - Source: `raw/2026-05-03-mindtrellis-connectingdots-GPT.txt`（西尾 × ChatGPT GPT-5系の4ラウンド対話、973行）
