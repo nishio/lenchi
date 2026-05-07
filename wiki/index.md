@@ -47,6 +47,7 @@ LLM時代の知的生産論を構成する概念群。
 - [ブロードリスニング](concepts/ブロードリスニング.md) — 集団における知的生産性向上。LENCHI主題の集団版
 - [ConnectingDots](concepts/ConnectingDots.md) — 西尾の並走システム。事実/関係/解釈/物語/表示の4層分離
 - [Wikiの人格化](concepts/Wikiの人格化.md) — 複数Wikiが同じ問いを自分のスキーマで読み替える。手動orchestratorパターン
+- [想起の設計](concepts/想起の設計.md) — 「記憶」を保存と想起に分けたとき、現代の本質は想起側。本書第二部の概念群を横断する整理
 
 ## 3. エンティティ（entities/）
 
@@ -99,10 +100,11 @@ LLM時代の知的生産論を構成する概念群。
   - Session C: Q14・Q17 解決、ナラティブの価値・ブロードリスニング 言語化
 - [Day 13](timeline/Day13.md) — 2026-05-03 / MindTrellis / ConnectingDots / Kozaneba 三者対比、5週間アクションプラン整理
 - [Day 14](timeline/Day14.md) — 2026-05-04 / 3-Wiki 比較実験、Wikiの人格化 言語化、LENCHI の二層記録設計を自己観察
+- [Day 15](timeline/Day15.md) — 2026-05-07 / Q1 サブトピック「記憶」「やる気」の再フレーミング、想起の設計 言語化、Q24/Q25 新設
 
 ## 5. 未解決の問い
 
-- [questions/未解決の問い.md](questions/未解決の問い.md) — active な問い 20 件（理論的・編集上・運用上）
+- [questions/未解決の問い.md](questions/未解決の問い.md) — active な問い 23 件（理論的・編集上・運用上）
 - [questions/解決済みの問い.md](questions/解決済みの問い.md) — 解決済みアーカイブ（解決日付き）。現在 Q14・Q16・Q17 を保管
 
 ## 6. 一次資料（raw/）
@@ -115,3 +117,4 @@ LLM時代の知的生産論を構成する概念群。
 - `../raw/blu3mo-fractal_reader.2hop.txt` — Day 12 Session C。Fractal Reader 実装と派生（10 ページ）。**改変禁止**
 - `../raw/nishio-直線的でない時間.1hop.txt` — Day 12 Session C。思考の熟成の機構と「ナラティブの価値」概念（10 ページ）。**改変禁止**
 - `../raw/2026-05-03-mindtrellis-connectingdots-GPT.txt` — Day 13。GPT との4ラウンド対話。MindTrellis 解説、ConnectingDots との対比、5週間アクションプラン。**改変禁止**（当初 `wiki/concepts/gpt-mindtrellis-connectingdots-20260503.md` として誤配置されていたものを移動）
+- `../raw/2026-05-07-nishio-Q4Q5コメント.txt` — 著者が Q4・Q5 に直筆で書き加えたコメントを raw 化（[Q26](questions/未解決の問い.md) 関連、Wiki を AI 生成テキストのみに復元するため移動）。**改変禁止**
