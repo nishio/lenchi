@@ -2,6 +2,62 @@
 
 Ingest / Query / Lint の時系列ログ。`## [YYYY-MM-DD] {ingest|query|lint} | 概要` の書式で1エントリ1行を起点に追記する。
 
+## [2026-05-08] ingest | Day 16 — 著者の包括フィードバック（5/7 電車移動中執筆）
+
+- Source: `raw/2026-05-08-nishio-train-feedback.txt`（著者が 5/7 電車内で Wiki 全体を通読してまとめた所感・補足・再フレーミング・ingest 指示）
+- 新規ページ:
+  - [timeline/Day16.md](timeline/Day16.md) — 本セッション
+  - [concepts/まだ言語化できない近さ.md](concepts/まだ言語化できない近さ.md) — Kozaneba の独自ニッチを表す概念。意味関係の明示前の概念間距離
+  - [concepts/分布としての他者.md](concepts/分布としての他者.md) — ブロードリスニングを狭く取り直した本書での扱い
+- Q 状態変化（多数）:
+  - **解決アーカイブへ**: Q8（プロセスログ：電子なら全部残す）、Q20（命名規約：二系統併存）
+  - **部分対応に格下げ**: Q23（ConnectingDots 進捗追跡は不要、本書扱いは保留）
+  - **著者見解追記**: Q4（サービス提供論はスコープ外）、Q6・Q7（LLM時代の新サービスが必要）、Q9（ingest着手予定）、Q10（JSON+Claude Code+視線エミュレーション）、Q21（分布としての他者へフォーカス）、Q22（Cosense比較も含めて拡張）
+  - **新設**: Q27（Q tracking を Spaced Repetition / Incremental Reading 系に再設計）
+- 既存ページ更新:
+  - [entities/Kozaneba.md](entities/Kozaneba.md) — 新方針（JSON+視線エミュ）、道具世代交代の論点
+  - [concepts/後段としてのWiki.md](concepts/後段としてのWiki.md) — 別表現「下流に永続記憶を置く」を冒頭に追加
+  - [concepts/ブロードリスニング.md](concepts/ブロードリスニング.md) — 「分布としての他者へフォーカス」節、AI要約の進化と収束ムーブの位置づけ
+  - [overview.md](overview.md) — 「初見不親切問題」自己観察を反映、サービス提供論スコープ外を明記
+  - [index.md](index.md) — 新概念2件・Day 16・新raw・active件数（22）を更新
+- Ingest 待ち（[Q27](questions/未解決の問い.md) に集約）:
+  1. 著者の Spaced Repetition 議論（エンジニアの知的生産術より、raw に入っているか要確認）
+  2. SuperMemo Incremental Reading
+  3. 常緑のノート（Evergreen Notes）系議論
+  4. 「収束ムーブ」概念（[分布としての他者](concepts/分布としての他者.md) と接続）
+  5. 「Cosense 的とは何か」の言語化
+- 設計判断:
+  - 「下流に永続記憶を置く」は独立概念ページにせず、[後段としてのWiki](concepts/後段としてのWiki.md) の別表現として冒頭に追記（重複回避）
+  - Q27 は当面「Spaced Repetition 再設計の方向性 + ingest 待ちリスト」のメタ Q として運用。再設計の実装は ingest 完了後に判断
+
+## [2026-05-08] lint | Day 15 後の Wiki 健康診断と前向き整備
+
+実施項目: 孤児ページ、古い主張、横断概念の逆リンク、章ドラフト鮮度、CLAUDE.md 観点拡充。
+
+### 発見
+
+- **A. 孤児ページなし**（最少 4 件、新規 Wikiの人格化／想起の設計含む）
+- **B. 章ドラフト鮮度**: 前書き・第一章は Day 12 進展までで Day 15（記憶=想起の設計、やる気=プロジェクト停滞）への接続が未反映。第二部 導入章の見取り図に「想起の設計」が未登録
+- **C. 横断的統合性**: [想起の設計](concepts/想起の設計.md) を「第二部の主要概念群を横断する整理」と位置づけたが、横断される側（後段としてのWiki、段階的開示、ナラティブの価値、RAG、フラクタル要約、思考の熟成、コンテキスト維持）の関連欄に逆リンクなし
+- **D. 古い主張**: [overview.md](overview.md) の中間層議論が Q4「両論併記」前提のまま。Day 15 で「A 不要、B 優位」確定なので注記必要
+- **E. Q (未解決の問い) 鮮度**: 最新（直近で Q24/Q25/Q26 新設、Q4 を部分対応へ、Q5/Q25 著者見解統合）
+- **F. CLAUDE.md Lint 観点**: 想起の設計の四つの軸（discoverability / zoom / context preservation / latency tolerance）を運用評価指標として併用できる
+
+### 実施した整備
+
+1. 想起の設計を 7 つの横断概念ページの関連欄に逆リンク追加（後段としてのWiki / 段階的開示 / ナラティブの価値 / RAG / フラクタル要約 / 思考の熟成 / コンテキスト維持）
+2. 章ドラフト 前書き・第一章 残課題に Day 15 進展への接続を追記
+3. [chapters/第二部-LLM_Wikiの導入.md](chapters/第二部-LLM_Wikiの導入.md) の見取り図に「[想起の設計](concepts/想起の設計.md) としての LLM Wiki」節を追加
+4. [overview.md](overview.md) に「中間層」節を新設、Day 15 で確定した「A 不要、B 優位」を反映
+5. [concepts/Wikiの人格化.md](concepts/Wikiの人格化.md) の差分 2 節（運用文化）に **2026-05-07 補足** を追加。`nishio:` 撤回経緯と「ファイル境界 vs ファイル内境界」での分離設計の対比
+6. [CLAUDE.md](../CLAUDE.md) の Lint 節に「想起の設計の四つの軸」を運用評価指標として追加
+7. 本 Lint 結果を log.md に記録（このエントリ）
+
+### 設計判断
+
+- 想起の設計のメタ位置づけ（既存概念群を束ねる）を、横断される側からの逆リンクとして双方向に成立させた。これにより読者がどの概念から入っても想起の設計に到達できる
+- `nishio:` プレフィックス撤回の経緯を **Wikiの人格化** ページに残すことで、「LENCHI と ConnectingDots の anti-misattribution 設計差」が後日参照可能になった
+
 ## [2026-05-07] ingest | raw/2026-05-07-nishio-Q4Q5コメント.txt を Wiki に反映
 
 直前のセッションで raw 化した著者の Q4・Q5 直筆コメントを、AI による合成知の形で wiki 側に反映：

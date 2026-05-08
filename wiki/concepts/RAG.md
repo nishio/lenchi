@@ -58,6 +58,8 @@ Anthropic の **Contextual Retrieval**（2024）は典型的な反省例。チ�
 - [段階的開示](段階的開示.md) — Naive RAG への反省と同じ方向にある設計原理。
 - [コンテキスト維持](コンテキスト維持.md) — 後段としての Wiki / 段階的開示と並ぶ構造解の中核。
 
+- [想起の設計](想起の設計.md) — Naive RAG → Modern RAG の構造変化は想起設計の進化として読める
+
 ## 出典
 
 - raw: `LENCHI_Day6`、`LLMを使いこなすエンジニアの知的生産術(講演資料)`、`2026-05-02-Q16検証-GPT.txt`（[Day 12 Session B](../timeline/Day12.md)）

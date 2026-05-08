@@ -25,7 +25,15 @@ GPT による三者の整理：
 > MindTrellis = 文書から Dots と Relations を育てる AI 機構
 > Kozaneba = Dots, Relations, Stories を触る空間 UI
 
-Kozaneba の独自性は「**前言語的な構造化**」に強い点。MindTrellis の知識グラフは「意味関係」を明示したがるが、KJ法的な配置は「**まだ言語化できない近さ**」も扱える。ConnectingDots の 5 週間アクションプラン（[Day 13](../timeline/Day13.md)）では、Kozaneba は第 4 週で **Story 編集の作業 View** として接続予定。
+Kozaneba の独自性は「**前言語的な構造化**」に強い点。MindTrellis の知識グラフは「意味関係」を明示したがるが、KJ法的な配置は「**[まだ言語化できない近さ](../concepts/まだ言語化できない近さ.md)**」も扱える（[Day 16](../timeline/Day16.md) で独立概念ページ化）。ConnectingDots の 5 週間アクションプラン（[Day 13](../timeline/Day13.md)）では、Kozaneba は第 4 週で **Story 編集の作業 View** として接続予定。
+
+## LLM 受け渡しの新方針（[Day 16](../timeline/Day16.md)、[Q10](../questions/未解決の問い.md)）
+
+著者の方針更新：画像経由ではなく **JSON エクスポート + Claude Code + 視線エミュレーションスクリプト** で LLM に読ませる。具体には大きいこざねから順に注視 → 隣接近接 → リンク追跡、というスクリプトで人間の読み方を再現する。距離計算は LLM ではなくスクリプトで行う方が向いているという判断。これは「[まだ言語化できない近さ](../concepts/まだ言語化できない近さ.md)」を LLM に伝えるプロトコル設計でもある。
+
+## 道具の世代交代（[Day 16](../timeline/Day16.md)、[Q6](../questions/未解決の問い.md)/[Q7](../questions/未解決の問い.md)）
+
+著者見解：現時点の Kozaneba は **LLM がここまで成長する以前に作られたサービス** であり、基本的には新しいものが作られるべき。本書（特に [第二章](../chapters/第二章.md)）での Kozaneba 言及は「**当時こう運用していた**」という歴史記録の側面を持つ。Kozaneba の独自ニッチ「[まだ言語化できない近さ](../concepts/まだ言語化できない近さ.md)」は LLM 時代でも残る価値として再評価できる。
 
 ## 出典
 

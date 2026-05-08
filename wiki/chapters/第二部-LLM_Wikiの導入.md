@@ -60,6 +60,7 @@ Karpathy の [LLM Wiki](../../llm-wiki.md) は、まさにこの欠落への解�
 - **Lint の作法** — LLM 自身に Wiki の健康診断をさせる。孤児ページ・矛盾・欠落の検出
 - **[後段としてのWiki](../concepts/後段としてのWiki.md) — Wiki が下流にあることが上流の探索を並列化する** — [Day 12](../timeline/Day12.md) で言語化された節。ChatGPT Pro × LLM Wiki の組み合わせを実例に
 - **収束支援装置としての LLM Wiki**（[発散と収束](../concepts/発散と収束.md) [Q3](../questions/未解決の問い.md) への回答）— 概念抽出そのものが収束操作、段階的開示で overview↔詳細の往復、後段としての Wiki が並列発散を時間をかけて吸収。従来の 4 候補（コンテキスト幅／フラクタル要約／KJ法／Kozaneba）を **束ねるメタ装置** として位置づけ
+- **[想起の設計](../concepts/想起の設計.md) としての LLM Wiki**（[Day 15](../timeline/Day15.md) で言語化、[Q24](../questions/未解決の問い.md)）— 「記憶」の本質が保存ではなく想起にあると認識すれば、第二部の本論ノード（後段としてのWiki / 段階的開示 / ナラティブの価値 / RAG / フラクタル要約 / 思考の熟成 / コンテキスト維持）はすべて **想起設計の各側面** として横断的に整理できる。四つの軸（discoverability / zoom / context preservation / latency tolerance）が評価枠
 - **Wiki と書籍の関係** — 有限化された書籍が、背後の無限ネットワークと LLM Wiki に読者を接続する設計（[有限化と無限ネットワーク](../concepts/有限化と無限ネットワーク.md)）
 
 [Day 10](../timeline/Day10.md) で [o1 pro](../entities/o1pro.md) が提案した **「実践可能なガイドライン」** への落とし込みは、第二部全体を貫く方針として採用する。

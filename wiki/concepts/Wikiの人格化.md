@@ -24,6 +24,8 @@ A2（ConnectingDots）は「**anti-misattribution 規律**」を持っており�
 
 A1（LLM Wiki）と A3（LENCHI）はこの分離をしない。
 
+**[2026-05-07] 補足**: A3（LENCHI）は一度 `nishio:` プレフィックスで anti-misattribution 規律を採用しようとしたが、IDE 同時編集衝突で運用が破綻し撤回した（[Q26](../questions/未解決の問い.md)）。最終的に **「人間の生コメントは raw、Wiki は AI 合成知のみ」** という 3 層分離原則に立ち戻ることで解決した。これは A2（ConnectingDots）が **同一ファイル内での fact/interpretation 分離** で実現するのに対し、A3（LENCHI）は **ファイル境界での分離（raw vs wiki）** で実現する、という設計差として読める。
+
 ### 3. 時間粒度・記録 artifact の差
 
 A3（LENCHI）は **「Q 番号付きバックログ」** という artifact を持ち、ingest が **新概念追加 + 未決 Q 層の状態変化として二重に記録される**（[未決問いの first-class 化](#a3-の二層記録設計-について) 参照）。これは A1/A2 にはない構造。
